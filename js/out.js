@@ -551,7 +551,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".red {\n  background-color: red; }\n\n* {\n  border: 1px solid blue; }\n\n.logo {\n  width: 40%; }\n\nform {\n  width: 20%;\n  display: inline-block; }\n\nimg {\n  height: 200px;\n  width: 200px; }\n\n.thumbnail {\n  width: 240px;\n  display: inline-block;\n  text-align: center; }\n\nul {\n  list-style: none;\n  padding-left: 0; }\n", ""]);
+exports.push([module.i, ".red {\n  background-color: red; }\n\n* {\n  border: 1px solid magenta; }\n\n.logo {\n  width: 40%; }\n\nform {\n  width: 20%;\n  display: inline-block; }\n\nimg {\n  height: 200px;\n  width: 200px; }\n\n.thumbnail {\n  width: 240px;\n  display: inline-block;\n  text-align: center; }\n\nul {\n  list-style: none;\n  padding-left: 0; }\n", ""]);
 
 // exports
 
