@@ -3,119 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <title>koty</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&amp;subset=latin-ext" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
-<!--    <div id="app"></div>
--->
-  <header>
-    <div class="container">
-      <div class="logo">
-        TU LOGO
+
+  <div class="grid-container">
+
+<!-- row 1 -->
+
+    <div class="row">
+      <div class="col-4 logo">
+          <img class="logo" src="images/rainbowcat.png" alt="logo">
       </div>
-      <nav>
-        nav
+      <nav class="col-8">
+        <h1>Grzyb</h1>
+
+        <img class="hamburger" src="images/hamburger.png" alt=""/>
+        <!-- <ul>
+          <li>o nas</li>
+          <li>schronisko</li>
+          <li>nie kupuj, adoptuj</li>
+          <li>wirtualna adopcja faq</li>
+          <li>kontakt</li>
+        </ul> -->
       </nav>
     </div>
-  </header>
 
+<!-- row 2  -->
 
-  <section class="search">
-    <div class="container">
-      search:
-      <form>
-        <input type="checkbox" name="sex" value="male" checked> panowie<br>
-        <input type="checkbox" name="sex" value="female" checked> panie
-      </form>
-      <form>
-        <input type="checkbox" name="age" value="young" checked> < 1 rok<br>
-        <input type="checkbox" name="age" value="adult" checked> 1-5 lat<br>
-        <input type="checkbox" name="age" value="senior" checked> > 5 lat
-      </form>
-      <form>
-        sortuj:
-        <select name="carlist">
-          <option value="lonely">samotne</option>
-          <option value="oldest">najstarsze</option>
-          <option value="youngest">najmłodsze</option>
-          <option value="popular">most popular</option>
-        </select>
-      </form>
-    </div>
-  </section>
-  <section class="results">
-    <div class="container">
-      <div class="thumbnail">
-        <img src="images/heavy.png" alt="heavy">
-        <ul>
-          <li>Mruczuś</li>
-          <li>pan</li>
-          <li>4 lata</li>
-          <li>biedny, smutny, głodny, jego pani umarła z zaskoczenia</li>
-        </ul>
-      </div>
-
-      <div class="thumbnail">
-        <img src="images/heavy.png" alt="heavy">
-        <ul>
-          <li>Mruczuś</li>
-          <li>pan</li>
-          <li>4 lata</li>
-          <li>biedny, smutny, głodny, jego pani umarła z zaskoczenia</li>
-        </ul>
-      </div>
-
-      <div class="thumbnail">
-        <img src="images/heavy.png" alt="heavy">
-        <ul>
-          <li>Mruczuś</li>
-          <li>pan</li>
-          <li>4 lata</li>
-          <li>biedny, smutny, głodny, jego pani umarła z zaskoczenia</li>
-        </ul>
-      </div>
-
-      <div class="thumbnail">
-        <img src="images/heavy.png" alt="heavy">
-        <ul>
-          <li>Mruczuś</li>
-          <li>pan</li>
-          <li>4 lata</li>
-          <li>biedny, smutny, głodny, jego pani umarła z zaskoczenia</li>
-        </ul>
-      </div>
-
-      <div class="thumbnail">
-        <img src="images/heavy.png" alt="heavy">
-        <ul>
-          <li>Mruczuś</li>
-          <li>pan</li>
-          <li>4 lata</li>
-          <li>biedny, smutny, głodny, jego pani umarła z zaskoczenia</li>
-        </ul>
-      </div>
-
-      <div class="thumbnail">
-        <img src="images/heavy.png" alt="heavy">
-        <ul>
-          <li>Mruczuś</li>
-          <li>pan</li>
-          <li>4 lata</li>
-          <li>biedny, smutny, głodny, jego pani umarła z zaskoczenia</li>
-        </ul>
-      </div>
-
-      <div class="thumbnail">
-        <img src="images/heavy.png" alt="heavy">
-        <ul>
-          <li>Mruczuś</li>
-          <li>pan</li>
-          <li>4 lata</li>
-          <li>biedny, smutny, głodny, jego pani umarła z zaskoczenia</li>
-        </ul>
+    <div class="row">
+      <div class="col-12">
+        search:
+        <form>
+          <input type="checkbox" name="sex" value="male" checked> panowie<br>
+          <input type="checkbox" name="sex" value="female" checked> panie
+        </form>
+        <form>
+          <input type="checkbox" name="age" value="young" checked> < 1 rok<br>
+          <input type="checkbox" name="age" value="adult" checked> 1-5 lat<br>
+          <input type="checkbox" name="age" value="senior" checked> > 5 lat
+        </form>
+        <form>
+          sortuj:
+          <select name="carlist">
+            <option value="lonely">samotne</option>
+            <option value="oldest">najstarsze</option>
+            <option value="youngest">najmłodsze</option>
+            <option value="popular">most popular</option>
+          </select>
+        </form>
       </div>
     </div>
-  </section>
+
+    <!-- row 3 -->
+
+    <div class="row">
+      <div class="col-12 search-result">
+        <div class="card">
+          <img class="card-img" src="images/heavy.png" alt="heavy">
+          <ul class="card-list">
+            <li>Mruczuś <span>&#9794</span></li>
+            <li>wiek: 4 lata</li>
+            <li>special features: heavy breating</li>
+            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny, jego pani umarła naglebiedny, smutny, głodny, jego pani umarła nagle</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="images/heavy.png" alt="heavy">
+          <ul class="card-list">
+            <li>Mruczuś <span>&#9794</span></li>
+            <li>wiek: 4 lata</li>
+            <li>special features: heavy breating</li>
+            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny, jego pani umarła naglebiedny, smutny, głodny, jego pani umarła nagle</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="images/heavy.png" alt="heavy">
+          <ul class="card-list">
+            <li>Mruczuś <span>&#9794</span></li>
+            <li>wiek: 4 lata</li>
+            <li>special features: heavy breating</li>
+            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny, jego pani umarła naglebiedny, smutny, głodny, jego pani umarła nagle</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="images/heavy.png" alt="heavy">
+          <ul class="card-list">
+            <li>Mruczuś <span>&#9794</span></li>
+            <li>wiek: 4 lata</li>
+            <li>special features: heavy breating</li>
+            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny, jego pani umarła naglebiedny, smutny, głodny, jego pani umarła nagle</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="images/heavy.png" alt="heavy">
+          <ul class="card-list">
+            <li>Mruczuś <span>&#9794</span></li>
+            <li>wiek: 4 lata</li>
+            <li>special features: heavy breating</li>
+            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny, jego pani umarła naglebiedny, smutny, głodny, jego pani umarła nagle</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="images/heavy.png" alt="heavy">
+          <ul class="card-list">
+            <li>Mruczuś <span>&#9794</span></li>
+            <li>wiek: 4 lata</li>
+            <li>special features: heavy breating</li>
+            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny, jego pani umarła naglebiedny, smutny, głodny, jego pani umarła nagle</li>
+          </ul>
+        </div>
+
+
+
+    </div>
+
+
+    </div>
+
+
+  </div>
 
 
 
