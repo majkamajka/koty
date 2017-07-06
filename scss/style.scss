@@ -315,8 +315,9 @@ html {
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid magenta;
+//border: 1px solid magenta;
   font-family: 'Quicksand', sans-serif;
+  text-align: justify;
  }
 
 html {
@@ -326,22 +327,32 @@ html {
 body {
     background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
     background-attachment: fixed;
+    padding: 7px;
+}
+
+.header {
+  height: 15vh;
+  //position: relative;
+  h1 {
+    line-height: 2em;
+  }
 }
 
 .logo {
-  width: 50%;
+  width: 80%;
 }
 
 
 .hamburger {
-  width: 40px;
   position: fixed;
   right: 20px;
   top: 10px;
+  z-index: 1;
 }
 
 .search-component {
-  background-color: red;
+  height: 5vh;
+  float: left;
   div>span {
     font-size: 1.4em;
   }
@@ -351,15 +362,14 @@ body {
 }
 
 .filter-menu {
-
   position: absolute;
   background-color: white;
-  height: 75vh;
+  height: 70vh;
   margin-left: -10px;
   width: 50vw;
   font-size: 1.3em;
   line-height: 2em;
-
+  z-index: 1;
   form {
     width: 100%;
   }
@@ -371,26 +381,55 @@ body {
     margin-left: 10vw;
   }
   input[type="submit"] {
-    margin-top: 5vh;
+    margin-top: 20px;
     font-size: 1em;
     padding: 10px;
   }
 
 }
 
-
-.card {
-  //text-align: center;
+.sort {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  margin-bottom: 1%;
+  justify-content: flex-end;
+  padding-left: 50px;
+  span {
+    margin-right: 10px;
+
+  }
+  select {
+    font-size: 1.3em;
+  }
 }
 
-.card-img {
-  height: 30%;
-  width: 30%;
+.card {
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border: 5px solid white;
+  display: flex;
+  padding-bottom: 10px;
 }
+
+.images {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 30vw;
+  .card-img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .donate {
+    margin-bottom: 10px;
+  }
+
+}
+
+.char {
+  width: 70vw;
+}
+
 
 .card-list {
   width: 100%;
