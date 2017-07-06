@@ -332,27 +332,50 @@ body {
   width: 50%;
 }
 
-nav {
-  h1 {
-    float: left;
-  }
-  .hamburger {
-    width: 40px;
-    float: right;
-    position: fixed;
-  }
 
+.hamburger {
+  width: 40px;
+  position: fixed;
+  right: 20px;
+  top: 10px;
 }
 
 .search-component {
   background-color: red;
+  div>span {
+    font-size: 1.4em;
+  }
 
   //position: fixed;
 
 }
 
 .filter-menu {
-  position:absolute;
+
+  position: absolute;
+  background-color: white;
+  height: 75vh;
+  margin-left: -10px;
+  width: 50vw;
+  font-size: 1.3em;
+  line-height: 2em;
+
+  form {
+    width: 100%;
+  }
+  span {
+    margin-left: 5vw;
+    font-weight: bold;
+  }
+  input {
+    margin-left: 10vw;
+  }
+  input[type="submit"] {
+    margin-top: 5vh;
+    font-size: 1em;
+    padding: 10px;
+  }
+
 }
 
 
