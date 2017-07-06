@@ -9,15 +9,15 @@
 </head>
 <body>
 
-  <div class="grid-container">
+  <div class="container">
 
 <!-- row 1 -->
 
     <div class="row">
-      <div class="col-4 logo">
+      <div class="col-xs-4">
           <img class="logo" src="images/rainbowcat.png" alt="logo">
       </div>
-      <nav class="col-8">
+      <nav class="col-xs-8">
         <h1>Grzyb</h1>
 
         <img class="hamburger" src="images/hamburger.png" alt=""/>
@@ -33,27 +33,41 @@
 
 <!-- row 2  -->
 
-    <div class="row">
-      <div class="col-12">
-        search:
+    <div class="row search-component">
+      <div class="col-xs-12">
+        <span>Filtruj</span>
+        <div class="filter-menu col-xs-3">
+          <span>płeć &#709;</span><br/>
+          <form name="search" style="position: absolute">
+            <input type="checkbox" name="sex" value="male" checked> panowie<br/>
+            <input type="checkbox" name="sex" value="female" checked> panie
+
+          <span>wiek &#709;</span><br/>
+            <input type="checkbox" name="age" value="young" checked> < 1 rok<br>
+            <input type="checkbox" name="age" value="adult" checked> 1-5 lat<br>
+            <input type="checkbox" name="age" value="senior" checked> > 5 lat
+
+            <input type="submit" value="szukaj">
+        </div>
+
+      </div>
+
+
+
+
+
+      <div class="col-xs-3">
+        <span>sortuj</span><br/>
         <form>
-          <input type="checkbox" name="sex" value="male" checked> panowie<br>
-          <input type="checkbox" name="sex" value="female" checked> panie
-        </form>
-        <form>
-          <input type="checkbox" name="age" value="young" checked> < 1 rok<br>
-          <input type="checkbox" name="age" value="adult" checked> 1-5 lat<br>
-          <input type="checkbox" name="age" value="senior" checked> > 5 lat
-        </form>
-        <form>
-          sortuj:
           <select name="carlist">
             <option value="lonely">samotne</option>
             <option value="oldest">najstarsze</option>
             <option value="youngest">najmłodsze</option>
-            <option value="popular">most popular</option>
+            <option value="popular">popularne</option>
           </select>
         </form>
+      </div>
+
       </div>
     </div>
 
