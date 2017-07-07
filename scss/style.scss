@@ -79,10 +79,10 @@ html {
   padding-left: 5px;
   padding-right: 5px;
 }
-.row {
-  margin-left: -5px;
-  margin-right: -5px;
-}
+// .row {
+//   margin-left: -5px;
+//   margin-right: -5px;
+// }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
@@ -315,31 +315,48 @@ html {
 * {
   margin: 0;
   padding: 0;
-//border: 1px solid magenta;
+  //border: 1px solid magenta;
   font-family: 'Quicksand', sans-serif;
   text-align: justify;
  }
 
+.container.header {
+  width: 100%;
+}
+
+
+.row {
+ //border: 2px solid blue;
+}
+
 html {
- font-size: 16px;
+ //font-size: 16px;
 }
 
 body {
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-    background-attachment: fixed;
-    padding: 7px;
+    background-color: #f2efe8;
+
 }
 
-.header {
-  height: 15vh;
+header {
+
+  padding-top: 1vh;
+  width: 100%;
+  background-color: #afa9c1;
   //position: relative;
   h1 {
-    line-height: 2em;
+    font-size: 10vw;;
   }
 }
 
 .logo {
   width: 80%;
+}
+
+button {
+  background-color: white;
+  border: 2px solid #92a3a7;
+  padding: 3px 2px 3px 2px;
 }
 
 
@@ -351,10 +368,11 @@ body {
 }
 
 .search-component {
-  height: 5vh;
-  float: left;
-  div>span {
-    font-size: 1.4em;
+  background-color: #c2d4d8;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  span {
+    font-size: 6vw;
   }
 
   //position: fixed;
@@ -388,17 +406,9 @@ body {
 
 }
 
-.sort {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-left: 50px;
-  span {
-    margin-right: 10px;
-
-  }
+#sort {
   select {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
 
@@ -411,23 +421,21 @@ body {
 }
 
 .images {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 30vw;
+
+  width: 30%;
   .card-img {
     width: 100%;
     margin-bottom: 10px;
   }
   .donate {
+    width:30%;
     margin-bottom: 10px;
   }
 
 }
 
 .char {
-  width: 70vw;
+  width: 70%;
 }
 
 

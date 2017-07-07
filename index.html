@@ -8,12 +8,8 @@
 
 </head>
 <body>
-
-  <div class="container">
-
-<!-- row 1 -->
-
-    <div class="row header">
+  <div class="container header">
+    <header class="row">
       <div class="col-xs-4">
           <img class="logo" src="images/rainbowcat.png" alt="logo">
       </div>
@@ -30,15 +26,18 @@
           <li>kontakt</li>
         </ul> -->
       </div>
-    </div>
+    </header>
+  </div>
+
+
+  <div class="container">
 
 <!-- row 2  -->
-
     <div class="row search-component">
-      <div class="col-xs-5">
+      <div class="col-xs-4">
         <span id="filter">Filtruj &#9661;</span>
-        <div class="filter-menu hidden">
 
+        <div class="filter-menu hidden">
           <form name="search" style="position: absolute">
             <span>płeć:</span><br/><hr/>
             <input type="checkbox" name="sex" value="male" checked> panowie<hr/>
@@ -47,29 +46,33 @@
             <input type="checkbox" name="age" value="young" checked> &lt; 1 rok<hr/>
             <input type="checkbox" name="age" value="adult" checked> 1-5 lat<hr/>
             <input type="checkbox" name="age" value="senior" checked> &gt; 5 lat<hr/>
-            <input type="submit" value="szukaj">
+            <input class="button" type="submit" value="szukaj">
           </form>
         </div>
 
       </div>
 
-      <div class="col-xs-7">
-        <div class="sort">
-          <span>sortuj: </span>
-          <form id="sort">
-            <select>
-              <option value="lonely">samotne</option>
-              <option value="oldest">najstarsze</option>
-              <option value="youngest">najmłodsze</option>
-              <option value="popular">popularne</option>
-            </select>
-          </form>
+      <div class="col-xs-8">
+        <div class="row">
+          <div class="col-xs-5">
+            <span>sortuj: </span>
+          </div>
+
+          <div class="col-xs-7">
+            <form id="sort">
+              <select>
+                <option value="lonely">samotne</option>
+                <option value="oldest">najstarsze</option>
+                <option value="youngest">najmłodsze</option>
+                <option value="popular">popularne</option>
+              </select>
+            </form>
+          </div>
+
         </div>
 
       </div>
-
-      </div>
-    </div>
+</div>
 
     <!-- row 3 -->
 
@@ -103,48 +106,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-xs-12 card">
-        <div class="images">
-          <img class="card-img" src="images/heavy.png" alt="heavy">
-          <img class="donate" src="images/donate.png" alt="donate">
-        </div>
-        <div class="char">
-          <ul class="card-list">
-            <li>Mruczuś <span>&#9794;</span></li>
-            <li>wiek: 4 lata</li>
-            <li>special features: heavy breating</li>
-            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button>wincyj</button></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-xs-12 card">
-        <div class="images">
-          <img class="card-img" src="images/heavy.png" alt="heavy">
-          <img class="donate" src="images/donate.png" alt="donate">
-        </div>
-        <div class="char">
-          <ul class="card-list">
-            <li>Mruczuś <span>&#9794;</span></li>
-            <li>wiek: 4 lata</li>
-            <li>special features: heavy breating</li>
-            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button>wincyj</button></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-xs-12 card">
-        <div class="images">
-          <img class="card-img" src="images/heavy.png" alt="heavy">
-          <img class="donate" src="images/donate.png" alt="donate">
-        </div>
-        <div class="char">
-          <ul class="card-list">
-            <li>Mruczuś <span>&#9794;</span></li>
-            <li>wiek: 4 lata</li>
-            <li>special features: heavy breating</li>
-            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button>wincyj</button></li>
-          </ul>
-        </div>
-      </div>
+
       <div class="col-xs-12 card">
         <div class="images">
           <img class="card-img" src="images/heavy.png" alt="heavy">
@@ -160,10 +122,24 @@
         </div>
       </div>
 
+      <div class="col-xs-12 card">
+        <div class="images">
+          <img class="card-img" src="images/heavy.png" alt="heavy">
+          <img class="donate" src="images/donate.png" alt="donate">
+        </div>
+        <div class="char">
+          <ul class="card-list">
+            <li>Mruczuś <span>&#9794;</span></li>
+            <li>wiek: 4 lata</li>
+            <li>special features: heavy breating</li>
+            <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button>wincyj</button></li>
+          </ul>
+        </div>
+      </div>
 
     </div>
 
-
+    </div>
 
 
 <script src="js/jquery.js"></script>
