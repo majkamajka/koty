@@ -55,8 +55,7 @@ html {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 5px;
-  padding-right: 5px;
+
 }
 @media (min-width: 768px) {
   .container {
@@ -316,17 +315,25 @@ html {
   margin: 0;
   padding: 0;
   //border: 1px solid magenta;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-align: justify;
  }
 
-.container.header {
+.container.full-width {
   width: 100%;
+  overflow: visible;
+}
+
+.shadow {
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
 }
 
 
+
 .row {
- //border: 2px solid blue;
+ border: 2px solid blue;
 }
 
 html {
@@ -334,7 +341,7 @@ html {
 }
 
 body {
-    background-color: #f2efe8;
+    background-color: #aacfd0;
 
 }
 
@@ -342,10 +349,11 @@ header {
 
   padding-top: 1vh;
   width: 100%;
-  background-color: #afa9c1;
-  //position: relative;
+  background-color: #1F4E5F;
   h1 {
-    font-size: 10vw;;
+    font-size: 10vw;
+    color: #92a3a7;
+
   }
 }
 
@@ -368,28 +376,32 @@ header {
 }
 
 .search-component {
-  background-color: #c2d4d8;
+  width: 100vw;
+  background-color: #79a8a9;
   padding-top: 1vh;
   padding-bottom: 1vh;
   span {
     font-size: 6vw;
   }
-
-  //position: fixed;
+  // z-index: 1;
+  // position: fixed;
 
 }
 
 .filter-menu {
   position: absolute;
-  background-color: white;
-  height: 65vh;
+  height: 100%;
   margin-left: -10px;
-  width: 50vw;
-  font-size: 1.3em;
+  width: 60vw;
+  font-size: 5.5vw;
   line-height: 2em;
   z-index: 1;
+  display: block;
+
   form {
     width: 100%;
+    background-color: white;
+    color: #1F4E5F;
   }
   span {
     margin-left: 5vw;
@@ -400,23 +412,32 @@ header {
   }
   input[type="submit"] {
     margin-top: 20px;
-    // margin-top: 20px;
-    // font-size: 1em;
-    // padding: 10px;
+    float: right;
+    margin-right: 10vw;
+    margin-bottom: 20px;
   }
 
 }
 
+
+
 #sort {
+  float: right;
+  font-size: 6vw;
   select {
-    font-size: 1.2em;
+    font-size: 5vw;
   }
+}
+
+.results {
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 .card {
   margin-bottom: 5%;
   margin-top: 5%;
-  border: 5px solid white;
+  background-color: #f4f7f7;
   display: flex;
   padding-bottom: 10px;
 }
@@ -456,13 +477,3 @@ header {
     font-size: 3rem;
   }
 }
-
-
-
-
-// .search-result {
-//   background-color: pink;
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-// }

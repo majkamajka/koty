@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>koty</title>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
-  <div class="container header">
+  <div class="container full-width">
     <header class="row">
       <div class="col-xs-4">
           <img class="logo" src="images/rainbowcat.png" alt="logo">
@@ -27,12 +27,7 @@
         </ul> -->
       </div>
     </header>
-  </div>
 
-
-  <div class="container">
-
-<!-- row 2  -->
     <div class="row search-component">
       <div class="col-xs-4">
         <span id="filter">Filtruj &#9661;</span>
@@ -45,39 +40,38 @@
           <span>wiek:</span><br/><hr/>
             <input type="checkbox" name="age" value="young" checked> &lt; 1 rok<hr/>
             <input type="checkbox" name="age" value="adult" checked> 1-5 lat<hr/>
-            <input type="checkbox" name="age" value="senior" checked> &gt; 5 lat<hr/>
+            <input type="checkbox" name="age" value="senior" checked> &gt; 5 lat<hr/><br/>
+          <span>adopcje:</span><br/><hr/>
+            <input type="checkbox" name="adopt" value="false" checked> brak opiekuna<hr/>
+            <input type="checkbox" name="adopt" value="true" checked> zaadoptowane<hr/>
             <input class="button" type="submit" value="szukaj">
           </form>
         </div>
-
       </div>
-
       <div class="col-xs-8">
-        <div class="row">
-          <div class="col-xs-5">
-            <span>sortuj: </span>
-          </div>
-
-          <div class="col-xs-7">
-            <form id="sort">
-              <select>
-                <option value="lonely">samotne</option>
-                <option value="oldest">najstarsze</option>
-                <option value="youngest">najmłodsze</option>
-                <option value="popular">popularne</option>
-              </select>
-            </form>
-          </div>
-
-        </div>
-
+        <form id="sort">
+          <label>sortuj:</label>
+          <select>
+            <option value="lonely">samotne</option>
+            <option value="oldest">najstarsze</option>
+            <option value="youngest">najmłodsze</option>
+            <option value="popular">popularne</option>
+          </select>
+        </form>
       </div>
-</div>
+    </div>
+  </div>
 
-    <!-- row 3 -->
 
-    <div class="row">
-      <div class="col-xs-12 card">
+  <div class="container">
+
+<!-- row 2  -->
+
+
+   <!-- row 3 -->
+
+    <div class="row results">
+      <div class="col-xs-12 card shadow">
         <div class="images">
           <img class="card-img" src="images/heavy.png" alt="heavy">
           <img class="donate" src="images/donate.png" alt="donate">
@@ -141,6 +135,7 @@
 
     </div>
 
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 
 <script src="js/jquery.js"></script>
 <script src="js/out.js"></script>
