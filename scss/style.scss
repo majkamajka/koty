@@ -353,7 +353,7 @@ header {
   width: 80%;
 }
 
-button {
+.button {
   background-color: white;
   border: 2px solid #92a3a7;
   padding: 3px 2px 3px 2px;
@@ -382,7 +382,7 @@ button {
 .filter-menu {
   position: absolute;
   background-color: white;
-  height: 70vh;
+  height: 65vh;
   margin-left: -10px;
   width: 50vw;
   font-size: 1.3em;
@@ -400,8 +400,9 @@ button {
   }
   input[type="submit"] {
     margin-top: 20px;
-    font-size: 1em;
-    padding: 10px;
+    // margin-top: 20px;
+    // font-size: 1em;
+    // padding: 10px;
   }
 
 }
