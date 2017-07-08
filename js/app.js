@@ -19,12 +19,12 @@ firebase.initializeApp(config);
 
   const filter = $("#filter");
   const filterMenu = $(".filter-menu");
+  const filterForm = filterMenu.find("form");
   const header = $("header");
 
-
-
   filter.on("click", () => {
-    filterMenu.toggleClass("hidden");
+    filterMenu.toggleClass("slide");
+    filterForm.toggleClass("slide");
   });
 
 $(window).on("resize", (() => {
