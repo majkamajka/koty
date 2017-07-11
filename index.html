@@ -3,222 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>koty</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&amp;subset=latin-ext" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body>
-  <div class="blocker"></div>
-  <div class="container full-width">
-    <header class="row small-shadow">
 
-      <div class="col-xs-4">
-          <img class="logo" src="images/nose.png" alt="logo">
+
+<body>
+  <div class="container">
+    <header class="row">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 logo">
       </div>
-      <div class="col-xs-7">
-        <h1>Adoptuj</h1>
-      </div>
-      <div class="col-xs-1">
-        <img class="hamburger" src="images/hamburger.png" alt=""/>
-        <div class="hamburger-menu">
-          <ul>
-            <li>o nas</li><hr/>
-            <li>schronisko</li><hr/>
-            <li>nie kupuj, adoptuj</li><hr/>
-            <li>wirtualna adopcja faq</li><hr/>
-            <li>kontakt</li>
-          </ul>
-        </div>
-      </div>
+      <nav class="col-xs-8 col-sm-8 col-md-8 col-lg-8 menu">
+        <ul>
+          <li>WIRTUALNA<br>ADOPCJA</li>
+          <li>NIE KUPUJ<br>- ADOPTUJ</li>
+          <li>FAQ</li>
+          <li>O NAS /<br>KONTAKT</li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="row search-component small-shadow">
-      <div class="col-xs-4">
-        <span id="filter">Filtruj &#9661;</span>
-
-        <div class="filter-menu slide">
-          <form name="search" class="shadow slide">
-            <span>płeć:</span><br/><hr/>
-            <input type="checkbox" name="sex" value="male" checked> panowie<hr/>
-            <input type="checkbox" name="sex" value="female" checked> panie<hr/><br/>
-          <span>wiek:</span><br/><hr/>
-            <input type="checkbox" name="age" value="young" checked> &lt; 1 rok<hr/>
-            <input type="checkbox" name="age" value="adult" checked> 1-5 lat<hr/>
-            <input type="checkbox" name="age" value="senior" checked> &gt; 5 lat<hr/><br/>
-          <span>adopcje:</span><br/><hr/>
-            <input type="checkbox" name="adopt" value="false" checked> brak opiekuna<hr/>
-            <input type="checkbox" name="adopt" value="true" checked> zaadoptowane<hr/>
-            <input class="button shadow-hover" type="submit" value="szukaj">
-          </form>
-        </div>
-      </div>
-      <div class="col-xs-8">
-        <form id="sort">
-          <label>sortuj:</label>
-          <select>
-            <option value="lonely">samotne</option>
-            <option value="oldest">najstarsze</option>
-            <option value="youngest">najmłodsze</option>
-            <option value="popular">popularne</option>
-          </select>
-        </form>
-      </div>
+    <div class="row main">
+      <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <p>Nie masz czasu?</p>
+          <p>Nie masz warunków?</p>
+          <p>Masz serce?</p>
+          <h1>Adoptuj wirtualnie!</h1>
+          <h3>Koty czekają na Twoją pomoc</h3>
+          <div><button class="button">Sprawdź</button></div>
+      </section>
     </div>
+
+
+    <div class="row">
+      <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6 slider">
+          slider ze zdjeciami kotow
+      </section>
+      <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h1>Wirtualna adopcja</h1>
+
+      </section>
+
+    </div>
+
+
+
+
+
+
+    <footer class="row" id="footer">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <p>
+          nazwa<br>
+          ulica<br>
+          adres<br>
+          nip<br>
+          piniądz
+
+        </p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        bla bla koty koty bla bla koty i grzyby
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        find us:
+        <ul>
+          <li>koteria</li>
+          <li>fejs</li>
+          <li>insta</li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        &copy; majkamajka
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        portfolio
+      </div>
+    </footer>
   </div>
 
 
-  <div class="container">
-
-<!-- row 2  -->
-
-
-   <!-- row 3 -->
-
-    <div class="row results">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-hover">
-          <div class="row">
-            <div class="col-xs-4 col-sm-12 images">
-              <img class="card-img" src="images/heavy.png" alt="heavy">
-              <img class="donate" src="images/donate.png" alt="donate">
-<!--              <i class="material-icons">star_border</i>-->
-            </div>
-            <div class="col-xs-8 col-sm-12 char">
-              <ul class="card-list">
-                <li>Mruczuś <span>&#9794;</span></li>
-                <li>wiek: 4 lata</li>
-                <li>special features: heavy breating</li>
-                <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button class="small-shadow">wincyj</button></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-hover">
-          <div class="images">
-            <img class="card-img" src="images/heavy.png" alt="heavy">
-            <img class="donate" src="images/donate.png" alt="donate">
-          </div>
-          <div class="char">
-            <ul class="card-list">
-              <li>Mruczuś <span>&#9794;</span></li>
-              <li>wiek: 4 lata</li>
-              <li>special features: heavy breating</li>
-              <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button class="small-shadow">wincyj</button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-hover">
-          <div class="images">
-            <img class="card-img" src="images/heavy.png" alt="heavy">
-            <img class="donate" src="images/donate.png" alt="donate">
-          </div>
-          <div class="char">
-            <ul class="card-list">
-              <li>Mruczuś <span>&#9794;</span></li>
-              <li>wiek: 4 lata</li>
-              <li>special features: heavy breating</li>
-              <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button class="small-shadow">wincyj</button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-hover">
-          <div class="images">
-            <img class="card-img" src="images/heavy.png" alt="heavy">
-            <img class="donate" src="images/donate.png" alt="donate">
-          </div>
-          <div class="char">
-            <ul class="card-list">
-              <li>Mruczuś <span>&#9794;</span></li>
-              <li>wiek: 4 lata</li>
-              <li>special features: heavy breating</li>
-              <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button class="small-shadow">wincyj</button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-hover">
-          <div class="images">
-            <img class="card-img" src="images/heavy.png" alt="heavy">
-            <img class="donate" src="images/donate.png" alt="donate">
-          </div>
-          <div class="char">
-            <ul class="card-list">
-              <li>Mruczuś <span>&#9794;</span></li>
-              <li>wiek: 4 lata</li>
-              <li>special features: heavy breating</li>
-              <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button class="small-shadow">wincyj</button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-hover">
-          <div class="images">
-            <img class="card-img" src="images/heavy.png" alt="heavy">
-            <img class="donate" src="images/donate.png" alt="donate">
-          </div>
-          <div class="char">
-            <ul class="card-list">
-              <li>Mruczuś <span>&#9794;</span></li>
-              <li>wiek: 4 lata</li>
-              <li>special features: heavy breating</li>
-              <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button class="small-shadow">wincyj</button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-hover">
-          <div class="images">
-            <img class="card-img" src="images/heavy.png" alt="heavy">
-            <img class="donate" src="images/donate.png" alt="donate">
-          </div>
-          <div class="char">
-            <ul class="card-list">
-              <li>Mruczuś <span>&#9794;</span></li>
-              <li>wiek: 4 lata</li>
-              <li>special features: heavy breating</li>
-              <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button class="small-shadow">wincyj</button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card shadow-hover">
-          <div class="images">
-            <img class="card-img" src="images/heavy.png" alt="heavy">
-            <img class="donate" src="images/donate.png" alt="donate">
-          </div>
-          <div class="char">
-            <ul class="card-list">
-              <li>Mruczuś <span>&#9794;</span></li>
-              <li>wiek: 4 lata</li>
-              <li>special features: heavy breating</li>
-              <li>biedny, smutny, głodny, jego pani umarła nagle biedny, smutny, głodny <button class="small-shadow">wincyj</button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    </div>
 
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 

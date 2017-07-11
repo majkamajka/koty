@@ -297,38 +297,15 @@ html {
   display: none !important;
 }
 
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 10vw;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
 
 
 
 
 
-
-
-
+$firstColor: #560764;
+$secondColor: #BB8FA9;
+$thirdColor: #D8CBBB;
+$fourthColor: #EEEEEE;
 
 
 
@@ -338,7 +315,7 @@ html {
   margin: 0;
   padding: 0;
   //border: 1px solid magenta;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: justify;
  }
 
@@ -352,21 +329,94 @@ html {
 }
 
 body {
-   background-color: #aacfd0;
+   background-color: $thirdColor;
 
 }
 
 header {
- padding-top: 1vh;
- width: 100%;
- background-color: #1F4E5F;
- position: relative;
- z-index: 2;
- h1 {
+  padding: 1vh;
+  width: 100%;
+  background-color: $firstColor;
+  @extend .small-shadow;
+  color: $thirdColor;
+  position: relative;
+
+  h1 {
    font-size: 10vw;
-   color: #92a3a7;
- }
+  }
+  nav {
+    font-weight: bold;
+    height: 100px;
+
+
+    ul {
+      float: right;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      align-items: flex-end;
+
+      height: 100px;
+
+      li {
+        display: inline-block;
+        margin-right: 1vw;
+        text-align: center;
+        border-bottom: 5px solid $firstColor;
+        padding: 5px;
+
+        &:hover {
+          border-bottom: 5px solid $secondColor;
+        }
+        &:active {
+          background-color: $secondColor;
+          color: $firstColor;
+        }
+      }
+
+    }
+  }
 }
+
+.logo {
+  height: 100px;
+  background-image: url("/images/cat-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.main {
+  background-image: url("/images/cat-paws.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  color: $firstColor;
+  section {
+    display: inline-block;
+    height: 100%;
+    background-color: rgba($thirdColor, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1, h2, h3 {
+      display: inline-block;
+      text-shadow: 2px 2px $secondColor;
+
+    }
+    button {
+      font-size: 30px;
+      padding: 5px;
+      margin-top: 20px;
+    }
+  }
+
+}
+
 
 .small-shadow {
  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -392,32 +442,33 @@ header {
 .blocker {
   width: 100%;
   height: 100%;
-  background-color: black;
-  opacity: 0.5;
+  background-color: rgba(0,0,0,1);
   position: absolute;
-  z-index: 2;
+  z-index: 200;
   transition: 0.5s;
 }
 
 
-.logo {
-  width: 100%;
+#logo {
+  height: 100px;
 }
 
 .button {
-  background-color: #f4f7f7;
-  border: 2px solid #1F4E5F;
-  padding: 3%;
-  color: #1F4E5F;
-  font-size: 5vw;
+  background-color: $thirdColor;
+  border: 3px solid $firstColor;
+  color: $firstColor;
+  @extend .small-shadow;
+  &:hover {
+    @extend .shadow;
+  }
 }
 
 
-.hamburger {
+#hamburger {
   position: fixed;
   right: 20px;
   top: 10px;
-  z-index: 4;
+  z-index: 202;
 }
 
 .hamburger-menu {
@@ -425,13 +476,15 @@ header {
   right: 0;
   top: 0;
   width: 60vw;
-  background-color: white;
+  background-color: $fourthColor;
   font-size: 5vw;
   line-height: 2em;
-  z-index: 4;
+  z-index: 201;
   transition: 0.5s;
+  overflow: hidden;
 
   ul {
+      overflow: hidden;
     list-style: none;
     li {
       padding-left: 20px;
@@ -442,12 +495,15 @@ header {
 
 .search-component {
   width: 100vw;
-  background-color: #79a8a9;
+  background-color: $secondColor;
   padding-top: 1vh;
   padding-bottom: 1vh;
   position: relative;
   span {
     font-size: 6vw;
+  }
+  .button {
+    font-size: 5vw;
   }
   // z-index: 1;
   // position: fixed;
@@ -465,8 +521,8 @@ header {
   form {
     position: absolute;
     width: 100%;
-    background-color: #f4f7f7;
-    color: #1F4E5F;
+    background-color: $fourthColor;
+    color: $firstColor;
     overflow: hidden;
   }
   span {
@@ -506,7 +562,7 @@ header {
   margin-top: 3vh;
   margin-right: 2vh;
   margin-left: 2vh;
-  background-color: #f4f7f7;
+  background-color: $fourthColor;
   padding-bottom: 10px;
   @extend .small-shadow;
 }
@@ -543,5 +599,16 @@ header {
   font-size: 2rem;
   span {
     font-size: 3rem;
+  }
+}
+
+
+footer {
+  //position: fixed;
+  bottom: 0;
+  background-color: $firstColor;
+  color: $secondColor;
+  div {
+    border: 1px solid red;
   }
 }

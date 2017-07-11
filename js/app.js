@@ -21,16 +21,28 @@ firebase.initializeApp(config);
   const filterMenu = $(".filter-menu");
   const filterForm = filterMenu.find("form");
   const header = $("header");
+  const hamburger = $("#hamburger");
+  const hamburgerMenu = $(".hamburger-menu");
+  const logo = $("#logo");
+  let headerHeight = header.height() + "px";
+  console.log(headerHeight);
+  $(header).find("h1").css("lineHeight", headerHeight);
+  $(logo).css("height" , headerHeight)
 
   filter.on("click", () => {
     filterMenu.toggleClass("slide");
     filterForm.toggleClass("slide");
   });
 
+  hamburger.on("click", () => {
+    hamburgerMenu.toggleClass("slide");
+    console.log("dsda");
+  });
+
 $(window).on("resize", (() => {
-  let headerHeight = header.height() + "px";
-  console.log(headerHeight);
+  headerHeight = header.height() + "px";
   $(header).find("h1").css("lineHeight", headerHeight);
+
 }));
 
 
