@@ -340,15 +340,12 @@ header {
   @extend .small-shadow;
   color: $thirdColor;
   position: relative;
-
   h1 {
    //font-size: 10vw;
   }
   nav {
     font-weight: bold;
     height: 100px;
-
-
     ul {
       float: right;
       list-style: none;
@@ -356,9 +353,7 @@ header {
       justify-content: flex-end;
       flex-direction: row;
       align-items: flex-end;
-
       height: 100px;
-
       li {
         display: inline-block;
         margin-right: 1vw;
@@ -374,7 +369,6 @@ header {
           color: $firstColor;
         }
       }
-
     }
   }
 }
