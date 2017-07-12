@@ -22,7 +22,12 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
-      }
+      },
+      {
+				test:/\.(png|jpe?g|gif)$/,
+				exclude:/node_modules/,
+				loader: 'url-loader?limit=1024&name=/images/[name].[ext]'
+			}
     ]
   }
 }
