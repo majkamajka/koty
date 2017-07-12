@@ -12,7 +12,7 @@ header,
 menu,
 nav,
 section {
-  display: block;
+  //display: block;
 }
 
 * {
@@ -375,14 +375,14 @@ header {
 
 .logo {
   height: 100px;
-  background-image: url("/../images/catlogo.jpg");
+  background-image: url("/images/catlogo.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 
 .main {
-  background-image: url("/../images/catpaws.jpg");
+  background-image: url("/images/catpaws.jpg");
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -414,9 +414,9 @@ header {
 .adopt {
   padding-top: 30px;
   padding-bottom: 30px;
-  height: 50vh;
   color: $firstColor;
   line-height: 24px;
+
   h1, h2 {
     display: inline-block;
     border-bottom: 5px solid $secondColor;
@@ -428,7 +428,7 @@ header {
     font-size: 20px;
   }
   #slider {
-    background-image: url("/../images/catslider.jpg");
+    background-image: url("/images/catslider.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -437,6 +437,7 @@ header {
   #definition.col-sm-12, #definition.col-md-6, #definition.col-lg-6 {
     padding-left: 30px;
     padding-right: 30px;
+    height: auto;
     ul {
       list-style-type: square;
       list-style-position: inside;
@@ -458,8 +459,6 @@ header {
 
 
 footer {
-  //position: fixed;
-  bottom: 0;
   background-color: $firstColor;
   color: $secondColor;
   div {
