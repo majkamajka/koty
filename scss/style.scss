@@ -317,20 +317,39 @@ $fourthColor: #EEEEEE;
   //border: 1px solid magenta;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
+  font-size: 1.6rem;
  }
 
-.row {
-  //border: 2px solid blue;
-}
-
-
- html {
-//font-size: 16px;
+html {
+  font-size: 62.5%;
 }
 
 body {
-   background-color: $thirdColor;
+  color: $firstColor;
+  background-color: $thirdColor;
+}
 
+h1 {
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+.heading {
+  border-bottom: 5px solid $secondColor;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+ul.square-list {
+  list-style-type: square;
+  list-style-position: inside;
 }
 
 header {
@@ -340,9 +359,6 @@ header {
   @extend .small-shadow;
   color: $thirdColor;
   position: relative;
-  h1 {
-   //font-size: 10vw;
-  }
   nav {
     font-weight: bold;
     height: 100px;
@@ -387,7 +403,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   height: 50vh;
-  color: $firstColor;
   section {
     display: inline-block;
     height: 100%;
@@ -398,7 +413,6 @@ header {
     flex-direction: column;
 
     h1, h2, h3 {
-      display: inline-block;
       text-shadow: 2px 2px $secondColor;
 
     }
@@ -411,22 +425,37 @@ header {
 
 }
 
+.about {
+  padding-top: 30px;
+  box-sizing: content-box;
+  .row.flex {
+    display: flex;
+    flex-wrap: wrap;
+    div.flex {
+      display: flex;
+      padding: 10px;
+      .tile {
+        @extend .small-shadow;
+        @extend .shadow-hover;
+        width: 100%;
+        display: inline-block;
+
+      }
+    }
+  }
+
+}
+
+
+
+
+
 .adopt {
   padding-top: 30px;
   padding-bottom: 30px;
-  color: $firstColor;
   line-height: 24px;
   position: relative;
-  h1, h2 {
-    display: inline-block;
-    border-bottom: 5px solid $secondColor;
-    margin-bottom: 10px;
-  }
-  h2 {
-    padding-top: 8px;
-    line-height: 24px;
-    font-size: 20px;
-  }
+
   #slider {
     background-image: url("./images/catslider.jpg");
     background-size:cover;
@@ -434,12 +463,10 @@ header {
     background-position: center;
     height: 50vh;
   }
-  ul {
-    list-style-type: square;
-    list-style-position: inside;
-  }
-  #definition {
+
+  .definition {
     padding-top: 30px;
+
   }
   // @media (min-width: 768px) {
   //   .container {
@@ -447,12 +474,12 @@ header {
   //   }
   // }
   @media (min-width: 992px) {
-    #definition {
+    .definition {
       padding-top: 0;
     }
   }
   @media (min-width: 1200px) {
-    #definition {
+    .definition {
       padding-top: 0;
     }
   }
