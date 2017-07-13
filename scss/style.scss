@@ -314,13 +314,13 @@ $fourthColor: #EEEEEE;
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid magenta;
+  //border: 1px solid magenta;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
  }
 
 .row {
-  border: 2px solid blue;
+  //border: 2px solid blue;
 }
 
 
@@ -473,7 +473,7 @@ footer {
   background-color: $firstColor;
   color: $secondColor;
   div {
-    border: 1px solid red;
+    //border: 1px solid red;
   }
 }
 
