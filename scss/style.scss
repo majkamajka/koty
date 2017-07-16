@@ -302,19 +302,31 @@ html {
 
 
 
-$firstColor: #560764;
-$secondColor: #BB8FA9;
-$thirdColor: #D8CBBB;
-$fourthColor: #EEEEEE;
+// $firstColor: #560764;
+// $secondColor: #BB8FA9;
+// $thirdColor: #D8CBBB;
+// $fourthColor: #EEEEEE;
 
+// $firstColor: #343434;
+// $secondColor: #8E8B82;
+// $thirdColor: #E9DCBE;
+// $fourthColor: #F3F3F3;
+//
+// $firstColor: #757A79;
+// $secondColor: #9BA6A5;
+// $thirdColor: #AECCC6;
+// $fourthColor: #BBE9DB;
 
-
+$firstColor: #1F4E5F;
+$secondColor: #0881A3;
+$thirdColor: #F4E7D3;
+$fourthColor: #F9F8ED;
 
 
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid magenta;
+  //border: 1px solid magenta;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
   font-size: 1.6rem;
@@ -334,7 +346,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
 }
 
 h3 {
@@ -350,6 +362,7 @@ p, ul {
   margin-bottom: 10px;
   display: inline-block;
 }
+
 
 ul.square-list {
   list-style-type: square;
@@ -440,48 +453,6 @@ header {
     flex-wrap: wrap;
     div.flex {
       padding: 10px;
-      .tile {
-        background-color: rgba($fourthColor, 0.7);
-        padding: 20px;
-        @extend .small-shadow;
-        @extend .shadow-hover;
-        width: 100%;
-        display: inline-block;
-        li {
-          text-align: left;
-        }
-        &.img {
-          padding: 0;
-
-          background-size:cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          box-sizing: padding-box;
-
-          .blend {
-            padding-top: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            height: 100%;
-            background-color: rgba($thirdColor, 0.6);
-            p {
-              text-align: center;
-              font-weight: bold;
-              font-size: 1.8rem;
-              line-height: 3rem;
-            }
-            button {
-              font-size: 2rem;
-              padding: 10px;
-              margin-top: 30px;
-              margin-bottom: 30px;
-
-            }
-          }
-        }
-      }
       @media (min-width: 992px) {
         .tile.img {
           background-image: url("./images/catpavement.jpg");
@@ -497,17 +468,63 @@ header {
 }
 
 
+.tile {
+  background-color: rgba($fourthColor, 0.7);
+  padding: 20px;
+  @extend .small-shadow;
+  @extend .shadow-hover;
+  width: 100%;
+  display: inline-block;
+  li {
+    text-align: left;
+  }
+  &.img {
+    padding: 0;
+    background-size:cover;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: padding-box;
+
+    .blend {
+      padding-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      background-color: rgba($thirdColor, 0.6);
+      p {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 3rem;
+      }
+      button {
+        font-size: 2rem;
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
 
 
 
 .adopt {
   margin-top: 30px;
-  line-height: 24px;
+  button {
+    font-size: 2rem;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   .row.flex {
     flex-wrap: wrap;
     div.flex {
       padding: 10px;
-
     }
 
   }
@@ -520,33 +537,17 @@ header {
   background-position: center;
 }
 
-//   #slider {
-//
-//   }
-//
-//   .definition {
-//     padding-top: 30px;
-//
-//   }
-//   @media (min-width: 992px) {
-//     .definition {
-//       padding-top: 0;
-//     }
-//   }
-//
-// }
 
 
 
-
-
-
+.map {
+  padding: 10px;
+}
 
 #map {
-        width: 100%;
-        height: 400px;
-        background-color: grey;
-      }
+  width: 100%;
+  height: 400px;
+}
 
 
 
@@ -560,9 +561,33 @@ header {
 footer {
   background-color: $firstColor;
   color: $secondColor;
-  div {
-    //border: 1px solid red;
+  padding: 15px;
+  ul {
+    list-style: none;
   }
+  li {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    .fa {
+      font-size: 4rem;
+    }
+  }
+  .social-media {
+    width: auto;
+    float: right;
+    p {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    li {
+      display: inline;
+      margin-left: 20px;
+    }
+    a {
+      color: inherit;
+    }
+  }
+
 }
 
 
