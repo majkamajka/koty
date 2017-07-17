@@ -358,11 +358,27 @@ p, ul {
 }
 
 #banner {
+  padding-top: 5px;
+  padding-right: 5px;
+  text-align: right;
   position: absolute;
   z-index: 1000;
   right: 10px;
   top: 10px;
+  width: 200px;
+  height: 200px;
   position: fixed;
+  background-image: url("./images/zoo_koty.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  a {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    height: 30px;
+    width: 160px;
+    bottom: 5px;
+  }
 }
 
 .heading {

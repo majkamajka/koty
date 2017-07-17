@@ -24,10 +24,10 @@ firebase.initializeApp(config);
   const hamburger = $("#hamburger");
   const hamburgerMenu = $(".hamburger-menu");
   const logo = $("#logo");
-  const banner = $("#banner");
+  const bannerX = $("#banner i");
   let headerHeight = header.height() + "px";
-
-  banner.on("click", () => {
+console.log(bannerX);
+  bannerX.on("click", () => {
     $(banner).addClass("hidden");
   });
 
