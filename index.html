@@ -11,6 +11,9 @@
 
 
 <body>
+  <div id="banner">
+    <img src="./images/zoo_koty.jpg" alt="">
+  </div>
   <div class="container">
     <header class="row">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 logo">
@@ -20,7 +23,7 @@
         <ul>
           <li>KOTERIA</li>
           <li>WIRTUALNA<br>ADOPCJA</li>
-          <li>FAQ</li>
+          <li>POMOC</li>
           <li>KONTAKT</li>
         </ul>
       </nav>
@@ -82,14 +85,15 @@
     <section class="row adopt">
       <div class="col-xs-12">
         <div class="row flex">
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 flex definition">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 flex">
             <div class="tile">
-            <h1 class="heading">Wirtualna adopcja</h1>
-            <p>
-              Czy marzysz o adopcji kota i uczynieniu jego (i swojego) życia lepszym, a zdajesz sobie sprawę, że nie masz warunków albo możliwości, żeby fizycznie zaadoptować kociaka?<br/>
-              Rozwiązaniem może być wirtualna adopcja – poprawiasz warunki życia wybranego przez Ciebie kotka poprzez regularne wpłaty na poczet opieki nad nim.
-            </p>
-            <a href="#"><button class="button">Zobacz aktualne</button></a>
+              <h1 class="heading">Wirtualna adopcja</h1>
+              <p>
+                Jeżeli marzysz o adopcji kota i uczynieniu jego (i swojego) życia lepszym, a zdajesz sobie sprawę, że nie masz warunków albo możliwości, żeby fizycznie zaadoptować kociaka, to wirtualna adopcja jest idealnym rozwiązaniem dla Ciebie! Możesz poprawić warunki życia wybranego przez Ciebie kotka poprzez regularne wpłaty na poczet opieki nad nim.
+              </p>
+              <div class="btn-wrapper">
+                <a href="#"><button class="button">Zobacz aktualne</button></a>
+              </div>
             </div>
           </div>
 
@@ -100,7 +104,7 @@
           </div>
 
 
-          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 flex definition">
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 flex virtual-adopt">
             <div class="tile">
               <h2 class="heading">Co zyskujesz?</h2>
               <ul class="square-list">
@@ -117,49 +121,54 @@
     </section>
 
 
-    <section class="row contact">
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 map">
-        <div id="map"></div>
-        <script>
-          function initMap() {
-            var uluru = {lat: -25.363, lng: 131.044};
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 4,
-              center: uluru
-            });
-            var marker = new google.maps.Marker({
-              position: uluru,
-              map: map
-            });
-          }
-        </script>
-        <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzzDPhkjjifJNahdMBvJXuGNm5-ut78U8&callback=initMap">
-        </script>
-      </div>
+    <section class="row another">
+      <div class="col-xs-12">
+        <div class="row flex">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 map flex">
+            <div id="map"></div>
+            <script>
+              function initMap() {
+                var uluru = {lat: -25.363, lng: 131.044};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 4,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+            </script>
+            <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzzDPhkjjifJNahdMBvJXuGNm5-ut78U8&callback=initMap">
+            </script>
+          </div>
 
-      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-        <div class="tile">
-          <h1>Jak możesz jeszcze pomóc?</h1>
-          <ul>
-            <li>bezpośrednia wpłata na rzecz ośrodka [paypal]</li>
-            <li>zakupy na zooplus poprzez reflink [klik]</li>
-            <li>dostarczenie nam karmy, środków czystości etc.</li>
-            <li>bycie domem tymczasowym [więcej info]</li>
-            <li>przekazać 1% podatku</li>
-          </ul>
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 flex">
+            <div class="tile">
+              <h1 class="heading">Jak możesz jeszcze pomóc?</h1>
+              <ul class="square-list">
+                <li>bezpośrednia wpłata na rzecz ośrodka [paypal]</li>
+                <li>zakupy na zooplus poprzez reflink [klik]</li>
+                <li>dostarczenie nam karmy, środków czystości etc.</li>
+                <li>bycie domem tymczasowym [więcej info]</li>
+                <li>przekazać 1% podatku</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 flex">
+            <div class="tile">
+              <ul class="square-list">
+                <li>[paypal link]</li>
+                <li>[zooplus link]</li>
+              </ul>
+            </div>
+          </div>
+
+
         </div>
       </div>
-
-      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-        <div class="tile">
-          <ul class="square-list">
-            <li>[paypal link]</li>
-            <li>[zooplus link]</li>
-          </ul>
-        </div>
-      </div>
-
 
 
     </section>

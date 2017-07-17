@@ -24,7 +24,13 @@ firebase.initializeApp(config);
   const hamburger = $("#hamburger");
   const hamburgerMenu = $(".hamburger-menu");
   const logo = $("#logo");
+  const banner = $("#banner");
   let headerHeight = header.height() + "px";
+
+  banner.on("click", () => {
+    $(banner).addClass("hidden");
+  });
+
   console.log(headerHeight);
   $(header).find("h1").css("lineHeight", headerHeight);
   $(logo).css("height" , headerHeight)
