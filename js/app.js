@@ -2,55 +2,49 @@ import "../scss/style.scss";
 
 $(function() {
 
-var firebase = require("firebase/app");
-require("firebase/auth");
-require("firebase/database");
+// var firebase = require("firebase/app");
+// require("firebase/auth");
+// require("firebase/database");
+//
+//
+// var config = {
+//   apiKey: "AIzaSyBD5bKLZyfDUTHWSQrMdOU6Z6tsreYaak4",
+//   authDomain: "koty-c79fd.firebaseapp.com",
+//   databaseURL: "https://koty-c79fd.firebaseio.com",
+//   projectId: "koty-c79fd",
+//   storageBucket: "koty-c79fd.appspot.com",
+//   messagingSenderId: "511321533732"
+// };
+// firebase.initializeApp(config);
 
 
-var config = {
-  apiKey: "AIzaSyBD5bKLZyfDUTHWSQrMdOU6Z6tsreYaak4",
-  authDomain: "koty-c79fd.firebaseapp.com",
-  databaseURL: "https://koty-c79fd.firebaseio.com",
-  projectId: "koty-c79fd",
-  storageBucket: "koty-c79fd.appspot.com",
-  messagingSenderId: "511321533732"
-};
-firebase.initializeApp(config);
+  // filter.on("click", () => {
+  //   filterMenu.toggleClass("slide");
+  //   filterForm.toggleClass("slide");
+  // });
 
-  const filter = $("#filter");
-  const filterMenu = $(".filter-menu");
-  const filterForm = filterMenu.find("form");
-  const header = $("header");
-  const hamburger = $("#hamburger");
-  const hamburgerMenu = $(".hamburger-menu");
-  const logo = $("#logo");
-  const bannerX = $("#banner i");
-  let headerHeight = header.height() + "px";
-console.log(bannerX);
+
+  const bannerX = $("#banner i"); //index.html banner
+  const filterClick = $(".filter-click");
+  let filterArrow = $(filterClick).find("i");
+  //const filterMenu = $()
+  console.log(filterArrow);
+
+
+
   bannerX.on("click", () => {
     $(banner).addClass("hidden");
   });
 
-  console.log(headerHeight);
-  $(header).find("h1").css("lineHeight", headerHeight);
-  $(logo).css("height" , headerHeight)
+  filterClick.on("click", () => {
+    if ($(filterArrow).hasClass("fa-arrow-circle-down")) {
+      $(filterArrow).removeClass("fa-arrow-circle-down").addClass("fa-arrow-circle-up");
 
-  filter.on("click", () => {
-    filterMenu.toggleClass("slide");
-    filterForm.toggleClass("slide");
-  });
+    } else {
+      $(filterArrow).removeClass("fa-arrow-circle-up").addClass("fa-arrow-circle-down");
+    }
 
-  hamburger.on("click", () => {
-    hamburgerMenu.toggleClass("slide");
-    console.log("dsda");
-  });
-
-$(window).on("resize", (() => {
-  headerHeight = header.height() + "px";
-  $(header).find("h1").css("lineHeight", headerHeight);
-
-}));
-
+  })
 
 
 
