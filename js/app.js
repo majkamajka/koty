@@ -26,10 +26,9 @@ $(function() {
 
   const bannerX = $("#banner i"); //index.html banner
   const filterClick = $(".filter-click");
-  let filterArrow = $(filterClick).find("i");
-  //const filterMenu = $()
-  console.log(filterArrow);
-
+  const filterArrow = $(filterClick).find("i");
+  const filterMenu = $("#filter-menu");
+  const blackBlend = $(".black-blend");
 
 
   bannerX.on("click", () => {
@@ -37,9 +36,11 @@ $(function() {
   });
 
   filterClick.on("click", () => {
+    //ogarnąć animacje! .slideToggle()
+    $(filterMenu).toggleClass("hidden");
+    $(blackBlend).toggleClass("hidden");
     if ($(filterArrow).hasClass("fa-arrow-circle-down")) {
       $(filterArrow).removeClass("fa-arrow-circle-down").addClass("fa-arrow-circle-up");
-
     } else {
       $(filterArrow).removeClass("fa-arrow-circle-up").addClass("fa-arrow-circle-down");
     }
