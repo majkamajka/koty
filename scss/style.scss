@@ -666,7 +666,7 @@ footer {
 // --------------- adoptions -----------------//
 
 * {
-//  border: 1px solid magenta;
+  //border: 1px solid magenta;
 }
 
 #selection-bar {
@@ -723,6 +723,7 @@ footer {
 }
 
 #filter-menu-desktop {
+  display: none;
   @extend .small-shadow;
   color: $firstColor;
   background-color: $fourthColor;
@@ -746,6 +747,10 @@ footer {
       margin-bottom: 20px;
     }
   }
+  @media (min-width: 992px) {
+    display: block;
+  }
+
 }
 
 #results {
