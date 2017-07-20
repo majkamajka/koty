@@ -19,44 +19,89 @@ var config = {
 
 let fb = firebase.initializeApp(config);
 let db = fb.database();
-// let dbLength = fb.database().length;
-// // jak policzyć length, które używam w forze?
-// db.ref().on("value", (snap)=>{
-//   console.log(db);
-// });
-
 
 const resultsDiv = $("#results");
 
-for (var i = 1; i < 6; i++) {
-  db.ref(i).on("value", (snap)=>{
-      let name = snap.val().name;
-      let ageMths = snap.val().ageMonths;
-      let features = snap.val().features;
-      let desc = snap.val().desc.substring(0, 250) + "...";
-      let photoLink = snap.val().photo;
-      let catContainer = $("<div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'></div>");
-      let catCard = $('<div class="tile cat-card"></div>');
-      let cardImgContainer = $('<div class="thumbnail"></div>')
-      let cardImg = $('<img>');
-      let cardName = $('<h1>');
-      let cardKeywords = $('<p id="keywords"></p>');
-      let cardDesc = $('<p class="cat-short-desc"></p');
-      let cardMoreBtn = $('<button class="button more">więcej</button>');
+db.ref().on("value", (snap) => {
+  let dbLength = snap.val().length; //check database length
 
-      $(cardImgContainer).append(cardImg);
-      $(cardImg).attr("src", photoLink);
-      $(cardName).text(name);
-      $(cardKeywords).text(features);
-      $(cardDesc).text(desc);
+  for (var i = 1; i < dbLength; i++) {
+    db.ref(i).on("value", (snap)=>{
+        let name = snap.val().name;
+        let ageMths = snap.val().ageMonths;
+        let features = snap.val().features;
+        let desc = snap.val().desc.substring(0, 250) + "...";
+        let photoLink = snap.val().photo;
+        let sex = snap.val().sex;
 
-      $(resultsDiv).append(catContainer);
-      $(catContainer).append(catCard);
-      $(catCard).append(cardImgContainer).append(cardName).append(cardKeywords).append(cardDesc).append(cardMoreBtn);
 
-  });
-}
+        let catContainer = $("<div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'></div>");
+        let catCard = $('<div class="tile cat-card"></div>');
+        let cardImgContainer = $('<div class="thumbnail"></div>')
+        let cardImg = $('<img class="cat-img">');
+        let cardName = $('<h1>');
+        let catSex = $('<i class="fa" aria-hidden="true"></i>')
+        let cardKeywords = $('<p id="keywords"></p>');
+        let cardDesc = $('<p class="cat-short-desc"></p');
+        let cardMoreBtn = $('<button class="button more">więcej</button>');
+        let cardPaypalBtn = snap.val().paypal;
 
+        $(cardImgContainer).append(cardImg);
+        $(cardImg).attr("src", photoLink);
+        $(cardName).text(name + " ");
+
+        if (sex === "m") {
+          $(catSex).addClass("fa-mars");
+        } else {
+          $(catSex).addClass("fa-venus");
+        };
+        $(cardName).append(catSex);
+        $(cardKeywords).text(features);
+        $(cardDesc).text(desc);
+
+        $(resultsDiv).append(catContainer);
+        $(catContainer).append(catCard);
+        $(catCard).append(cardImgContainer).append(cardName).append(cardKeywords).append(cardDesc).append(cardMoreBtn).append(cardPaypalBtn);
+
+    });
+  }
+});
+
+
+
+
+//
+// let _catCards =  function() {
+//   db.ref().on("value", (snap)=>{
+//     for (var i = 1; i < 6; i++) {
+//       let name = snap.val().name;
+//       let ageMths = snap.val().ageMonths;
+//       let features = snap.val().features;
+//       let desc = snap.val().desc.substring(0, 250) + "...";
+//       let photoLink = snap.val().photo;
+//       let catContainer = $("<div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'></div>");
+//       let catCard = $('<div class="tile cat-card"></div>');
+//       let cardImgContainer = $('<div class="thumbnail"></div>')
+//       let cardImg = $('<img>');
+//       let cardName = $('<h1>');
+//       let cardKeywords = $('<p id="keywords"></p>');
+//       let cardDesc = $('<p class="cat-short-desc"></p');
+//       let cardMoreBtn = $('<button class="button more">więcej</button>');
+//
+//       $(cardImgContainer).append(cardImg);
+//       $(cardImg).attr("src", photoLink);
+//       $(cardName).text(name);
+//       $(cardKeywords).text(features);
+//       $(cardDesc).text(desc);
+//
+//       $(resultsDiv).append(catContainer);
+//       $(catContainer).append(catCard);
+//       $(catCard).append(cardImgContainer).append(cardName).append(cardKeywords).append(cardDesc).append(cardMoreBtn);
+//     }
+//
+//   });
+//
+//       });
 
 
 
