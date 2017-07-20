@@ -714,6 +714,12 @@ footer {
   }
 }
 
+.filter-click {
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
 .black-blend {
   position: absolute;
   background-color: rgba(black,0.3);
@@ -763,20 +769,18 @@ footer {
     img {
       width: 100%;
     }
-    .cat-short-desc {
-      p {
-        font-size: 1.4rem;
-        line-height: 1.9rem;
+    p {
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+    }
+    button {
+      padding: 5px 3px 5px 3px;
+      margin: 5px 10px 5px 10px;
+      &.more {
+        float: left;
       }
-      button {
-        padding: 5px 3px 5px 3px;
-        margin: 5px 10px 5px 10px;
-        &.more {
-          float: left;
-        }
-        &.donate {
-          float: right;
-        }
+      &.donate {
+        float: right;
       }
     }
   }
