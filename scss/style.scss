@@ -761,13 +761,46 @@ footer {
 
 #results {
   padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
   .tile {
-    padding: 5px;
+    padding: 10px;
+    height: 98%;
   }
   .cat-card {
     margin-bottom: 10px;
+    .thumbnail {
+      @media (min-width: 768px) {
+        height: 340px;
+        width: 340px;
+        overflow: hidden;
+        position: relative;
+      }
+      @media (min-width: 992px) {
+        height: 236px;
+        width: 236px;
+        overflow: hidden;
+        position: relative;
+      }
+      @media (min-width: 1200px) {
+        height: 211px;
+        width: 211px;
+        overflow: hidden;
+        position: relative;
+      }
+    }
     img {
       width: 100%;
+      @media (min-width: 768px) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        width: auto;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+      }
     }
     p {
       font-size: 1.4rem;
@@ -777,15 +810,34 @@ footer {
       padding: 5px 3px 5px 3px;
       margin: 5px 10px 5px 10px;
       &.more {
-        float: left;
-      }
-      &.donate {
         float: right;
       }
+      // &.donate {
+      //   float: right;
+      // }
     }
   }
 }
-
+.thumbnail {
+  @media (min-width: 768px) {
+    height: 340px;
+    width: 340px;
+    overflow: hidden;
+    position: relative;
+  }
+  @media (min-width: 992px) {
+    height: 236px;
+    width: 236px;
+    overflow: hidden;
+    position: relative;
+  }
+  @media (min-width: 1200px) {
+    height: 211px;
+    width: 211px;
+    overflow: hidden;
+    position: relative;
+  }
+}
 
 
 

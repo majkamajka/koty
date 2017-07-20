@@ -19,10 +19,16 @@ var config = {
 
 let fb = firebase.initializeApp(config);
 let db = fb.database();
-const resultsDiv = $("#results");
-console.log(resultsDiv);
+// let dbLength = fb.database().length;
+// // jak policzyć length, które używam w forze?
+// db.ref().on("value", (snap)=>{
+//   console.log(db);
+// });
 
-for (var i = 1; i < 5; i++) {
+
+const resultsDiv = $("#results");
+
+for (var i = 1; i < 6; i++) {
   db.ref(i).on("value", (snap)=>{
       let name = snap.val().name;
       let ageMths = snap.val().ageMonths;
@@ -31,12 +37,14 @@ for (var i = 1; i < 5; i++) {
       let photoLink = snap.val().photo;
       let catContainer = $("<div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'></div>");
       let catCard = $('<div class="tile cat-card"></div>');
+      let cardImgContainer = $('<div class="thumbnail"></div>')
       let cardImg = $('<img>');
       let cardName = $('<h1>');
       let cardKeywords = $('<p id="keywords"></p>');
       let cardDesc = $('<p class="cat-short-desc"></p');
       let cardMoreBtn = $('<button class="button more">więcej</button>');
 
+      $(cardImgContainer).append(cardImg);
       $(cardImg).attr("src", photoLink);
       $(cardName).text(name);
       $(cardKeywords).text(features);
@@ -44,7 +52,7 @@ for (var i = 1; i < 5; i++) {
 
       $(resultsDiv).append(catContainer);
       $(catContainer).append(catCard);
-      $(catCard).append(cardImg).append(cardName).append(cardKeywords).append(cardDesc).append(cardMoreBtn);
+      $(catCard).append(cardImgContainer).append(cardName).append(cardKeywords).append(cardDesc).append(cardMoreBtn);
 
   });
 }
