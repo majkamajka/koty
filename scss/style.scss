@@ -843,13 +843,16 @@ footer {
 #cat-full-profile {
   margin-top: 10px;
   .photo-thumbnails {
-    height: 200px;
+    margin-bottom: 20px;
     .gallery-thumbnail {
       display: inline-block;
+      background-color: $fourthColor;
+      padding: 5px;
+      @extend .small-shadow, .shadow-hover;
       .cont {
         overflow: hidden;
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
         position: relative;
         img {
           height: 100%;
@@ -866,7 +869,14 @@ footer {
           }
         }
       }
-
+    }
+  }
+  #big-photo {
+    background-color: $fourthColor;
+    padding: 10px;
+    @extend .shadow;
+    img {
+      width: 100%;
     }
   }
 
@@ -880,18 +890,13 @@ footer {
       margin-bottom: 20px;
       ol {
         list-style-position: inside;
-
         li {
           font-weight: bold;
           padding-bottom: 20px;
           form {
             margin-top: 10px;
             margin-left: 20px;
-            input {
-              font-weight: normal;
-            }
           }
-
           .button {
             margin-left: 20px;
             margin-top: 10px;
@@ -900,11 +905,5 @@ footer {
         }
       }
     }
-  }
-}
-
-#big-photo {
-  img {
-      width: 100%;
   }
 }
