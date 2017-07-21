@@ -779,14 +779,10 @@ footer {
       @media (min-width: 992px) {
         height: 236px;
         width: 236px;
-        overflow: hidden;
-        position: relative;
       }
       @media (min-width: 1200px) {
         height: 211px;
         width: 211px;
-        overflow: hidden;
-        position: relative;
       }
     }
     .cat-img {
@@ -842,161 +838,73 @@ footer {
 
 
 
+/* cat full profile */
 
+#cat-full-profile {
+  margin-top: 10px;
+  .photo-thumbnails {
+    height: 200px;
+    .gallery-thumbnail {
+      display: inline-block;
+      .cont {
+        overflow: hidden;
+        height: 150px;
+        width: 150px;
+        position: relative;
+        img {
+          height: 100%;
+          width: auto;
+          @media (min-width: 768px) {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 100%;
+            width: auto;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+          }
+        }
+      }
 
+    }
+  }
 
+  .cat-full-info {
+    padding: 10px;
+    div {
+      padding: 10px;
+      background-color: $fourthColor;
+      @extend .small-shadow, .shadow-hover;
+      padding-bottom: 30px;
+      margin-bottom: 20px;
+      ol {
+        list-style-position: inside;
 
+        li {
+          font-weight: bold;
+          padding-bottom: 20px;
+          form {
+            margin-top: 10px;
+            margin-left: 20px;
+            input {
+              font-weight: normal;
+            }
+          }
 
-//
-// #logo {
-//   height: 100px;
-// }
-//
+          .button {
+            margin-left: 20px;
+            margin-top: 10px;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
+}
 
-//
-//
-// #hamburger {
-//   position: fixed;
-//   right: 20px;
-//   top: 10px;
-//   z-index: 202;
-// }
-//
-// .hamburger-menu {
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-//   width: 60vw;
-//   background-color: $fourthColor;
-//   font-size: 5vw;
-//   line-height: 2em;
-//   z-index: 201;
-//   transition: 0.5s;
-//   overflow: hidden;
-//
-//   ul {
-//       overflow: hidden;
-//     list-style: none;
-//     li {
-//       padding-left: 20px;
-//     }
-//
-//   }
-// }
-//
-// .search-component {
-//   width: 100vw;
-//   background-color: $secondColor;
-//   padding-top: 1vh;
-//   padding-bottom: 1vh;
-//   position: relative;
-//   span {
-//     font-size: 6vw;
-//   }
-//   .button {
-//     font-size: 5vw;
-//   }
-//   // z-index: 1;
-//   // position: fixed;
-//
-// }
-//
-// .filter-menu {
-//   position: absolute;
-//   margin-left: -10px;
-//   width: 60vw;
-//   font-size: 5vw;
-//   line-height: 2em;
-//   z-index: 1;
-//   transition: 0.5s;
-//   form {
-//     position: absolute;
-//     width: 100%;
-//     background-color: $fourthColor;
-//     color: $firstColor;
-//     overflow: hidden;
-//   }
-//   span {
-//     margin-left: 5vw;
-//     font-weight: bold;
-//   }
-//   input {
-//     margin-left: 10vw;
-//   }
-//   input[type="submit"] {
-//     margin-top: 20px;
-//     float: right;
-//     margin-right: 10vw;
-//     margin-bottom: 20px;
-//   }
-//
-// }
-//
-// .slide {
-//   width: 0;
-// }
-//
-//
-// #sort {
-//   float: right;
-//   font-size: 6vw;
-//   select {
-//     font-size: 5vw;
-//   }
-// }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// .results {
-//
-// }
-//
-// .card {
-//   margin-top: 3vh;
-//   margin-right: 2vh;
-//   margin-left: 2vh;
-//   background-color: $fourthColor;
-//   padding-bottom: 10px;
-//   @extend .small-shadow;
-// }
-//
-// .images {
-//
-//   .card-img {
-//     width: 100%;
-//     margin-bottom: 10px;
-//   }
-//   .donate {
-//     width:30%;
-//     margin-bottom: 10px;
-//   }
-//
-// }
-//
-// .char {
-//   //width: 70%;
-// }
-//
-//
-// .card-list {
-//   width: 100%;
-//   padding-left: 5%;
-//   list-style: none;
-//   li {
-//     margin-top: 5px;
-//   }
-// }
-//
-// .card-list li:first-child {
-//   margin-top: 0;
-//   font-size: 2rem;
-//   span {
-//     font-size: 3rem;
-//   }
-// }
+#big-photo {
+  img {
+      width: 100%;
+  }
+}

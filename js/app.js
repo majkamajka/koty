@@ -68,42 +68,7 @@ db.ref().on("value", (snap) => {
 });
 
 
-
-
-//
-// let _catCards =  function() {
-//   db.ref().on("value", (snap)=>{
-//     for (var i = 1; i < 6; i++) {
-//       let name = snap.val().name;
-//       let ageMths = snap.val().ageMonths;
-//       let features = snap.val().features;
-//       let desc = snap.val().desc.substring(0, 250) + "...";
-//       let photoLink = snap.val().photo;
-//       let catContainer = $("<div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'></div>");
-//       let catCard = $('<div class="tile cat-card"></div>');
-//       let cardImgContainer = $('<div class="thumbnail"></div>')
-//       let cardImg = $('<img>');
-//       let cardName = $('<h1>');
-//       let cardKeywords = $('<p id="keywords"></p>');
-//       let cardDesc = $('<p class="cat-short-desc"></p');
-//       let cardMoreBtn = $('<button class="button more">więcej</button>');
-//
-//       $(cardImgContainer).append(cardImg);
-//       $(cardImg).attr("src", photoLink);
-//       $(cardName).text(name);
-//       $(cardKeywords).text(features);
-//       $(cardDesc).text(desc);
-//
-//       $(resultsDiv).append(catContainer);
-//       $(catContainer).append(catCard);
-//       $(catCard).append(cardImgContainer).append(cardName).append(cardKeywords).append(cardDesc).append(cardMoreBtn);
-//     }
-//
-//   });
-//
-//       });
-
-
+ // main page & adoptions page
 
   const bannerX = $("#banner i"); //index.html banner
   const filterClick = $(".filter-click");
@@ -126,13 +91,36 @@ db.ref().on("value", (snap) => {
     } else {
       $(filterArrow).removeClass("fa-arrow-circle-up").addClass("fa-arrow-circle-down");
     }
-
   });
 
 
+  // cat profile page
+  // $(document).ready(function() {
+  //
+  //   $(".galImg").click(function() {
+  //     var image = $(this).attr("rel");
+  //     $('#feature').fadeOut('slow');
+  //     $('#feature').html('<img src="' + image + '"/>');
+  //     $('#feature').fadeIn('slow');
+  //   });
+  // });
 
 
 
+
+
+
+
+
+
+  let thumbnails = $('.photo-thumbnails .gallery-thumbnail');
+
+    $(thumbnails).click(function() {
+        $('.photo-thumbnails .gallery-thumbnail').removeClass('current');
+        $(this).addClass('current');
+        var path = $(this).find('img').attr('src');
+        $('#big-photo img').attr('src', path);
+    });
 
 
 
