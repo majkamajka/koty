@@ -14,10 +14,6 @@ import "../scss/style.scss";
 
 
 
-
-
-
-
 class App extends React.Component {
   render () {
     return (
@@ -27,6 +23,7 @@ class App extends React.Component {
         <SortBar />
 
         <div className="black-blend hidden"></div>
+
         <section className="row" id="results-container">
 
           <FilterMenu />
@@ -38,8 +35,8 @@ class App extends React.Component {
 
       </div>
     )
-  }
-}
+  };
+};
 
 
 

@@ -12,31 +12,48 @@
 
 <body>
 
-    <div id="banner">
+    <!--<div id="banner">
       <i class="fa fa-times" aria-hidden="true"></i>
       <a href="http://ad.zanox.com/ppc/?40970674C304287426T"><div></div>  </a>
-    </div>
+    </div>-->
 
   <div class="container">
     <header class="row">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 logo">
 
       </div>
+
       <nav class="col-xs-8 col-sm-8 col-md-8 col-lg-8 menu">
-        <ul>
-          <li>KOTERIA</li>
-          <li>WIRTUALNA<br>ADOPCJA</li>
-          <li>POMOC</li>
-          <li>KONTAKT</li>
+        <ul id="menu-desktop">
+          <a href="#about"><li>KOTERIA</li></a>
+          <a href="#virtual-adoption"><li>WIRTUALNA<br>ADOPCJA</li></a>
+          <a href="#other-help"><li>POMOC</li></a>
+          <a href="#contact"><li>KONTAKT</li></a>
         </ul>
+
+        <div class="hamburger">
+          <div id="menuToggle">
+            <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+            <ul id="menu">
+              <a href="#about"><li>Koteria</li></a>
+              <a href="#virtual-adoption"><li>Wirtualna adopcja</li></a>
+              <a href="#other-help"><li>Pomoc</li></a>
+              <a href="#contact"><li>Kontakt</li></a>
+            </ul>
+          </div>
+        </div>
+
       </nav>
     </header>
 
     <div class="row main">
-      <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-          <p>Nie masz czasu?</p>
-          <p>Nie masz warunków?</p>
-          <p>Masz serce?</p>
+      <section class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <p>Nie masz czasu?<br/>
+          Nie masz warunków?<br/>
+          Masz serce?</p>
           <h1>Adoptuj wirtualnie!</h1>
           <h3>Koty czekają na Twoją pomoc</h3>
           <div><a href="adoptions.html"><button class="button">Sprawdź</button></a></div>
@@ -44,7 +61,7 @@
     </div>
 
 
-    <section class="row about">
+    <section class="row about" id="about">
       <div class="col-xs-12">
         <div class="row flex">
 
@@ -62,7 +79,7 @@
             </div>
           </div>
 
-          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 flex">
+          <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5 flex">
             <div class="tile">
               <h2 class="heading">Do adopcji</h2>
               <p>
@@ -71,7 +88,7 @@
             </div>
           </div>
 
-          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 flex">
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 flex">
             <div class="tile img">
               <div class="blend">
                 <p>Więcej informacji o adopcji:</p>
@@ -85,7 +102,7 @@
 
 
 
-    <section class="row adopt">
+    <section class="row adopt" id="virtual-adoption">
       <div class="col-xs-12">
         <div class="row flex">
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 flex">
@@ -124,32 +141,21 @@
     </section>
 
 
-    <section class="row another">
+    <section class="row another" id="other-help">
       <div class="col-xs-12">
         <div class="row flex">
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 map flex">
-            <div id="map"></div>
-            <script>
-              function initMap() {
-                var koteria = {lat: 52.2524536, lng: 21.081486700000028};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 13,
-                  center: koteria
-                });
-                var marker = new google.maps.Marker({
-                  position: koteria,
-                  map: map
-                });
-              }
-            </script>
-            <script async defer
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzzDPhkjjifJNahdMBvJXuGNm5-ut78U8&callback=initMap">
-            </script>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 flex">
+            <div class="tile">
+              <h1 class="heading">sdfsdfsd</h1>
+              <p>
+                rabią sporu. I Wojski ubierze który teraz jeśli zechcesz, i on może też same obicia z kim był, lecz każdemu inna. Bo nie był żonaty a on zmienił się echem i widać z postawy lecz latem nic to mówiąc, że zamczysko wzięliśmy w porządku pilnował. Bo nie mógł. Jak mnie radą do pocałowani i krwi tonęła, gdy
+              </p>
+            </div>
           </div>
 
           <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 flex">
             <div class="tile">
-              <h1 class="heading">Jak możesz jeszcze pomóc?</h1>
+              <h1 class="heading">Jak możesz pomóc?</h1>
               <ul class="square-list">
                 <li>bezpośrednia wpłata na rzecz ośrodka [paypal]</li>
                 <li>zakupy na zooplus poprzez reflink [klik]</li>
@@ -173,6 +179,62 @@
         </div>
       </div>
 
+
+    </section>
+
+    <section class="row" id="contact">
+
+      <div class="col-xs-12">
+        <div class="row flex">
+
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 flex">
+            <div class="tile">
+              <img src="images/koteria-budynek.png" alt=""/>
+              <p>wejście do budynku</p>
+            </div>
+          </div>
+
+
+
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 flex">
+            <div id="map"></div>
+            <script>
+              function initMap() {
+                var koteria = {lat: 52.2524536, lng: 21.081486700000028};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 13,
+                  center: koteria
+                });
+                var marker = new google.maps.Marker({
+                  position: koteria,
+                  map: map
+                });
+              }
+            </script>
+            <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzzDPhkjjifJNahdMBvJXuGNm5-ut78U8&callback=initMap">
+            </script>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 flex">
+            <div class="tile">
+              <h1 class="heading">Kontakt</h1>
+                <p>
+                  <strong>Ośrodek KOTERIA</strong><br/>
+                  ul. Chrzanowskiego 13<br/>
+                  04-392 Warszawa<br/>
+                  koteria@argos.org.pl<br/>
+                  tel. 535 870 225
+                <br/><br/>
+                  <strong>Zapraszamy:</strong><br/>
+                  pon-pt: 9.00 - 19.00;<br/>
+                  sob: 9.00 - 13.00
+                </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
     </section>
 

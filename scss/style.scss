@@ -404,7 +404,7 @@ p, ul {
   position: absolute;
   z-index: 1000;
   right: 10px;
-  top: 10px;
+  top: 100px;
   width: 200px;
   height: 200px;
   position: fixed;
@@ -434,7 +434,7 @@ ul.square-list {
 }
 
 header {
-  padding: 1vh;
+  padding: 10px;
   width: 100%;
   background-color: $firstColor;
   @extend .small-shadow;
@@ -443,14 +443,20 @@ header {
   nav {
     font-weight: bold;
     height: 100px;
-    ul {
+    ul#menu-desktop {
       float: right;
       list-style: none;
-      display: flex;
+      display: none;
       justify-content: flex-end;
       flex-direction: row;
       align-items: flex-end;
       height: 100px;
+      @media (min-width: 768px) {
+        display: flex;
+      }
+      a {
+        color: $thirdColor;
+      }
       li {
         display: inline-block;
         margin-right: 1vw;
@@ -469,6 +475,114 @@ header {
     }
   }
 }
+
+.hamburger {
+  position: fixed;
+  right: 0px;
+  top: 0;
+  z-index: 999;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+#menuToggle{
+  overflow: hidden;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 300px;
+  padding-left: 300px;
+  float: right;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  a {
+   text-decoration: none;
+   color: $firstColor;
+   transition: color 0.3s ease;
+   &:hover {
+     color: $secondColor;
+   }
+  }
+   input {
+     right: 20px;
+     top: 20px;
+     display: block;
+     width: 40px;
+     height: 32px;
+     position: absolute;
+
+     cursor: pointer;
+
+     opacity: 0.0; /* hide this */
+     z-index: 2; /* and place it over the hamburger */
+
+     -webkit-touch-callout: none;
+   }
+
+   input:checked ~ span {
+     opacity: 1;
+     transform: rotate(45deg) translate(-2px, -1px);
+     background: $firstColor;
+   }
+   input:checked ~ span:nth-last-child(3) {
+     opacity: 0;
+     transform: rotate(0deg) scale(0.2, 0.2);
+   }
+   input:checked ~ span:nth-last-child(2) {
+     opacity: 1;
+     transform: rotate(-45deg) translate(0, -1px);
+   }
+   input:checked ~ ul {
+     transform: scale(1.0, 1.0);
+     opacity: 1;
+   }
+
+   span {
+     right: 55px;
+     top: 25px;
+     display: block;
+     width: 33px;
+     height: 4px;
+     margin-bottom: 5px;
+     position: relative;
+     background: $secondColor;
+     border-radius: 3px;
+     z-index: 1;
+     transform-origin: 4px 0px;
+     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                 opacity 0.55s ease;
+    &:first-child {
+      transform-origin: 0% 0%;
+      padding-top: 20px;
+    }
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+   }
+}
+
+#menu {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  width: 300px;
+  top: -60px;
+  right: 274px;
+  padding: 20px;
+  padding-top: 100px;
+  background: $fourthColor;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 100% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+}
+
 
 .logo {
   height: 100px;
@@ -492,10 +606,19 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    p {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 0px 0px 15px $fourthColor;
+      margin-bottom: 20px;
+    }
     h1, h2, h3 {
-      text-shadow: 2px 2px $secondColor;
-
+      text-shadow: 0px 0px 15px $fourthColor;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 2.8rem;
     }
     button {
       font-size: 30px;
@@ -619,10 +742,18 @@ header {
   }
 }
 
+
+#contact {
+  .row.flex {
+    flex-wrap: wrap;
+  }
+  img {
+    width: 100%;
+  }
+}
 .map {
   padding: 10px;
 }
-
 #map {
   width: 100%;
   min-height: 300px;
