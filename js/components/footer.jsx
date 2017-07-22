@@ -4,8 +4,9 @@ import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-r
 class Footer extends React.Component {
   render () {
     return (
+      <div>
       <footer className="row" id="footer">
-        <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div className="col-xs-7 col-sm-7 col-md-6 col-lg-6">
           <ul>
             <li>Ośrodek KOTERIA</li>
             <li>ul. Chrzanowskiego 13</li>
@@ -14,10 +15,8 @@ class Footer extends React.Component {
             <li>funcacja ARGOS:<br/>Bank PEKAO SA 47 1240 6133 1111 0000 4808 5915</li>
           </ul>
         </div>
-        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-          dfsdf
-        </div>
-        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 social-media">
+
+        <div className="col-xs-5 col-sm-5 col-md-6 col-lg-6 social-media">
           <p>Koteria:</p>
           <ul>
             <li><a href="https://www.facebook.com/KoteriaOrgPl/?ref=br_rs"><i className="fa fa-facebook-official" aria-hidden="true"></i></a></li>
@@ -26,6 +25,16 @@ class Footer extends React.Component {
           </ul>
         </div>
       </footer>
+
+      <div className="row">
+        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          &copy; majkamajka
+        </div>
+        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          portfolio
+        </div>
+      </div>
+    </div>
     )
   };
 };

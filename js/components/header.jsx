@@ -7,14 +7,32 @@ class Header extends React.Component {
     return (
       <header className="row">
         <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 logo">
+
         </div>
+
         <nav className="col-xs-8 col-sm-8 col-md-8 col-lg-8 menu">
-          <ul>
-            <li>KOTERIA</li>
-            <li>WIRTUALNA<br/>ADOPCJA</li>
-            <li>POMOC</li>
-            <li>KONTAKT</li>
+          <ul id="menu-desktop">
+            <a href="#about"><li>KOTERIA</li></a>
+            <a href="#virtual-adoption"><li>WIRTUALNA<br/>ADOPCJA</li></a>
+            <a href="#other-help"><li>POMOC</li></a>
+            <a href="#contact"><li>KONTAKT</li></a>
           </ul>
+
+          <div className="hamburger">
+            <div id="menuToggle">
+              <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+              <ul id="menu">
+                <a href="#about"><li>Koteria</li></a>
+                <a href="#virtual-adoption"><li>Wirtualna adopcja</li></a>
+                <a href="#other-help"><li>Pomoc</li></a>
+                <a href="#contact"><li>Kontakt</li></a>
+              </ul>
+            </div>
+          </div>
+
         </nav>
       </header>
     )

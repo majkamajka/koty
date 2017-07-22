@@ -1,6 +1,6 @@
 module.exports = {
-  entry: ['whatwg-fetch', './js/app-jquery.js'],
-  output: { filename: "./js/out.js" },
+  entry: ['whatwg-fetch', './js/main.jsx'],
+  output: { filename: "./js/out-main.js" },
   devServer: {
     inline: true,
     contentBase: './'  ,
