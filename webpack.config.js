@@ -1,6 +1,6 @@
 module.exports = {
-  entry: ['whatwg-fetch', './js/main.jsx'],
-  output: { filename: "./js/out-main.js" },
+  entry: ['whatwg-fetch', './js/cat-profile.jsx'],
+  output: { filename: "./js/out-cat-profile.js" },
   devServer: {
     inline: true,
     contentBase: './'  ,
