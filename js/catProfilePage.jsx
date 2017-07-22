@@ -14,7 +14,7 @@ import "../scss/style.scss";
 
 // IMPORTANT! removed all https from all links, as it wasn't working. needs to be fixed!
 
-class App extends React.Component {
+class CatProfilePage extends React.Component {
   render () {
     return (
       <div className="container">
@@ -34,4 +34,4 @@ class App extends React.Component {
 
 
 
-ReactDOM.render(<App />, document.getElementById("cat-profile"));
+export default CatProfilePage;

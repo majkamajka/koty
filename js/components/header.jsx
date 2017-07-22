@@ -6,9 +6,11 @@ class Header extends React.Component {
   render () {
     return (
       <header className="row">
-        <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 logo">
-
-        </div>
+        <Link to="/">
+          <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 logo">
+            <h1>Dgsdgf</h1>
+          </div>
+        </Link>
 
         <nav className="col-xs-8 col-sm-8 col-md-8 col-lg-8 menu">
           <ul id="menu-desktop">

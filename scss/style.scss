@@ -592,6 +592,13 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
+  h1 {
+    color: $thirdColor;
+    margin-left: 110px;
+    margin-top: 40px;
+    font-size: 4rem;
+    text-shadow: 0px 0px 20px $secondColor;
+  }
 }
 
 .main {
@@ -685,8 +692,9 @@ header {
       p {
         text-align: center;
         font-weight: bold;
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         line-height: 3rem;
+        text-shadow: 0px 0px 15px $fourthColor;
       }
       button {
         font-size: 2rem;

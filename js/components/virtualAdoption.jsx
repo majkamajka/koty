@@ -14,7 +14,9 @@ class VirtualAdoption extends React.Component {
                   Jeżeli marzysz o adopcji kota i uczynieniu jego (i swojego) życia lepszym, a zdajesz sobie sprawę, że nie masz warunków albo możliwości, żeby fizycznie zaadoptować kociaka, to wirtualna adopcja jest idealnym rozwiązaniem dla Ciebie! Możesz poprawić warunki życia wybranego przez Ciebie kotka poprzez regularne wpłaty na poczet opieki nad nim.
                 </p>
                 <div className="btn-wrapper">
-                  <a href="#"><button className="button">Zobacz aktualne</button></a>
+                  <Link to="/adoptions">
+                    <button className="button">Zobacz aktualne</button>
+                  </Link>
                 </div>
               </div>
             </div>

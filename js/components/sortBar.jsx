@@ -30,7 +30,7 @@ class SortBar extends React.Component {
 
         <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8 sort-container">
           <form id="sort">
-            <label>sortuj:</label>
+            <label>sortuj: </label>
             <select>
               <option value="lonely">samotne</option>
               <option value="oldest">najstarsze</option>

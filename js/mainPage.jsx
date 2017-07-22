@@ -12,17 +12,15 @@ import Help from "./components/help.jsx";
 import Contact from "./components/contact.jsx";
 import Footer from "./components/footer.jsx";
 
-import AdoptionsPage from "./adoptions.jsx";
 
 import "../scss/style.scss";
 
 
 
-class App extends React.Component {
+class MainPage extends React.Component {
   render () {
     return (
       <div className="container">
-        <AdoptionsPage />
         <Header />
         <Title />
         <About />
@@ -37,4 +35,4 @@ class App extends React.Component {
 
 
 
-ReactDOM.render(<App />, document.getElementById("main-page-app"));
+export default MainPage;

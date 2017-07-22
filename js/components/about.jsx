@@ -34,7 +34,7 @@ class About extends React.Component {
             <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3 flex">
               <div className="tile img">
                 <div className="blend">
-                  <p>Więcej informacji o adopcji:</p>
+                  <p>Więcej informacji o&nbsp;adopcji:</p>
                   <a href="http://www.koteria.org.pl/adopcje/adopcje.htm"><button className="button">Zobacz</button></a>
                 </div>
               </div>

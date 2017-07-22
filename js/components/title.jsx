@@ -11,7 +11,11 @@ class Title extends React.Component {
             Masz serce?</p>
             <h1>Adoptuj wirtualnie!</h1>
             <h3>Koty czekają na Twoją pomoc</h3>
-            <div><a href="adoptions.html"><button className="button">Sprawdź</button></a></div>
+            <div>
+              <Link to="/adoptions">
+                <button className="button">Sprawdź</button>
+              </Link>
+            </div>
         </section>
       </div>
     )
