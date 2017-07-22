@@ -14,7 +14,7 @@ import "../scss/style.scss";
 
 
 
-class AdoptionsPage extends React.Component {
+class App extends React.Component {
   render () {
     return (
       <div className="container">
@@ -40,4 +40,4 @@ class AdoptionsPage extends React.Component {
 
 
 
-export default AdoptionsPage;
+ReactDOM.render(<App />, document.getElementById("app"));

@@ -12,6 +12,8 @@ import Help from "./components/help.jsx";
 import Contact from "./components/contact.jsx";
 import Footer from "./components/footer.jsx";
 
+import AdoptionsPage from "./adoptions.jsx";
+
 import "../scss/style.scss";
 
 
@@ -20,6 +22,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="container">
+        <AdoptionsPage />
         <Header />
         <Title />
         <About />
