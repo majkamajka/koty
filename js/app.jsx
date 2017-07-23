@@ -33,8 +33,6 @@ class App extends React.Component {
         <Route path='/cat-profile' component={CatProfilePage} />
         <Route path='*' component={NotFound} />
       </Router>
-
-
     )
   };
 };

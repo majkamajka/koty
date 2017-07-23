@@ -2,16 +2,38 @@ import React from "react";
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 
 class SortBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filterMenuDisplay: "none"
+    }
+  }
+
+  filterMenuToggle = (event) => {
+      if (this.state.filterMenuDisplay === "none"){
+        this.setState({
+          filterMenuDisplay: "block"
+        })
+      } else {
+        this.setState({
+          filterMenuDisplay: "none"
+        })
+      }
+  }
+
+
   render () {
+    let filterMenuDisplay = {display: this.state.filterMenuDisplay}
+
     return (
       <section className="row" id="selection-bar">
 
         <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="filter-click">
-          <div className="filter-click">
+          <div className="filter-click" onClick={this.filterMenuToggle}>
             <span>Filtruj</span> <i className="fa fa-arrow-circle-down" aria-hidden="true"></i>
           </div>
 
-          <div id="filter-menu" className="hidden">
+          <div id="filter-menu" style={filterMenuDisplay}>
             <form name="search">
               <span>płeć:</span><br/><hr/>
                 <input type="checkbox" name="sex" value="male" defaultChecked></input> panowie<hr/>

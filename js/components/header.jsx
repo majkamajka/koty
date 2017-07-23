@@ -14,6 +14,7 @@ class Header extends React.Component {
 
         <nav className="col-xs-8 col-sm-8 col-md-8 col-lg-8 menu">
           <ul id="menu-desktop">
+            <IndexLink to="/adoptions" activeClassName="active-menu-link"><li>KOTY DO<br/>ADOPCJI</li></IndexLink>
             <a href="#about"><li>KOTERIA</li></a>
             <a href="#virtual-adoption"><li>WIRTUALNA<br/>ADOPCJA</li></a>
             <a href="#other-help"><li>POMOC</li></a>

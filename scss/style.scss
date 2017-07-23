@@ -465,7 +465,6 @@ header {
         text-align: center;
         border-bottom: 5px solid $firstColor;
         padding: 5px;
-
         &:hover {
           border-bottom: 5px solid $secondColor;
         }
@@ -473,9 +472,14 @@ header {
           background-color: $secondColor;
           color: $firstColor;
         }
+
       }
     }
   }
+}
+
+.active-menu-link {
+  border-bottom: 5px solid $secondColor;
 }
 
 .hamburger {
