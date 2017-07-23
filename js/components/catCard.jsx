@@ -47,7 +47,7 @@ class CatCard extends React.Component {
         name: snap.val().name,
         sex: sexIcon,
         desc: snap.val().desc.substring(0, 250) + "...",
-        img: snap.val().photo,
+        img: snap.val().mainPhoto,
         keywords: snap.val().features
       })
     })

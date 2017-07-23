@@ -10,17 +10,16 @@ class SortBar extends React.Component {
   }
 
   filterMenuToggle = (event) => {
-      if (this.state.filterMenuDisplay === "none"){
-        this.setState({
-          filterMenuDisplay: "block"
-        })
-      } else {
-        this.setState({
-          filterMenuDisplay: "none"
-        })
-      }
+    if (this.state.filterMenuDisplay === "none"){
+      this.setState({
+        filterMenuDisplay: "block"
+      })
+    } else {
+      this.setState({
+        filterMenuDisplay: "none"
+      })
+    }
   }
-
 
   render () {
     let filterMenuDisplay = {display: this.state.filterMenuDisplay}
