@@ -1,8 +1,14 @@
 import React from "react";
+import ReactDOM from 'react-dom';
+import * as Firebase from "firebase";
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 import CatCard from "./catCard.jsx";
 
+
+
 class SearchResults extends React.Component {
+
+
   render () {
     return (
       <div className="col-xs-12 col-sm-12 col-md-10 col-lg-10">
@@ -12,7 +18,7 @@ class SearchResults extends React.Component {
           <CatCard dbId="2" />
           <CatCard dbId="3" />
           <CatCard dbId="4" />
-          <CatCard dbId="4" />
+          <CatCard dbId="5" />
 
              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
               <div className="tile cat-card">
@@ -29,7 +35,7 @@ class SearchResults extends React.Component {
               </div>
             </div>
 
-            
+
 
         </div>
       </div>

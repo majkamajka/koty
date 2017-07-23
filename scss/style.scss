@@ -926,7 +926,8 @@ footer {
     height: 98%;
   }
   .cat-card {
-    margin-bottom: 10px;
+    padding-bottom: 70px;
+    position: relative;
     .thumbnail {
       @media (min-width: 768px) {
         height: 340px;
@@ -956,19 +957,16 @@ footer {
         transform: translate(-50%,-50%);
       }
     }
-    p {
+    p.cat-short-desc {
       font-size: 1.4rem;
       line-height: 1.9rem;
     }
-    button {
+    button.more {
       padding: 5px 3px 5px 3px;
       margin: 5px 10px 5px 10px;
-      &.more {
-        float: right;
-      }
-      // &.donate {
-      //   float: right;
-      // }
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
     }
   }
 }
