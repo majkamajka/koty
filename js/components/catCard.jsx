@@ -32,9 +32,7 @@ class CatCard extends React.Component {
   componentDidMount() {
     let refNumber = "/" + this.props.dbId;
     let db = fb.database().ref(refNumber);
-
-
-
+    
     db.on("value" , snap => {
       let sexIcon ="";
       if (snap.val().sex === "m") {
@@ -46,7 +44,7 @@ class CatCard extends React.Component {
       this.setState({
         name: snap.val().name,
         sex: sexIcon,
-        desc: snap.val().desc.substring(0, 250) + "...",
+        desc: snap.val().desc.substring(0, 200) + "...",
         img: snap.val().mainPhoto,
         keywords: snap.val().features
       })
@@ -68,7 +66,7 @@ class CatCard extends React.Component {
           </h1>
 
           <p id="keywords">
-            keywords: {this.state.keywords}
+            {this.state.keywords}
           </p>
 
           <p className="cat-short-desc">

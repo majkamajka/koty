@@ -961,6 +961,14 @@ footer {
         transform: translate(-50%,-50%);
       }
     }
+    h1 {
+      margin: 10px 0;
+    }
+    #keywords {
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: left;
+    }
     p.cat-short-desc {
       font-size: 1.4rem;
       line-height: 1.9rem;
