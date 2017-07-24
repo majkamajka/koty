@@ -12,12 +12,11 @@ class Footer extends React.Component {
             <li>ul. Chrzanowskiego 13</li>
             <li>Warszawa</li>
             <li>535 870 225</li>
-            <li>funcacja ARGOS:<br/>Bank PEKAO SA 47 1240 6133 1111 0000 4808 5915</li>
+            <li>fundacja ARGOS:<br/>Bank PEKAO SA 47 1240 6133 1111 0000 4808 5915</li>
           </ul>
         </div>
 
         <div className="col-xs-5 col-sm-5 col-md-6 col-lg-6 social-media">
-          <p>Koteria:</p>
           <ul>
             <li><a href="https://www.facebook.com/KoteriaOrgPl/?ref=br_rs"><i className="fa fa-facebook-official" aria-hidden="true"></i></a></li>
             <li><a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -26,12 +25,15 @@ class Footer extends React.Component {
         </div>
       </footer>
 
-      <div className="row">
+      <div className="row copy">
         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          &copy; majkamajka
+          &copy; 2017 majkamajka
         </div>
-        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          portfolio
+        <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 git">
+          <Link to="https://github.com/majkamajka">
+            <span>&nbsp;/majkamajka</span>
+            <i className="fa fa-github"></i>
+          </Link>
         </div>
       </div>
     </div>

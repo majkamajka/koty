@@ -28,24 +28,7 @@ class SearchResults extends React.Component {
           <CatCard dbId="12" />
           <CatCard dbId="13" />
           <CatCard dbId="14" />
-
-             <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-              <div className="tile cat-card">
-                <div className="thumbnail">
-                  <img src="images/catslider.jpg" alt="" className="cat-img"/>
-                </div>
-                  <h1>Mruczuś <i className="fa fa-mars" aria-hidden="true"></i></h1>
-                  <p id="keywords">keywords</p>
-
-                    <p className="cat-short-desc">
-                      Litwo! Ojczyzno moja! Ty jesteś jak zdrowie. Ile cię trzeba cenić, ten Bonapart figurka! Bez Suworowa to mówiąc, że tytuły przychodzą z nadzwyczajnej ich lekkości woły właśnie z brylantów oprawa a prędki nie
-                    </p>
-                    <Link to="cat-profile"><button className="button more">więcej</button></Link>
-              </div>
-            </div>
-
-
-
+          
         </div>
       </div>
     )

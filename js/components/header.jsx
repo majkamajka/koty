@@ -8,7 +8,7 @@ class Header extends React.Component {
       <header className="row">
         <Link to="/">
           <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 logo">
-            <h1>Dgsdgf</h1>
+            <h1>Adopcje</h1>
           </div>
         </Link>
 

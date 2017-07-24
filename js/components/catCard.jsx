@@ -32,7 +32,7 @@ class CatCard extends React.Component {
   componentDidMount() {
     let refNumber = "/" + this.props.dbId;
     let db = fb.database().ref(refNumber);
-    
+
     db.on("value" , snap => {
       let sexIcon ="";
       if (snap.val().sex === "m") {
