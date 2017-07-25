@@ -880,6 +880,7 @@ footer {
   padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
+  
   .tile {
     padding: 10px;
     height: 98%;
@@ -887,6 +888,7 @@ footer {
   .cat-card {
     padding-bottom: 70px;
     position: relative;
+
     .thumbnail {
       @media (min-width: 768px) {
         height: 340px;

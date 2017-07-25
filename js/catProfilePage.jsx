@@ -15,6 +15,12 @@ import "../scss/style.scss";
 // IMPORTANT! removed all https from all links, as it wasn't working. needs to be fixed!
 
 class CatProfilePage extends React.Component {
+
+componentDidMount () {
+  console.log(this.props.params.id);
+}
+
+
   render () {
     return (
       <div className="container">
@@ -22,7 +28,7 @@ class CatProfilePage extends React.Component {
         <section className="row" id="cat-full-profile">
           <Gallery />
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 cat-full-info">
-            <FullDesc />
+            <FullDesc pathId={this.props.params.id}/>
             <Donations />
           </div>
         </section>

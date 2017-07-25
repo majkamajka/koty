@@ -2,7 +2,16 @@ import React from "react";
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 
 class FullDesc extends React.Component {
+
+  componentDidMount () {
+    console.log(this.props.params.id);
+    console.log("dgffdg");
+  }
+
   render () {
+
+
+
     return (
       <div className="cat-full-desc">
         <h1 className="heading">Mruczek</h1>

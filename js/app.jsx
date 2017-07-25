@@ -10,6 +10,8 @@ import CatProfilePage from "./catProfilePage.jsx";
 
 import "../scss/style.scss";
 
+
+
 class NotFound extends React.Component {
   render() {
     return <h1>404, Nothing is here</h1>;
@@ -22,7 +24,7 @@ class App extends React.Component {
       <Router history={hashHistory}>
         <Route path='/' component={MainPage} />
         <Route path='/adoptions' component={AdoptionsPage} />
-        <Route path='/cat-profile' component={CatProfilePage} />
+        <Route path='/cat-profile/:id' component={CatProfilePage} />
         <Route path='*' component={NotFound} />
       </Router>
     )

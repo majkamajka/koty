@@ -12,22 +12,22 @@ class Gallery extends React.Component {
     }
   }
 
-  setBigPhoto = (event) => {
-    console.log("ddasa");
+  setBigPhoto = (image) => {
+
     this.setState({
-      bigImgPath: this.props.imgPath
+      bigImgPath: image
     })
   }
 
   render () {
     return (
-      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery">
+      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery" >
 
         <div className="photo-thumbnails">
 
-          <GalleryThumbnail imgPath="images/catslider.jpg" onClick={this.setBigPhoto}/>
-          <GalleryThumbnail imgPath="images/heavy.png" onClick={this.setBigPhoto} />
-          <GalleryThumbnail imgPath="images/catpaws.jpg" onClick={this.setBigPhoto} />
+          <GalleryThumbnail imgPath="images/catslider.jpg" setBigPhoto={this.setBigPhoto}/>
+          <GalleryThumbnail imgPath="images/heavy.png" setBigPhoto={this.setBigPhoto}/>
+          <GalleryThumbnail imgPath="images/catpaws.jpg" setBigPhoto={this.setBigPhoto} />
 
       </div>
 
