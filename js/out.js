@@ -17096,7 +17096,145 @@ var About = function (_React$Component) {
 exports.default = About;
 
 /***/ }),
-/* 150 */,
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(28);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _firebase = __webpack_require__(22);
+
+var Firebase = _interopRequireWildcard(_firebase);
+
+var _reactRouter = __webpack_require__(7);
+
+var _db = __webpack_require__(90);
+
+var _db2 = _interopRequireDefault(_db);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CatCards = function (_React$Component) {
+  _inherits(CatCards, _React$Component);
+
+  function CatCards(props) {
+    _classCallCheck(this, CatCards);
+
+    var _this = _possibleConstructorReturn(this, (CatCards.__proto__ || Object.getPrototypeOf(CatCards)).call(this, props));
+
+    _this.state = {
+      cards: []
+    };
+    return _this;
+  }
+
+  _createClass(CatCards, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var db = _db2.default.database().ref("/");
+      var cards = [];
+
+      db.on("value", function (snap) {
+
+        for (var i = 1; i < snap.val().length; i++) {
+          var sexIcon = "";
+          if (snap.val()[i].sex === "m") {
+            sexIcon = "fa fa-mars";
+          } else {
+            sexIcon = "fa fa-venus";
+          };
+
+          var path = "/cat-profile/" + [i];
+
+          cards.push(_react2.default.createElement(
+            "div",
+            { className: "col-xs-12 col-sm-6 col-md-4 col-lg-3", key: i },
+            _react2.default.createElement(
+              "div",
+              { className: "tile cat-card" },
+              _react2.default.createElement(
+                "div",
+                { className: "thumbnail" },
+                _react2.default.createElement("img", { src: snap.val()[i].mainPhoto, alt: "", className: "cat-img" })
+              ),
+              _react2.default.createElement(
+                "h1",
+                null,
+                snap.val()[i].name,
+                " \xA0",
+                _react2.default.createElement("i", { className: sexIcon, "aria-hidden": "true" })
+              ),
+              _react2.default.createElement(
+                "p",
+                { id: "keywords" },
+                snap.val()[i].features
+              ),
+              _react2.default.createElement(
+                "p",
+                { className: "cat-short-desc" },
+                snap.val()[i].desc.substring(0, 200) + "..."
+              ),
+              _react2.default.createElement(
+                _reactRouter.Link,
+                { to: path },
+                _react2.default.createElement(
+                  "button",
+                  { className: "button more" },
+                  "wi\u0119cej"
+                )
+              )
+            )
+          ));
+        }
+
+        _this2.setState({
+          cards: cards
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "row", id: "results" },
+        this.state.cards
+      );
+    }
+  }]);
+
+  return CatCards;
+}(_react2.default.Component);
+
+;
+
+exports.default = CatCards;
+
+/***/ }),
 /* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17455,7 +17593,17 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _firebase = __webpack_require__(22);
+
+var Firebase = _interopRequireWildcard(_firebase);
+
 var _reactRouter = __webpack_require__(7);
+
+var _db = __webpack_require__(90);
+
+var _db2 = _interopRequireDefault(_db);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17468,17 +17616,38 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var FullDesc = function (_React$Component) {
   _inherits(FullDesc, _React$Component);
 
-  function FullDesc() {
+  function FullDesc(props) {
     _classCallCheck(this, FullDesc);
 
-    return _possibleConstructorReturn(this, (FullDesc.__proto__ || Object.getPrototypeOf(FullDesc)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (FullDesc.__proto__ || Object.getPrototypeOf(FullDesc)).call(this, props));
+
+    _this.state = {
+      name: "",
+      keywords: "",
+      sex: "",
+      age: "",
+      fullDesc: ""
+    };
+    return _this;
   }
 
   _createClass(FullDesc, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log(this.props.params.id);
-      console.log("dgffdg");
+      var _this2 = this;
+
+      var id = this.props.pathId;
+      var db = _db2.default.database().ref("/");
+
+      db.on("value", function (snap) {
+        _this2.setState({
+          name: snap.val()[id].name,
+          keywords: snap.val()[id].features,
+          sex: snap.val()[id].sex,
+          age: snap.val()[id].ageMonths,
+          fullDesc: snap.val()[id].desc
+        });
+      });
     }
   }, {
     key: "render",
@@ -17490,27 +17659,31 @@ var FullDesc = function (_React$Component) {
         _react2.default.createElement(
           "h1",
           { className: "heading" },
-          "Mruczek"
+          this.state.name
         ),
         _react2.default.createElement(
           "p",
           null,
-          "keywords: "
+          "keywords: ",
+          this.state.keywords
         ),
         _react2.default.createElement(
           "p",
           null,
-          "p\u0142e\u0107: kocur"
+          "p\u0142e\u0107: ",
+          this.state.sex
         ),
         _react2.default.createElement(
           "p",
           null,
-          "wiek: 2 lata"
+          "wiek: ",
+          this.state.age,
+          " miesi\u0119cy"
         ),
         _react2.default.createElement(
           "p",
           null,
-          "Litwo! Ojczyzno moja! Ty jeste\u015B jak zdrowie. Ile ci\u0119 trzeba ceni\u0107, ten Bonapart figurka! Bez Suworowa to m\xF3wi\u0105c, \u017Ce tytu\u0142y przychodz\u0105 z nadzwyczajnej ich lekko\u015Bci wo\u0142y w\u0142a\u015Bnie z brylant\xF3w oprawa a pr\u0119dki nie"
+          this.state.fullDesc
         )
       );
     }
@@ -17851,7 +18024,7 @@ var Firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
-var _catCards = __webpack_require__(322);
+var _catCards = __webpack_require__(150);
 
 var _catCards2 = _interopRequireDefault(_catCards);
 
@@ -38966,145 +39139,6 @@ exports.clearImmediate = clearImmediate;
 __webpack_require__(146);
 module.exports = __webpack_require__(145);
 
-
-/***/ }),
-/* 322 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(3);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(28);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _firebase = __webpack_require__(22);
-
-var Firebase = _interopRequireWildcard(_firebase);
-
-var _reactRouter = __webpack_require__(7);
-
-var _db = __webpack_require__(90);
-
-var _db2 = _interopRequireDefault(_db);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var CatCards = function (_React$Component) {
-  _inherits(CatCards, _React$Component);
-
-  function CatCards(props) {
-    _classCallCheck(this, CatCards);
-
-    var _this = _possibleConstructorReturn(this, (CatCards.__proto__ || Object.getPrototypeOf(CatCards)).call(this, props));
-
-    _this.state = {
-      cards: []
-    };
-    return _this;
-  }
-
-  _createClass(CatCards, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      var db = _db2.default.database().ref("/");
-      var cards = [];
-
-      db.on("value", function (snap) {
-
-        for (var i = 1; i < snap.val().length; i++) {
-          var sexIcon = "";
-          if (snap.val()[i].sex === "m") {
-            sexIcon = "fa fa-mars";
-          } else {
-            sexIcon = "fa fa-venus";
-          };
-
-          var path = "/cat-profile/" + [i];
-
-          cards.push(_react2.default.createElement(
-            "div",
-            { className: "col-xs-12 col-sm-6 col-md-4 col-lg-3", key: i },
-            _react2.default.createElement(
-              "div",
-              { className: "tile cat-card" },
-              _react2.default.createElement(
-                "div",
-                { className: "thumbnail" },
-                _react2.default.createElement("img", { src: snap.val()[i].mainPhoto, alt: "", className: "cat-img" })
-              ),
-              _react2.default.createElement(
-                "h1",
-                null,
-                snap.val()[i].name,
-                " \xA0",
-                _react2.default.createElement("i", { className: sexIcon, "aria-hidden": "true" })
-              ),
-              _react2.default.createElement(
-                "p",
-                { id: "keywords" },
-                snap.val()[i].features
-              ),
-              _react2.default.createElement(
-                "p",
-                { className: "cat-short-desc" },
-                snap.val()[i].desc.substring(0, 200) + "..."
-              ),
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: path },
-                _react2.default.createElement(
-                  "button",
-                  { className: "button more" },
-                  "wi\u0119cej"
-                )
-              )
-            )
-          ));
-        }
-
-        _this2.setState({
-          cards: cards
-        });
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "row", id: "results" },
-        this.state.cards
-      );
-    }
-  }]);
-
-  return CatCards;
-}(_react2.default.Component);
-
-;
-
-exports.default = CatCards;
 
 /***/ })
 /******/ ]);
