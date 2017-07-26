@@ -26,7 +26,7 @@ class CatCards extends React.Component {
 
     db.on("value", snap => {
 
-      for (let i = 1; i < snap.val().length; i++) {
+      for (let i = 0; i < snap.val().length; i++) {
         let sexIcon = "";
         if (snap.val()[i].sex === "m") {
           sexIcon = "fa fa-mars";
@@ -46,7 +46,7 @@ class CatCards extends React.Component {
                 {snap.val()[i].name}&nbsp;<i className={sexIcon} aria-hidden="true"></i>
               </h1>
               <p id="keywords">
-                {snap.val()[i].features}
+                {snap.val()[i].keywords}
               </p>
               <p className="cat-short-desc">
                 {snap.val()[i].desc.substring(0, 200) + "..."}

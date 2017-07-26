@@ -5,18 +5,21 @@ class SortBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filterMenuDisplay: "none"
+      filterMenuDisplay: "none",
+      arrowClass: "fa fa-arrow-circle-down"
     }
   }
 
   filterMenuToggle = (event) => {
     if (this.state.filterMenuDisplay === "none"){
       this.setState({
-        filterMenuDisplay: "block"
+        filterMenuDisplay: "block",
+        arrowClass: "fa fa-arrow-circle-up"
       })
     } else {
       this.setState({
-        filterMenuDisplay: "none"
+        filterMenuDisplay: "none",
+        arrowClass: "fa fa-arrow-circle-down"
       })
     }
   }
@@ -29,7 +32,7 @@ class SortBar extends React.Component {
 
         <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="filter-click">
           <div className="filter-click" onClick={this.filterMenuToggle}>
-            <span>Filtruj</span> <i className="fa fa-arrow-circle-down" aria-hidden="true"></i>
+            <span>Filtruj</span> <i className={this.state.arrowClass} aria-hidden="true"></i>
           </div>
 
           <div id="filter-menu" style={filterMenuDisplay}>

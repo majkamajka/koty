@@ -26,8 +26,8 @@ class FullDesc extends React.Component {
   componentDidMount() {
     let id = this.props.pathId;
     let db = fb.database().ref("/");
-    let czas = "";
-    let wiek = 0;
+    let ageUnit = "";
+    let age = 0;
     let sex = "";
 
     db.on("value", snap => {
@@ -39,18 +39,34 @@ class FullDesc extends React.Component {
       };
 
       if (snap.val()[id].ageMonths >= 12) {
-        wiek = Math.round(snap.val()[id].ageMonths / 12);
-        czas = " years";
+        age = Math.round(snap.val()[id].ageMonths / 12);
+
+        if (age === 1) {
+          ageUnit = " rok";
+        } else if (age >= 2 && age <= 4){
+          ageUnit = " lata";
+        } else {
+          ageUnit = " lat";
+        };
+
       } else {
-        wiek = snap.val()[id].ageMonths
-        czas = " months"
+        age = snap.val()[id].ageMonths;
+
+        if (snap.val()[id].ageMonths === 1) {
+          ageUnit = " miesiąc";
+        } else if (snap.val()[id].ageMonths >= 2 && snap.val()[id].ageMonths <=4){
+          ageUnit = " miesiące";
+        } else {
+          ageUnit = " miesięcy";
+        };
+
       };
 
       this.setState({
         name: snap.val()[id].name,
-        keywords: snap.val()[id].features,
+        keywords: snap.val()[id].keywords,
         sex: sex,
-        age: wiek + czas,
+        age: age + ageUnit,
         fullDesc: snap.val()[id].desc
       })
     })

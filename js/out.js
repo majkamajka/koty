@@ -17160,7 +17160,7 @@ var CatCards = function (_React$Component) {
 
       db.on("value", function (snap) {
 
-        for (var i = 1; i < snap.val().length; i++) {
+        for (var i = 0; i < snap.val().length; i++) {
           var sexIcon = "";
           if (snap.val()[i].sex === "m") {
             sexIcon = "fa fa-mars";
@@ -17191,7 +17191,7 @@ var CatCards = function (_React$Component) {
               _react2.default.createElement(
                 "p",
                 { id: "keywords" },
-                snap.val()[i].features
+                snap.val()[i].keywords
               ),
               _react2.default.createElement(
                 "p",
@@ -17636,8 +17636,8 @@ var FullDesc = function (_React$Component) {
 
       var id = this.props.pathId;
       var db = _db2.default.database().ref("/");
-      var czas = "";
-      var wiek = 0;
+      var ageUnit = "";
+      var age = 0;
       var sex = "";
 
       db.on("value", function (snap) {
@@ -17649,18 +17649,32 @@ var FullDesc = function (_React$Component) {
         };
 
         if (snap.val()[id].ageMonths >= 12) {
-          wiek = Math.round(snap.val()[id].ageMonths / 12);
-          czas = " years";
+          age = Math.round(snap.val()[id].ageMonths / 12);
+
+          if (age === 1) {
+            ageUnit = " rok";
+          } else if (age >= 2 && age <= 4) {
+            ageUnit = " lata";
+          } else {
+            ageUnit = " lat";
+          };
         } else {
-          wiek = snap.val()[id].ageMonths;
-          czas = " months";
+          age = snap.val()[id].ageMonths;
+
+          if (snap.val()[id].ageMonths === 1) {
+            ageUnit = " miesiąc";
+          } else if (snap.val()[id].ageMonths >= 2 && snap.val()[id].ageMonths <= 4) {
+            ageUnit = " miesiące";
+          } else {
+            ageUnit = " miesięcy";
+          };
         };
 
         _this2.setState({
           name: snap.val()[id].name,
-          keywords: snap.val()[id].features,
+          keywords: snap.val()[id].keywords,
           sex: sex,
-          age: wiek + czas,
+          age: age + ageUnit,
           fullDesc: snap.val()[id].desc
         });
       });
@@ -17756,7 +17770,8 @@ var Gallery = function (_React$Component) {
     };
 
     _this.state = {
-      bigImgPath: ""
+      bigImgPath: "",
+      id: _this.props.pathId
     };
     return _this;
   }
@@ -17783,9 +17798,7 @@ var Gallery = function (_React$Component) {
         _react2.default.createElement(
           "div",
           { className: "photo-thumbnails" },
-          _react2.default.createElement(_galleryThumbnail2.default, { imgPath: "images/catslider.jpg", setBigPhoto: this.setBigPhoto }),
-          _react2.default.createElement(_galleryThumbnail2.default, { imgPath: "images/heavy.png", setBigPhoto: this.setBigPhoto }),
-          _react2.default.createElement(_galleryThumbnail2.default, { imgPath: "images/catpaws.jpg", setBigPhoto: this.setBigPhoto })
+          _react2.default.createElement(_galleryThumbnail2.default, { setBigPhoto: this.setBigPhoto, pathId: this.state.id })
         ),
         _react2.default.createElement(
           "div",
@@ -17802,6 +17815,10 @@ var Gallery = function (_React$Component) {
 ;
 
 exports.default = Gallery;
+
+// <GalleryThumbnail imgPath="images/catslider.jpg" setBigPhoto={this.setBigPhoto}/>
+// <GalleryThumbnail imgPath="images/heavy.png" setBigPhoto={this.setBigPhoto}/>
+// <GalleryThumbnail imgPath="images/catpaws.jpg" setBigPhoto={this.setBigPhoto} />
 
 /***/ }),
 /* 156 */
@@ -17822,6 +17839,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(7);
 
+var _db = __webpack_require__(41);
+
+var _db2 = _interopRequireDefault(_db);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -17833,35 +17854,65 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var GalleryThumbnail = function (_React$Component) {
   _inherits(GalleryThumbnail, _React$Component);
 
-  function GalleryThumbnail() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
+  function GalleryThumbnail(props) {
     _classCallCheck(this, GalleryThumbnail);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _this = _possibleConstructorReturn(this, (GalleryThumbnail.__proto__ || Object.getPrototypeOf(GalleryThumbnail)).call(this, props));
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GalleryThumbnail.__proto__ || Object.getPrototypeOf(GalleryThumbnail)).call.apply(_ref, [this].concat(args))), _this), _this.getImage = function (event) {
+    _this.getImage = function (event) {
       event.preventDefault();
       var img = _this.props.imgPath;
       _this.props.setBigPhoto(img);
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    };
+
+    _this.state = {
+      thumbnails: []
+    };
+    return _this;
   }
 
   _createClass(GalleryThumbnail, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var db = _db2.default.database().ref("/");
+      var cards = [];
+      var id = this.props.pathId;
+      var thumbnailsLinks = [];
+      var thumbnails = [];
+
+      db.on("value", function (snap) {
+        thumbnailsLinks.push(snap.val()[id].mainPhoto);
+
+        for (var i = 0; i < snap.val()[id].gallery.length; i++) {
+          thumbnailsLinks.push(snap.val()[id].gallery[i]);
+        };
+
+        for (var _i = 0; _i < thumbnailsLinks.length; _i++) {
+          thumbnails.push(_react2.default.createElement(
+            "div",
+            { className: "gallery-thumbnail current", onClick: _this2.getImage, key: _i },
+            _react2.default.createElement(
+              "div",
+              { className: "cont" },
+              _react2.default.createElement("img", { src: thumbnailsLinks[_i], alt: "" })
+            )
+          ));
+        };
+
+        _this2.setState({
+          thumbnails: thumbnails
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
         "div",
-        { className: "gallery-thumbnail current", onClick: this.getImage },
-        _react2.default.createElement(
-          "div",
-          { className: "cont" },
-          _react2.default.createElement("img", { src: this.props.imgPath, alt: "" })
-        )
+        null,
+        this.state.thumbnails
       );
     }
   }]);
@@ -17870,6 +17921,12 @@ var GalleryThumbnail = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = GalleryThumbnail;
+
+// <div className="gallery-thumbnail current" onClick={this.getImage}>
+//   <div className="cont">
+//     <img src={this.props.imgPath} alt=""/>
+//   </div>
+// </div>
 
 /***/ }),
 /* 157 */
@@ -18124,17 +18181,20 @@ var SortBar = function (_React$Component) {
     _this.filterMenuToggle = function (event) {
       if (_this.state.filterMenuDisplay === "none") {
         _this.setState({
-          filterMenuDisplay: "block"
+          filterMenuDisplay: "block",
+          arrowClass: "fa fa-arrow-circle-up"
         });
       } else {
         _this.setState({
-          filterMenuDisplay: "none"
+          filterMenuDisplay: "none",
+          arrowClass: "fa fa-arrow-circle-down"
         });
       }
     };
 
     _this.state = {
-      filterMenuDisplay: "none"
+      filterMenuDisplay: "none",
+      arrowClass: "fa fa-arrow-circle-down"
     };
     return _this;
   }
@@ -18159,7 +18219,7 @@ var SortBar = function (_React$Component) {
               "Filtruj"
             ),
             " ",
-            _react2.default.createElement("i", { className: "fa fa-arrow-circle-down", "aria-hidden": "true" })
+            _react2.default.createElement("i", { className: this.state.arrowClass, "aria-hidden": "true" })
           ),
           _react2.default.createElement(
             "div",

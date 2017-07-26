@@ -8,7 +8,8 @@ class Gallery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bigImgPath: ""
+      bigImgPath: "",
+      id: this.props.pathId
     }
   }
 
@@ -34,9 +35,7 @@ class Gallery extends React.Component {
 
         <div className="photo-thumbnails">
 
-          <GalleryThumbnail imgPath="images/catslider.jpg" setBigPhoto={this.setBigPhoto}/>
-          <GalleryThumbnail imgPath="images/heavy.png" setBigPhoto={this.setBigPhoto}/>
-          <GalleryThumbnail imgPath="images/catpaws.jpg" setBigPhoto={this.setBigPhoto} />
+          <GalleryThumbnail setBigPhoto={this.setBigPhoto} pathId={this.state.id}/>
 
       </div>
 
@@ -49,3 +48,7 @@ class Gallery extends React.Component {
 };
 
 export default Gallery;
+
+// <GalleryThumbnail imgPath="images/catslider.jpg" setBigPhoto={this.setBigPhoto}/>
+// <GalleryThumbnail imgPath="images/heavy.png" setBigPhoto={this.setBigPhoto}/>
+// <GalleryThumbnail imgPath="images/catpaws.jpg" setBigPhoto={this.setBigPhoto} />
