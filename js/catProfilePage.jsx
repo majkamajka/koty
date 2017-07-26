@@ -2,7 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import * as firebase from "firebase";
 
-import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
+import {
+  Router,
+  Route,
+  Link,
+  IndexLink,
+  IndexRoute,
+  hashHistory
+} from 'react-router';
 
 import Header from "./components/header.jsx";
 import Gallery from "./components/gallery.jsx";
@@ -16,28 +23,25 @@ import "../scss/style.scss";
 
 class CatProfilePage extends React.Component {
 
-componentDidMount () {
-  console.log(this.props.params.id);
-}
+  componentDidMount() {
+    console.log(this.props.params.id);
+  }
 
-
-  render () {
+  render() {
     return (
       <div className="container">
-        <Header />
+        <Header/>
         <section className="row" id="cat-full-profile">
-          <Gallery />
+          <Gallery pathId={this.props.params.id}/>
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 cat-full-info">
             <FullDesc pathId={this.props.params.id}/>
-            <Donations />
+            <Donations/>
           </div>
         </section>
-        <Footer />
+        <Footer/>
       </div>
     )
   };
 };
-
-
 
 export default CatProfilePage;

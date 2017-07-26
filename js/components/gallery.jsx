@@ -1,6 +1,6 @@
 import React from "react";
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
-
+import fb from "./db.js";
 import GalleryThumbnail from "./galleryThumbnail.jsx";
 
 class Gallery extends React.Component {
@@ -8,12 +8,21 @@ class Gallery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      bigImgPath: "images/catslider.jpg"
+      bigImgPath: ""
     }
   }
 
-  setBigPhoto = (image) => {
+  componentDidMount() {
+    let db = fb.database().ref("/");
+    let id = this.props.pathId;
+    db.on("value", snap => {
+      this.setState({
+        bigImgPath: snap.val()[id].mainPhoto
+      })
+    });
+  }
 
+  setBigPhoto = (image) => {
     this.setState({
       bigImgPath: image
     })

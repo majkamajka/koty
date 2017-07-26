@@ -4,16 +4,6 @@ import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-r
 
 class GalleryThumbnail extends React.Component {
 
-
-  // setBigPhoto = (event) => {
-  //   console.log(this.props.bigImgPath);
-  //
-  //   this.setState({
-  //     bigImgPath: this.props.imgPath
-  //   })
-  //   console.log(this.state.imgPath);
-  // }
-
   getImage = (event) => {
     event.preventDefault();
     const img = this.props.imgPath;
