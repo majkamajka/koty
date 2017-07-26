@@ -1,5 +1,12 @@
 import React from "react";
-import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
+import {
+  Router,
+  Route,
+  Link,
+  IndexLink,
+  IndexRoute,
+  hashHistory
+} from 'react-router';
 import fb from "./db.js";
 import GalleryThumbnail from "./galleryThumbnail.jsx";
 
@@ -29,20 +36,18 @@ class Gallery extends React.Component {
     })
   }
 
-  render () {
-    return (
-      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery" >
+  render() {
 
-        <div className="photo-thumbnails">
+    return (
+      <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery">
 
           <GalleryThumbnail setBigPhoto={this.setBigPhoto} pathId={this.state.id}/>
 
-      </div>
+        <div id="big-photo" className="big-photo">
+          <img src={this.state.bigImgPath} alt=""/>
+        </div>
 
-      <div id="big-photo" className="big-photo">
-        <img src={this.state.bigImgPath} alt="" />
       </div>
-    </div>
     )
   };
 };

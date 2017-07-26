@@ -26,6 +26,7 @@ class GalleryThumbnail extends React.Component {
     let thumbnails = [];
 
     db.on("value", snap => {
+
       thumbnailsLinks.push(snap.val()[id].mainPhoto);
 
       for (let i = 0; i < snap.val()[id].gallery.length; i++) {
@@ -34,30 +35,32 @@ class GalleryThumbnail extends React.Component {
 
       for (let i = 0; i < thumbnailsLinks.length; i++) {
         thumbnails.push(
-          <div className="gallery-thumbnail current" onClick={this.getImage} key={i}>
+          <div className="gallery-thumbnail current" key={i} >
             <div className="cont">
-              <img src={thumbnailsLinks[i]} alt=""/>
+              <img src={thumbnailsLinks[i]} alt="" onClick={this.getImage}/>
             </div>
           </div>
         );
       };
 
       this.setState({
-        thumbnails: thumbnails
+        thumbnails: thumbnails,
       });
-      
+
     });
   };
 
   getImage = (event) => {
     event.preventDefault();
-    const img = this.props.imgPath;
+    const img = event.target.src; //to chyba nie tak powinno być, onClick powinien być na całym divie, a nie tylko na img, ale takim sposobem mogę wyciąganąć src. DZIAŁA! do poprawy później
     this.props.setBigPhoto(img);
   }
 
   render() {
     return (
-      <div>{this.state.thumbnails}</div>
+      <div className="photo-thumbnails">
+        {this.state.thumbnails}
+      </div>
     )
   }
 }
