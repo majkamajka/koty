@@ -2,20 +2,50 @@ import React from "react";
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 
 class FilterMenu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sexMale: true,
+      sexFemale: true,
+      ageYoung: true,
+      ageAdult: true,
+      ageSenior: true,
+      notAdopted: true,
+      ill: true,
+      urgent: true,
+    }
+  }
+
   render () {
     return (
       <div className="col-md-2 col-lg-2" id="filter-menu-desktop">
         <form name="search">
-          <span>płeć:</span><br/><hr/>
-            <input type="checkbox" name="sex" value="male" defaultChecked></input> panowie<hr/>
-            <input type="checkbox" name="sex" value="female" defaultChecked></input> panie<hr/><br/>
-          <span>wiek:</span><br/><hr/>
-            <input type="checkbox" name="age" value="young" defaultChecked></input> &lt; 1 rok<hr/>
-            <input type="checkbox" name="age" value="adult" defaultChecked></input> 1-5 lat<hr/>
-            <input type="checkbox" name="age" value="senior" defaultChecked></input> &gt; 5 lat<hr/><br/>
-          <span>adopcje:</span><br/><hr/>
-            <input type="checkbox" name="adopt" value="false" defaultChecked></input> brak opiekuna<hr/>
-            <input type="checkbox" name="adopt" value="true" defaultChecked></input> zaadoptowane<hr/>
+
+          <label>płeć:<br/><hr/>
+            <input type="checkbox" name="sex" checked={this.state.sexMale}></input>
+              <span> panowie</span><hr/>
+            <input type="checkbox" name="sex" checked={this.state.sexFemale}></input>
+              <span> panie</span><hr/><br/>
+          </label>
+
+          <label>wiek:<br/><hr/>
+            <input type="checkbox" name="age" checked={this.state.ageYoung}></input>
+              <span> &lt; 1 rok</span><hr/>
+            <input type="checkbox" name="age" checked={this.state.ageAdult}></input>
+              <span> 1-5 lat</span><hr/>
+            <input type="checkbox" name="age" checked={this.state.ageSenior}></input>
+              <span> &gt; 5 lat</span><hr/><br/>
+          </label>
+
+          <label>inne:<br/><hr/>
+            <input type="checkbox" name="other" checked={this.state.notAdopted}></input>
+              <span> brak opiekuna</span><hr/>
+            <input type="checkbox" name="other" checked={this.state.ill}></input>
+              <span> chore</span><hr/>
+            <input type="checkbox" name="other" checked={this.state.urgent}></input>
+              <span> PILNE</span><hr/>
+          </label>
+          
             <input className="button shadow-hover" type="submit" value="szukaj"></input>
         </form>
       </div>
