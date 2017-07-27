@@ -9,7 +9,7 @@ import {
 } from 'react-router';
 import fb from "./db.js";
 
-class GalleryThumbnail extends React.Component {
+class GalleryThumbnails extends React.Component {
 
   constructor(props) {
     super(props);
@@ -35,7 +35,7 @@ class GalleryThumbnail extends React.Component {
 
       for (let i = 0; i < thumbnailsLinks.length; i++) {
         thumbnails.push(
-          <div className="gallery-thumbnail current" key={i} >
+          <div className="gallery-thumbnail current" key={i}>
             <div className="cont">
               <img src={thumbnailsLinks[i]} alt="" onClick={this.getImage}/>
             </div>
@@ -65,7 +65,7 @@ class GalleryThumbnail extends React.Component {
   }
 }
 
-export default GalleryThumbnail;
+export default GalleryThumbnails;
 
 // <div className="gallery-thumbnail current" onClick={this.getImage}>
 //   <div className="cont">

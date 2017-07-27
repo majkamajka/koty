@@ -2300,7 +2300,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _app = __webpack_require__(35);
+var _app = __webpack_require__(36);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -4265,6 +4265,31 @@ module.exports = reactProdInvariant;
 
 /***/ }),
 /* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_firebase__);
+
+
+const config = {
+  apiKey: "AIzaSyBD5bKLZyfDUTHWSQrMdOU6Z6tsreYaak4",
+  authDomain: "koty-c79fd.firebaseapp.com",
+  databaseURL: "https://koty-c79fd.firebaseio.com",
+  projectId: "koty-c79fd",
+  storageBucket: "koty-c79fd.appspot.com",
+  messagingSenderId: "511321533732"
+};
+
+const fb = __WEBPACK_IMPORTED_MODULE_0_firebase__["initializeApp"](config);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (fb);
+
+
+/***/ }),
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4303,7 +4328,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4583,7 +4608,7 @@ module.exports = EventPluginHub;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4599,7 +4624,7 @@ module.exports = EventPluginHub;
 
 
 
-var EventPluginHub = __webpack_require__(36);
+var EventPluginHub = __webpack_require__(37);
 var EventPluginUtils = __webpack_require__(72);
 
 var accumulateInto = __webpack_require__(123);
@@ -4723,7 +4748,7 @@ module.exports = EventPropagators;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4774,7 +4799,7 @@ var ReactInstanceMap = {
 module.exports = ReactInstanceMap;
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4838,7 +4863,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4878,31 +4903,6 @@ var component = oneOfType([func, string]);
 var components = oneOfType([component, object]);
 var route = oneOfType([object, element]);
 var routes = oneOfType([route, arrayOf(route)]);
-
-/***/ }),
-/* 41 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_firebase__);
-
-
-const config = {
-  apiKey: "AIzaSyBD5bKLZyfDUTHWSQrMdOU6Z6tsreYaak4",
-  authDomain: "koty-c79fd.firebaseapp.com",
-  databaseURL: "https://koty-c79fd.firebaseio.com",
-  projectId: "koty-c79fd",
-  storageBucket: "koty-c79fd.appspot.com",
-  messagingSenderId: "511321533732"
-};
-
-const fb = __WEBPACK_IMPORTED_MODULE_0_firebase__["initializeApp"](config);
-
-
-/* harmony default export */ __webpack_exports__["default"] = (fb);
-
 
 /***/ }),
 /* 42 */
@@ -5916,7 +5916,7 @@ module.exports = ReactBrowserEventEmitter;
 
 
 
-var SyntheticUIEvent = __webpack_require__(39);
+var SyntheticUIEvent = __webpack_require__(40);
 var ViewportMetrics = __webpack_require__(122);
 
 var getEventModifierState = __webpack_require__(80);
@@ -8962,7 +8962,7 @@ module.exports = ReactErrorUtils;
 var _prodInvariant = __webpack_require__(4);
 
 var ReactCurrentOwner = __webpack_require__(15);
-var ReactInstanceMap = __webpack_require__(38);
+var ReactInstanceMap = __webpack_require__(39);
 var ReactInstrumentation = __webpack_require__(12);
 var ReactUpdates = __webpack_require__(14);
 
@@ -13628,7 +13628,7 @@ var ReactDOMComponentTree = __webpack_require__(6);
 var ReactDOMContainerInfo = __webpack_require__(232);
 var ReactDOMFeatureFlags = __webpack_require__(234);
 var ReactFeatureFlags = __webpack_require__(116);
-var ReactInstanceMap = __webpack_require__(38);
+var ReactInstanceMap = __webpack_require__(39);
 var ReactInstrumentation = __webpack_require__(12);
 var ReactMarkupChecksum = __webpack_require__(254);
 var ReactReconciler = __webpack_require__(30);
@@ -15143,7 +15143,7 @@ function isPromise(obj) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__RouteUtils__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PatternUtils__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(41);
 
 
 
@@ -17122,7 +17122,7 @@ var Firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
-var _db = __webpack_require__(41);
+var _db = __webpack_require__(35);
 
 var _db2 = _interopRequireDefault(_db);
 
@@ -17597,7 +17597,7 @@ var Firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
-var _db = __webpack_require__(41);
+var _db = __webpack_require__(35);
 
 var _db2 = _interopRequireDefault(_db);
 
@@ -17739,13 +17739,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(7);
 
-var _db = __webpack_require__(41);
+var _db = __webpack_require__(35);
 
 var _db2 = _interopRequireDefault(_db);
 
-var _galleryThumbnail = __webpack_require__(156);
+var _galleryThumbnails = __webpack_require__(156);
 
-var _galleryThumbnail2 = _interopRequireDefault(_galleryThumbnail);
+var _galleryThumbnails2 = _interopRequireDefault(_galleryThumbnails);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17771,7 +17771,8 @@ var Gallery = function (_React$Component) {
 
     _this.state = {
       bigImgPath: "",
-      id: _this.props.pathId
+      id: _this.props.pathId,
+      galleryExists: false
     };
     return _this;
   }
@@ -17783,7 +17784,19 @@ var Gallery = function (_React$Component) {
 
       var db = _db2.default.database().ref("/");
       var id = this.props.pathId;
+
       db.on("value", function (snap) {
+
+        if (snap.val()[id].gallery) {
+          _this2.setState({
+            galleryExists: true
+          });
+        } else {
+          _this2.setState({
+            galleryExists: false
+          });
+        };
+
         _this2.setState({
           bigImgPath: snap.val()[id].mainPhoto
         });
@@ -17792,17 +17805,28 @@ var Gallery = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-
-      return _react2.default.createElement(
-        "div",
-        { className: "col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery" },
-        _react2.default.createElement(_galleryThumbnail2.default, { setBigPhoto: this.setBigPhoto, pathId: this.state.id }),
-        _react2.default.createElement(
+      if (this.state.galleryExists) {
+        return _react2.default.createElement(
           "div",
-          { id: "big-photo", className: "big-photo" },
-          _react2.default.createElement("img", { src: this.state.bigImgPath, alt: "" })
-        )
-      );
+          { className: "col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery" },
+          _react2.default.createElement(_galleryThumbnails2.default, { setBigPhoto: this.setBigPhoto, pathId: this.state.id }),
+          _react2.default.createElement(
+            "div",
+            { id: "big-photo", className: "big-photo" },
+            _react2.default.createElement("img", { src: this.state.bigImgPath, alt: "" })
+          )
+        );
+      } else {
+        return _react2.default.createElement(
+          "div",
+          { className: "col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery" },
+          _react2.default.createElement(
+            "div",
+            { id: "big-photo", className: "big-photo" },
+            _react2.default.createElement("img", { src: this.state.bigImgPath, alt: "" })
+          )
+        );
+      }
     }
   }]);
 
@@ -17812,10 +17836,6 @@ var Gallery = function (_React$Component) {
 ;
 
 exports.default = Gallery;
-
-// <GalleryThumbnail imgPath="images/catslider.jpg" setBigPhoto={this.setBigPhoto}/>
-// <GalleryThumbnail imgPath="images/heavy.png" setBigPhoto={this.setBigPhoto}/>
-// <GalleryThumbnail imgPath="images/catpaws.jpg" setBigPhoto={this.setBigPhoto} />
 
 /***/ }),
 /* 156 */
@@ -17836,7 +17856,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(7);
 
-var _db = __webpack_require__(41);
+var _db = __webpack_require__(35);
 
 var _db2 = _interopRequireDefault(_db);
 
@@ -17848,13 +17868,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var GalleryThumbnail = function (_React$Component) {
-  _inherits(GalleryThumbnail, _React$Component);
+var GalleryThumbnails = function (_React$Component) {
+  _inherits(GalleryThumbnails, _React$Component);
 
-  function GalleryThumbnail(props) {
-    _classCallCheck(this, GalleryThumbnail);
+  function GalleryThumbnails(props) {
+    _classCallCheck(this, GalleryThumbnails);
 
-    var _this = _possibleConstructorReturn(this, (GalleryThumbnail.__proto__ || Object.getPrototypeOf(GalleryThumbnail)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (GalleryThumbnails.__proto__ || Object.getPrototypeOf(GalleryThumbnails)).call(this, props));
 
     _this.getImage = function (event) {
       event.preventDefault();
@@ -17868,7 +17888,7 @@ var GalleryThumbnail = function (_React$Component) {
     return _this;
   }
 
-  _createClass(GalleryThumbnail, [{
+  _createClass(GalleryThumbnails, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
@@ -17915,10 +17935,10 @@ var GalleryThumbnail = function (_React$Component) {
     }
   }]);
 
-  return GalleryThumbnail;
+  return GalleryThumbnails;
 }(_react2.default.Component);
 
-exports.default = GalleryThumbnail;
+exports.default = GalleryThumbnails;
 
 // <div className="gallery-thumbnail current" onClick={this.getImage}>
 //   <div className="cont">
@@ -18100,7 +18120,7 @@ var _catCards = __webpack_require__(150);
 
 var _catCards2 = _interopRequireDefault(_catCards);
 
-var _db = __webpack_require__(41);
+var _db = __webpack_require__(35);
 
 var _db2 = _interopRequireDefault(_db);
 
@@ -19547,7 +19567,7 @@ exports = module.exports = __webpack_require__(165)(undefined);
 
 
 // module
-exports.push([module.i, "html {\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%; }\n\nbody {\n  margin: 0; }\n\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\n*:before,\n*:after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nhtml {\n  -webkit-tap-highlight-color: transparent; }\n\n[role=\"button\"], .button {\n  cursor: pointer; }\n\n.container {\n  margin-right: auto;\n  margin-left: auto; }\n\n@media (min-width: 768px) {\n  .container {\n    width: 750px; } }\n\n@media (min-width: 992px) {\n  .container {\n    width: 970px; } }\n\n@media (min-width: 1200px) {\n  .container {\n    width: 1170px; } }\n\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 5px;\n  padding-right: 5px; }\n\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\n  position: relative;\n  min-height: 1px;\n  padding-left: 5px;\n  padding-right: 5px; }\n\n.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {\n  float: left; }\n\n.col-xs-12 {\n  width: 100%; }\n\n.col-xs-11 {\n  width: 91.66666667%; }\n\n.col-xs-10 {\n  width: 83.33333333%; }\n\n.col-xs-9 {\n  width: 75%; }\n\n.col-xs-8 {\n  width: 66.66666667%; }\n\n.col-xs-7 {\n  width: 58.33333333%; }\n\n.col-xs-6 {\n  width: 50%; }\n\n.col-xs-5 {\n  width: 41.66666667%; }\n\n.col-xs-4 {\n  width: 33.33333333%; }\n\n.col-xs-3 {\n  width: 25%; }\n\n.col-xs-2 {\n  width: 16.66666667%; }\n\n.col-xs-1 {\n  width: 8.33333333%; }\n\n@media (min-width: 768px) {\n  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {\n    float: left; }\n  .col-sm-12 {\n    width: 100%; }\n  .col-sm-11 {\n    width: 91.66666667%; }\n  .col-sm-10 {\n    width: 83.33333333%; }\n  .col-sm-9 {\n    width: 75%; }\n  .col-sm-8 {\n    width: 66.66666667%; }\n  .col-sm-7 {\n    width: 58.33333333%; }\n  .col-sm-6 {\n    width: 50%; }\n  .col-sm-5 {\n    width: 41.66666667%; }\n  .col-sm-4 {\n    width: 33.33333333%; }\n  .col-sm-3 {\n    width: 25%; }\n  .col-sm-2 {\n    width: 16.66666667%; }\n  .col-sm-1 {\n    width: 8.33333333%; } }\n\n@media (min-width: 992px) {\n  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {\n    float: left; }\n  .col-md-12 {\n    width: 100%; }\n  .col-md-11 {\n    width: 91.66666667%; }\n  .col-md-10 {\n    width: 83.33333333%; }\n  .col-md-9 {\n    width: 75%; }\n  .col-md-8 {\n    width: 66.66666667%; }\n  .col-md-7 {\n    width: 58.33333333%; }\n  .col-md-6 {\n    width: 50%; }\n  .col-md-5 {\n    width: 41.66666667%; }\n  .col-md-4 {\n    width: 33.33333333%; }\n  .col-md-3 {\n    width: 25%; }\n  .col-md-2 {\n    width: 16.66666667%; }\n  .col-md-1 {\n    width: 8.33333333%; } }\n\n@media (min-width: 1200px) {\n  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {\n    float: left; }\n  .col-lg-12 {\n    width: 100%; }\n  .col-lg-11 {\n    width: 91.66666667%; }\n  .col-lg-10 {\n    width: 83.33333333%; }\n  .col-lg-9 {\n    width: 75%; }\n  .col-lg-8 {\n    width: 66.66666667%; }\n  .col-lg-7 {\n    width: 58.33333333%; }\n  .col-lg-6 {\n    width: 50%; }\n  .col-lg-5 {\n    width: 41.66666667%; }\n  .col-lg-4 {\n    width: 33.33333333%; }\n  .col-lg-3 {\n    width: 25%; }\n  .col-lg-2 {\n    width: 16.66666667%; }\n  .col-lg-1 {\n    width: 8.33333333%; } }\n\n.clearfix:before,\n.clearfix:after,\n.container:before,\n.container:after,\n.container-fluid:before,\n.container-fluid:after,\n.row:before,\n.row:after {\n  content: \" \";\n  display: table; }\n\n.clearfix:after,\n.container:after,\n.container-fluid:after,\n.row:after {\n  clear: both; }\n\n.center-block {\n  display: block;\n  margin-left: auto;\n  margin-right: auto; }\n\n.hide {\n  display: none !important; }\n\n.show {\n  display: block !important; }\n\n.invisible {\n  visibility: hidden; }\n\n.text-hide {\n  font: 0/0 a;\n  color: transparent;\n  text-shadow: none;\n  background-color: transparent;\n  border: 0; }\n\n.hidden {\n  display: none !important; }\n\n* {\n  margin: 0;\n  padding: 0;\n  font-family: 'Montserrat', sans-serif;\n  text-align: justify;\n  font-size: 1.6rem; }\n\nhtml {\n  font-size: 62.5%; }\n\nbody {\n  color: #1F4E5F;\n  background-color: #F4E7D3; }\n\nh1 {\n  font-size: 2.6rem; }\n\nh2 {\n  font-size: 2.6rem; }\n\nh3 {\n  font-size: 1.8rem; }\n\np, ul {\n  line-height: 2.4rem; }\n\n.small-shadow, .button, header, .tile, #selection-bar, #filter-menu, #filter-menu-desktop, #cat-full-profile .photo-thumbnails .gallery-thumbnail, #cat-full-profile .cat-full-info div {\n  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }\n\n.shadow, .button:hover, #cat-full-profile #big-photo {\n  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);\n  z-index: 1; }\n\n.shadow-hover:hover, .tile:hover, #cat-full-profile .photo-thumbnails .gallery-thumbnail:hover, #cat-full-profile .cat-full-info div:hover {\n  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }\n\n.container.full-width {\n  width: 100%;\n  overflow: visible; }\n\n.blocker {\n  width: 100%;\n  height: 100%;\n  background-color: black;\n  position: absolute;\n  z-index: 200;\n  transition: 0.5s; }\n\n.button {\n  background-color: rgba(249, 248, 237, 0.5);\n  border: 3px solid #1F4E5F;\n  color: #1F4E5F; }\n\n#banner {\n  padding-top: 5px;\n  padding-right: 5px;\n  text-align: right;\n  position: absolute;\n  z-index: 1000;\n  right: 10px;\n  top: 100px;\n  width: 200px;\n  height: 200px;\n  position: fixed;\n  background-image: url(\"./images/zoo_koty.jpg\");\n  background-size: contain;\n  background-repeat: no-repeat; }\n  #banner a {\n    position: absolute;\n    display: inline-block;\n    right: 20px;\n    height: 30px;\n    width: 160px;\n    bottom: 5px; }\n\n.heading {\n  border-bottom: 5px solid #0881A3;\n  margin-bottom: 10px;\n  display: inline-block;\n  padding-left: 5px;\n  padding-right: 5px; }\n\nul.square-list {\n  list-style-type: square;\n  list-style-position: inside; }\n\nheader {\n  padding: 10px;\n  width: 100%;\n  background-color: #1F4E5F;\n  color: #F4E7D3;\n  position: relative; }\n  header nav {\n    font-weight: bold;\n    height: 100px; }\n    header nav ul#menu-desktop {\n      float: right;\n      list-style: none;\n      display: none;\n      justify-content: flex-end;\n      flex-direction: row;\n      align-items: flex-end;\n      height: 100px; }\n      @media (min-width: 992px) {\n        header nav ul#menu-desktop {\n          display: flex; } }\n      header nav ul#menu-desktop a {\n        color: #F4E7D3; }\n      header nav ul#menu-desktop li {\n        display: inline-block;\n        margin-right: 1vw;\n        text-align: center;\n        border-bottom: 5px solid #1F4E5F;\n        padding: 5px; }\n        header nav ul#menu-desktop li:hover {\n          border-bottom: 5px solid #0881A3; }\n        header nav ul#menu-desktop li:active {\n          background-color: #0881A3;\n          color: #1F4E5F; }\n\n.active-menu-link {\n  border-bottom: 5px solid #0881A3; }\n\n.hamburger {\n  position: fixed;\n  right: 0px;\n  top: 0;\n  z-index: 999; }\n  @media (min-width: 992px) {\n    .hamburger {\n      display: none; } }\n\n#menuToggle {\n  overflow: hidden;\n  position: absolute;\n  top: -15px;\n  right: -15px;\n  width: 300px;\n  padding-left: 300px;\n  float: right;\n  z-index: 1;\n  -webkit-user-select: none;\n  user-select: none; }\n  #menuToggle a {\n    text-decoration: none;\n    color: #1F4E5F;\n    transition: color 0.3s ease; }\n    #menuToggle a:hover {\n      color: #0881A3; }\n  #menuToggle input {\n    right: 20px;\n    top: 20px;\n    display: block;\n    width: 40px;\n    height: 32px;\n    position: absolute;\n    cursor: pointer;\n    opacity: 0.0;\n    z-index: 2;\n    -webkit-touch-callout: none; }\n  #menuToggle input:checked ~ span {\n    opacity: 1;\n    transform: rotate(45deg) translate(-2px, -1px);\n    background: #1F4E5F; }\n  #menuToggle input:checked ~ span:nth-last-child(3) {\n    opacity: 0;\n    transform: rotate(0deg) scale(0.2, 0.2); }\n  #menuToggle input:checked ~ span:nth-last-child(2) {\n    opacity: 1;\n    transform: rotate(-45deg) translate(0, -1px); }\n  #menuToggle input:checked ~ ul {\n    transform: scale(1, 1);\n    opacity: 1; }\n  #menuToggle span {\n    right: 55px;\n    top: 25px;\n    display: block;\n    width: 33px;\n    height: 4px;\n    margin-bottom: 5px;\n    position: relative;\n    background: #0881A3;\n    border-radius: 3px;\n    z-index: 1;\n    transform-origin: 4px 0px;\n    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\n    #menuToggle span:first-child {\n      transform-origin: 0% 0%;\n      padding-top: 20px; }\n    #menuToggle span:nth-last-child(2) {\n      transform-origin: 0% 100%; }\n\n#menu {\n  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);\n  position: relative;\n  width: 300px;\n  top: -60px;\n  right: 274px;\n  padding: 20px;\n  padding-top: 100px;\n  background: #F9F8ED;\n  list-style-type: none;\n  -webkit-font-smoothing: antialiased;\n  transform-origin: 100% 0%;\n  transform: translate(100%, 0);\n  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }\n  #menu li {\n    padding: 10px 0;\n    font-size: 22px; }\n\n.logo {\n  height: 100px;\n  background-image: url(\"./images/catlogo.jpg\");\n  background-size: contain;\n  background-repeat: no-repeat;\n  display: inline-block; }\n  .logo h1 {\n    color: #F4E7D3;\n    margin-left: 110px;\n    margin-top: 40px;\n    font-size: 4rem;\n    text-shadow: 0px 0px 20px #0881A3; }\n\n.main {\n  background-image: url(\"./images/catpaws.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  height: 50vh; }\n  .main section {\n    display: inline-block;\n    height: 100%;\n    background-color: rgba(244, 231, 211, 0.5);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column; }\n    .main section p {\n      text-align: center;\n      font-size: 2rem;\n      font-weight: bold;\n      text-shadow: 0px 0px 15px #F9F8ED;\n      margin-bottom: 20px; }\n    .main section h1, .main section h2, .main section h3 {\n      text-shadow: 0px 0px 15px #F9F8ED;\n      font-weight: bold; }\n    .main section h1 {\n      font-size: 2.8rem; }\n    .main section button {\n      font-size: 30px;\n      padding: 5px;\n      margin-top: 20px; }\n\n.flex {\n  display: flex; }\n\n.about {\n  margin-top: 30px; }\n  .about .row.flex {\n    flex-wrap: wrap; }\n    .about .row.flex div.flex {\n      padding: 10px; }\n      @media (min-width: 992px) {\n        .about .row.flex div.flex .tile.img {\n          background-image: url(\"./images/catpavement.jpg\"); }\n          .about .row.flex div.flex .tile.img .blend {\n            padding: 0 30px 0 30px; } }\n\n.tile {\n  background-color: #F9F8ED;\n  padding: 20px;\n  width: 100%;\n  display: inline-block; }\n  .tile li {\n    text-align: left; }\n  .tile.img {\n    padding: 0;\n    background-size: cover;\n    float: right;\n    background-repeat: no-repeat;\n    background-position: center;\n    box-sizing: padding-box; }\n    .tile.img .blend {\n      padding-top: 30px;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      flex-direction: column;\n      height: 100%;\n      background-color: rgba(244, 231, 211, 0.6); }\n      .tile.img .blend p {\n        text-align: center;\n        font-weight: bold;\n        font-size: 2.4rem;\n        line-height: 3rem;\n        text-shadow: 0px 0px 15px #F9F8ED; }\n      .tile.img .blend button {\n        font-size: 2rem;\n        padding: 10px;\n        margin-top: 30px;\n        margin-bottom: 30px; }\n\n.adopt {\n  margin-top: 30px; }\n  .adopt .btn-wrapper {\n    display: flex;\n    justify-content: center; }\n  .adopt button {\n    font-size: 2rem;\n    padding: 10px;\n    margin-top: 30px;\n    margin-bottom: 30px; }\n  .adopt .row.flex {\n    flex-wrap: wrap; }\n    .adopt .row.flex div.flex {\n      padding: 10px; }\n    .adopt .row.flex .virtual-adopt li {\n      margin-bottom: 10px; }\n\n.slider {\n  order: -1; }\n  @media (min-width: 992px) {\n    .slider {\n      order: 0; } }\n\n#slider {\n  width: 100%;\n  background-image: url(\"./images/catslider.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.another {\n  margin-top: 30px; }\n  .another .row.flex {\n    flex-wrap: wrap; }\n    .another .row.flex div.flex {\n      padding: 10px; }\n\n#contact {\n  margin-top: 30px; }\n  #contact .entrance-img {\n    display: none; }\n    @media (min-width: 992px) {\n      #contact .entrance-img {\n        display: flex; } }\n  #contact .row.flex {\n    flex-wrap: wrap; }\n  #contact img {\n    width: 100%; }\n\n.map {\n  padding: 10px; }\n\n#map {\n  width: 100%;\n  min-height: 300px; }\n\nfooter {\n  margin-top: 30px;\n  background-color: #1F4E5F;\n  color: #0881A3;\n  padding: 15px; }\n  footer ul {\n    list-style: none; }\n  footer li {\n    font-size: 1.2rem;\n    line-height: 1.6rem; }\n    footer li .fa {\n      font-size: 4rem; }\n  footer .social-media {\n    width: auto;\n    float: right; }\n    footer .social-media p {\n      margin-bottom: 20px;\n      padding-left: 20px; }\n    @media (min-width: 768px) {\n      footer .social-media ul {\n        margin-top: 50px; } }\n    footer .social-media li {\n      display: block;\n      margin-left: 20px;\n      padding: 5px; }\n      @media (min-width: 768px) {\n        footer .social-media li {\n          display: inline; } }\n    footer .social-media a {\n      color: inherit; }\n\n.copy {\n  color: #1F4E5F;\n  margin: 5px 0; }\n  .copy .git i {\n    float: right;\n    font-size: 2.5rem; }\n  .copy .git span {\n    float: right; }\n  .copy .git a {\n    color: #1F4E5F; }\n\n#selection-bar {\n  background-color: #0881A3;\n  color: #F4E7D3;\n  padding: 10px; }\n  #selection-bar .sort-container {\n    float: right; }\n    #selection-bar .sort-container #sort {\n      display: inline-block;\n      float: right; }\n\n#filter-menu {\n  position: absolute;\n  color: #1F4E5F;\n  background-color: #F9F8ED;\n  top: 33px;\n  left: -10px;\n  width: 60vw;\n  padding: 10px;\n  z-index: 2; }\n  #filter-menu form {\n    font-size: 2rem;\n    line-height: 3.3rem; }\n    #filter-menu form span {\n      font-size: 2.2rem;\n      padding-left: 15px;\n      font-weight: bold; }\n    #filter-menu form input {\n      margin-left: 20px; }\n    #filter-menu form [type=\"submit\"] {\n      font-size: 2rem;\n      margin-top: 20px;\n      float: right;\n      padding: 10px;\n      margin-right: 20px; }\n\n@media (min-width: 992px) {\n  .filter-click {\n    display: none; } }\n\n.black-blend {\n  position: absolute;\n  background-color: rgba(0, 0, 0, 0.3);\n  height: 100vh;\n  width: 100vw;\n  z-index: 1; }\n\n#filter-menu-desktop {\n  display: none;\n  color: #1F4E5F;\n  background-color: #F9F8ED; }\n  #filter-menu-desktop form {\n    font-size: 1.8rem;\n    line-height: 3.3rem; }\n    #filter-menu-desktop form span {\n      font-size: 2rem;\n      padding-left: 15px;\n      font-weight: bold; }\n    #filter-menu-desktop form input {\n      margin-left: 20px; }\n    #filter-menu-desktop form [type=\"submit\"] {\n      font-size: 2rem;\n      margin-top: 20px;\n      float: right;\n      padding: 10px;\n      margin-right: 20px;\n      margin-bottom: 20px; }\n  @media (min-width: 992px) {\n    #filter-menu-desktop {\n      display: block; } }\n\n#results {\n  padding-top: 10px;\n  display: flex;\n  flex-wrap: wrap; }\n  #results .tile {\n    padding: 10px;\n    height: 98%; }\n  #results .cat-card {\n    padding-bottom: 70px;\n    position: relative; }\n    @media (min-width: 768px) {\n      #results .cat-card .thumbnail {\n        height: 340px;\n        width: 340px;\n        overflow: hidden;\n        position: relative; } }\n    @media (min-width: 992px) {\n      #results .cat-card .thumbnail {\n        height: 236px;\n        width: 236px; } }\n    @media (min-width: 1200px) {\n      #results .cat-card .thumbnail {\n        height: 211px;\n        width: 211px; } }\n    #results .cat-card .cat-img {\n      width: 100%; }\n      @media (min-width: 768px) {\n        #results .cat-card .cat-img {\n          position: absolute;\n          left: 50%;\n          top: 50%;\n          height: 100%;\n          width: auto;\n          -webkit-transform: translate(-50%, -50%);\n          -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%); } }\n    #results .cat-card h1 {\n      margin: 10px 0; }\n    #results .cat-card #keywords {\n      font-weight: bold;\n      margin-bottom: 10px;\n      text-align: left; }\n    #results .cat-card p.cat-short-desc {\n      font-size: 1.4rem;\n      line-height: 1.9rem; }\n    #results .cat-card button.more {\n      padding: 5px 3px 5px 3px;\n      margin: 5px 10px 5px 10px;\n      position: absolute;\n      bottom: 10px;\n      right: 10px; }\n\n@media (min-width: 768px) {\n  .thumbnail {\n    height: 340px;\n    width: 340px;\n    overflow: hidden;\n    position: relative; } }\n\n@media (min-width: 992px) {\n  .thumbnail {\n    height: 236px;\n    width: 236px;\n    overflow: hidden;\n    position: relative; } }\n\n@media (min-width: 1200px) {\n  .thumbnail {\n    height: 211px;\n    width: 211px;\n    overflow: hidden;\n    position: relative; } }\n\n/* cat full profile */\n#cat-full-profile {\n  margin-top: 10px; }\n  #cat-full-profile .photo-thumbnails {\n    margin-bottom: 15px; }\n    #cat-full-profile .photo-thumbnails .gallery-thumbnail {\n      display: inline-block;\n      background-color: #F9F8ED;\n      padding: 5px;\n      margin: 8px; }\n      #cat-full-profile .photo-thumbnails .gallery-thumbnail .cont {\n        overflow: hidden;\n        height: 100px;\n        width: 100px;\n        position: relative; }\n        #cat-full-profile .photo-thumbnails .gallery-thumbnail .cont img {\n          height: 100%;\n          width: auto; }\n          @media (min-width: 768px) {\n            #cat-full-profile .photo-thumbnails .gallery-thumbnail .cont img {\n              position: absolute;\n              left: 50%;\n              top: 50%;\n              height: 100%;\n              width: auto;\n              -webkit-transform: translate(-50%, -50%);\n              -ms-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%); } }\n  #cat-full-profile #big-photo {\n    background-color: #F9F8ED;\n    padding: 10px; }\n    #cat-full-profile #big-photo img {\n      width: 100%; }\n  #cat-full-profile .cat-full-info {\n    padding: 10px; }\n    #cat-full-profile .cat-full-info div {\n      padding: 10px;\n      background-color: #F9F8ED;\n      padding-bottom: 30px;\n      margin-bottom: 20px; }\n      #cat-full-profile .cat-full-info div ol {\n        list-style-position: inside; }\n        #cat-full-profile .cat-full-info div ol li {\n          font-weight: bold;\n          padding-bottom: 20px; }\n          #cat-full-profile .cat-full-info div ol li form {\n            margin-top: 10px;\n            margin-left: 20px; }\n          #cat-full-profile .cat-full-info div ol li .button {\n            margin-left: 20px;\n            margin-top: 10px;\n            padding: 5px 10px; }\n", ""]);
+exports.push([module.i, "html {\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%; }\n\nbody {\n  margin: 0; }\n\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\n*:before,\n*:after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box; }\n\nhtml {\n  -webkit-tap-highlight-color: transparent; }\n\n[role=\"button\"], .button {\n  cursor: pointer; }\n\n.container {\n  margin-right: auto;\n  margin-left: auto; }\n\n@media (min-width: 768px) {\n  .container {\n    width: 750px; } }\n\n@media (min-width: 992px) {\n  .container {\n    width: 970px; } }\n\n@media (min-width: 1200px) {\n  .container {\n    width: 1170px; } }\n\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 5px;\n  padding-right: 5px; }\n\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\n  position: relative;\n  min-height: 1px;\n  padding-left: 5px;\n  padding-right: 5px; }\n\n.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {\n  float: left; }\n\n.col-xs-12 {\n  width: 100%; }\n\n.col-xs-11 {\n  width: 91.66666667%; }\n\n.col-xs-10 {\n  width: 83.33333333%; }\n\n.col-xs-9 {\n  width: 75%; }\n\n.col-xs-8 {\n  width: 66.66666667%; }\n\n.col-xs-7 {\n  width: 58.33333333%; }\n\n.col-xs-6 {\n  width: 50%; }\n\n.col-xs-5 {\n  width: 41.66666667%; }\n\n.col-xs-4 {\n  width: 33.33333333%; }\n\n.col-xs-3 {\n  width: 25%; }\n\n.col-xs-2 {\n  width: 16.66666667%; }\n\n.col-xs-1 {\n  width: 8.33333333%; }\n\n@media (min-width: 768px) {\n  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {\n    float: left; }\n  .col-sm-12 {\n    width: 100%; }\n  .col-sm-11 {\n    width: 91.66666667%; }\n  .col-sm-10 {\n    width: 83.33333333%; }\n  .col-sm-9 {\n    width: 75%; }\n  .col-sm-8 {\n    width: 66.66666667%; }\n  .col-sm-7 {\n    width: 58.33333333%; }\n  .col-sm-6 {\n    width: 50%; }\n  .col-sm-5 {\n    width: 41.66666667%; }\n  .col-sm-4 {\n    width: 33.33333333%; }\n  .col-sm-3 {\n    width: 25%; }\n  .col-sm-2 {\n    width: 16.66666667%; }\n  .col-sm-1 {\n    width: 8.33333333%; } }\n\n@media (min-width: 992px) {\n  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {\n    float: left; }\n  .col-md-12 {\n    width: 100%; }\n  .col-md-11 {\n    width: 91.66666667%; }\n  .col-md-10 {\n    width: 83.33333333%; }\n  .col-md-9 {\n    width: 75%; }\n  .col-md-8 {\n    width: 66.66666667%; }\n  .col-md-7 {\n    width: 58.33333333%; }\n  .col-md-6 {\n    width: 50%; }\n  .col-md-5 {\n    width: 41.66666667%; }\n  .col-md-4 {\n    width: 33.33333333%; }\n  .col-md-3 {\n    width: 25%; }\n  .col-md-2 {\n    width: 16.66666667%; }\n  .col-md-1 {\n    width: 8.33333333%; } }\n\n@media (min-width: 1200px) {\n  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {\n    float: left; }\n  .col-lg-12 {\n    width: 100%; }\n  .col-lg-11 {\n    width: 91.66666667%; }\n  .col-lg-10 {\n    width: 83.33333333%; }\n  .col-lg-9 {\n    width: 75%; }\n  .col-lg-8 {\n    width: 66.66666667%; }\n  .col-lg-7 {\n    width: 58.33333333%; }\n  .col-lg-6 {\n    width: 50%; }\n  .col-lg-5 {\n    width: 41.66666667%; }\n  .col-lg-4 {\n    width: 33.33333333%; }\n  .col-lg-3 {\n    width: 25%; }\n  .col-lg-2 {\n    width: 16.66666667%; }\n  .col-lg-1 {\n    width: 8.33333333%; } }\n\n.clearfix:before,\n.clearfix:after,\n.container:before,\n.container:after,\n.container-fluid:before,\n.container-fluid:after,\n.row:before,\n.row:after {\n  content: \" \";\n  display: table; }\n\n.clearfix:after,\n.container:after,\n.container-fluid:after,\n.row:after {\n  clear: both; }\n\n.center-block {\n  display: block;\n  margin-left: auto;\n  margin-right: auto; }\n\n.hide {\n  display: none !important; }\n\n.show {\n  display: block !important; }\n\n.invisible {\n  visibility: hidden; }\n\n.text-hide {\n  font: 0/0 a;\n  color: transparent;\n  text-shadow: none;\n  background-color: transparent;\n  border: 0; }\n\n.hidden {\n  display: none !important; }\n\n* {\n  margin: 0;\n  padding: 0;\n  font-family: 'Montserrat', sans-serif;\n  text-align: justify;\n  font-size: 1.6rem; }\n\nhtml {\n  font-size: 62.5%; }\n\nbody {\n  color: #1F4E5F;\n  background-color: #F4E7D3; }\n\nh1 {\n  font-size: 2.6rem; }\n\nh2 {\n  font-size: 2.6rem; }\n\nh3 {\n  font-size: 1.8rem; }\n\np, ul {\n  line-height: 2.4rem; }\n\n.small-shadow, .button, header, .tile, #selection-bar, #filter-menu, #filter-menu-desktop, #cat-full-profile .photo-thumbnails .gallery-thumbnail, #cat-full-profile .cat-full-info div {\n  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }\n\n.shadow, .button:hover, #cat-full-profile #big-photo {\n  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);\n  z-index: 1; }\n\n.shadow-hover:hover, .tile:hover, #cat-full-profile .photo-thumbnails .gallery-thumbnail:hover, #cat-full-profile .cat-full-info div:hover {\n  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }\n\n.container.full-width {\n  width: 100%;\n  overflow: visible; }\n\n.blocker {\n  width: 100%;\n  height: 100%;\n  background-color: black;\n  position: absolute;\n  z-index: 200;\n  transition: 0.5s; }\n\n.button {\n  background-color: rgba(249, 248, 237, 0.5);\n  border: 3px solid #1F4E5F;\n  color: #1F4E5F; }\n\n#banner {\n  padding-top: 5px;\n  padding-right: 5px;\n  text-align: right;\n  position: absolute;\n  z-index: 1000;\n  right: 10px;\n  top: 100px;\n  width: 200px;\n  height: 200px;\n  position: fixed;\n  background-image: url(\"./images/zoo_koty.jpg\");\n  background-size: contain;\n  background-repeat: no-repeat; }\n  #banner a {\n    position: absolute;\n    display: inline-block;\n    right: 20px;\n    height: 30px;\n    width: 160px;\n    bottom: 5px; }\n\n.heading {\n  border-bottom: 5px solid #0881A3;\n  margin-bottom: 10px;\n  display: inline-block;\n  padding-left: 5px;\n  padding-right: 5px; }\n\nul.square-list {\n  list-style-type: square;\n  list-style-position: inside; }\n\nheader {\n  padding: 10px;\n  width: 100%;\n  background-color: #1F4E5F;\n  color: #F4E7D3;\n  position: relative; }\n  header nav {\n    font-weight: bold;\n    height: 100px; }\n    header nav ul#menu-desktop {\n      float: right;\n      list-style: none;\n      display: none;\n      justify-content: flex-end;\n      flex-direction: row;\n      align-items: flex-end;\n      height: 100px; }\n      @media (min-width: 992px) {\n        header nav ul#menu-desktop {\n          display: flex; } }\n      header nav ul#menu-desktop a {\n        color: #F4E7D3; }\n      header nav ul#menu-desktop li {\n        display: inline-block;\n        margin-right: 1vw;\n        text-align: center;\n        border-bottom: 5px solid #1F4E5F;\n        padding: 5px; }\n        header nav ul#menu-desktop li:hover {\n          border-bottom: 5px solid #0881A3; }\n        header nav ul#menu-desktop li:active {\n          background-color: #0881A3;\n          color: #1F4E5F; }\n\n.active-menu-link {\n  border-bottom: 5px solid #0881A3; }\n\n.hamburger {\n  position: fixed;\n  right: 0px;\n  top: 0;\n  z-index: 999; }\n  @media (min-width: 992px) {\n    .hamburger {\n      display: none; } }\n\n#menuToggle {\n  overflow: hidden;\n  position: absolute;\n  top: -15px;\n  right: -15px;\n  width: 300px;\n  padding-left: 300px;\n  float: right;\n  z-index: 1;\n  -webkit-user-select: none;\n  user-select: none; }\n  #menuToggle a {\n    text-decoration: none;\n    color: #1F4E5F;\n    transition: color 0.3s ease; }\n    #menuToggle a:hover {\n      color: #0881A3; }\n  #menuToggle input {\n    right: 20px;\n    top: 20px;\n    display: block;\n    width: 40px;\n    height: 32px;\n    position: absolute;\n    cursor: pointer;\n    opacity: 0.0;\n    z-index: 2;\n    -webkit-touch-callout: none; }\n  #menuToggle input:checked ~ span {\n    opacity: 1;\n    transform: rotate(45deg) translate(-2px, -1px);\n    background: #1F4E5F; }\n  #menuToggle input:checked ~ span:nth-last-child(3) {\n    opacity: 0;\n    transform: rotate(0deg) scale(0.2, 0.2); }\n  #menuToggle input:checked ~ span:nth-last-child(2) {\n    opacity: 1;\n    transform: rotate(-45deg) translate(0, -1px); }\n  #menuToggle input:checked ~ ul {\n    transform: scale(1, 1);\n    opacity: 1; }\n  #menuToggle span {\n    right: 55px;\n    top: 25px;\n    display: block;\n    width: 33px;\n    height: 4px;\n    margin-bottom: 5px;\n    position: relative;\n    background: #0881A3;\n    border-radius: 3px;\n    z-index: 1;\n    transform-origin: 4px 0px;\n    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }\n    #menuToggle span:first-child {\n      transform-origin: 0% 0%;\n      padding-top: 20px; }\n    #menuToggle span:nth-last-child(2) {\n      transform-origin: 0% 100%; }\n\n#menu {\n  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);\n  position: relative;\n  width: 300px;\n  top: -60px;\n  right: 274px;\n  padding: 20px;\n  padding-top: 100px;\n  background: #F9F8ED;\n  list-style-type: none;\n  -webkit-font-smoothing: antialiased;\n  transform-origin: 100% 0%;\n  transform: translate(100%, 0);\n  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }\n  #menu li {\n    padding: 10px 0;\n    font-size: 22px; }\n\n.logo {\n  height: 100px;\n  background-image: url(\"./images/catlogo.jpg\");\n  background-size: contain;\n  background-repeat: no-repeat;\n  display: inline-block; }\n  .logo h1 {\n    color: #F4E7D3;\n    margin-left: 110px;\n    margin-top: 40px;\n    font-size: 4rem;\n    text-shadow: 0px 0px 20px #0881A3; }\n\n.main {\n  background-image: url(\"./images/catpaws.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  height: 50vh; }\n  .main section {\n    display: inline-block;\n    height: 100%;\n    background-color: rgba(244, 231, 211, 0.5);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    flex-direction: column; }\n    .main section p {\n      text-align: center;\n      font-size: 2rem;\n      font-weight: bold;\n      text-shadow: 0px 0px 15px #F9F8ED;\n      margin-bottom: 20px; }\n    .main section h1, .main section h2, .main section h3 {\n      text-shadow: 0px 0px 15px #F9F8ED;\n      font-weight: bold; }\n    .main section h1 {\n      font-size: 2.8rem; }\n    .main section button {\n      font-size: 30px;\n      padding: 5px;\n      margin-top: 20px; }\n\n.flex {\n  display: flex; }\n\n.about {\n  margin-top: 30px; }\n  .about .row.flex {\n    flex-wrap: wrap; }\n    .about .row.flex div.flex {\n      padding: 10px; }\n      @media (min-width: 992px) {\n        .about .row.flex div.flex .tile.img {\n          background-image: url(\"./images/catpavement.jpg\"); }\n          .about .row.flex div.flex .tile.img .blend {\n            padding: 0 30px 0 30px; } }\n\n.tile {\n  background-color: #F9F8ED;\n  padding: 20px;\n  width: 100%;\n  display: inline-block; }\n  .tile li {\n    text-align: left; }\n  .tile.img {\n    padding: 0;\n    background-size: cover;\n    float: right;\n    background-repeat: no-repeat;\n    background-position: center;\n    box-sizing: padding-box; }\n    .tile.img .blend {\n      padding-top: 30px;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      flex-direction: column;\n      height: 100%;\n      background-color: rgba(244, 231, 211, 0.6); }\n      .tile.img .blend p {\n        text-align: center;\n        font-weight: bold;\n        font-size: 2.4rem;\n        line-height: 3rem;\n        text-shadow: 0px 0px 15px #F9F8ED; }\n      .tile.img .blend button {\n        font-size: 2rem;\n        padding: 10px;\n        margin-top: 30px;\n        margin-bottom: 30px; }\n\n.adopt {\n  margin-top: 30px; }\n  .adopt .btn-wrapper {\n    display: flex;\n    justify-content: center; }\n  .adopt button {\n    font-size: 2rem;\n    padding: 10px;\n    margin-top: 30px;\n    margin-bottom: 30px; }\n  .adopt .row.flex {\n    flex-wrap: wrap; }\n    .adopt .row.flex div.flex {\n      padding: 10px; }\n    .adopt .row.flex .virtual-adopt li {\n      margin-bottom: 10px; }\n\n.slider {\n  order: -1; }\n  @media (min-width: 992px) {\n    .slider {\n      order: 0; } }\n\n#slider {\n  width: 100%;\n  background-image: url(\"./images/catslider.jpg\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.another {\n  margin-top: 30px; }\n  .another .row.flex {\n    flex-wrap: wrap; }\n    .another .row.flex div.flex {\n      padding: 10px; }\n\n#contact {\n  margin-top: 30px; }\n  #contact .entrance-img {\n    display: none; }\n    @media (min-width: 992px) {\n      #contact .entrance-img {\n        display: flex; } }\n  #contact .row.flex {\n    flex-wrap: wrap; }\n  #contact img {\n    width: 100%; }\n\n.map {\n  padding: 10px; }\n\n#map {\n  width: 100%;\n  min-height: 300px; }\n\nfooter {\n  margin-top: 30px;\n  background-color: #1F4E5F;\n  color: #0881A3;\n  padding: 15px; }\n  footer ul {\n    list-style: none; }\n  footer li {\n    font-size: 1.2rem;\n    line-height: 1.6rem; }\n    footer li .fa {\n      font-size: 4rem; }\n  footer .social-media {\n    width: auto;\n    float: right; }\n    footer .social-media p {\n      margin-bottom: 20px;\n      padding-left: 20px; }\n    @media (min-width: 768px) {\n      footer .social-media ul {\n        margin-top: 50px; } }\n    footer .social-media li {\n      display: block;\n      margin-left: 20px;\n      padding: 5px; }\n      @media (min-width: 768px) {\n        footer .social-media li {\n          display: inline; } }\n    footer .social-media a {\n      color: inherit; }\n\n.copy {\n  color: #1F4E5F;\n  margin: 5px 0; }\n  .copy .git i {\n    float: right;\n    font-size: 2.5rem; }\n  .copy .git span {\n    float: right; }\n  .copy .git a {\n    color: #1F4E5F; }\n\n#selection-bar {\n  background-color: #0881A3;\n  color: #F4E7D3;\n  padding: 10px; }\n  #selection-bar .sort-container {\n    float: right; }\n    #selection-bar .sort-container #sort {\n      display: inline-block;\n      float: right; }\n\n#filter-menu {\n  position: absolute;\n  color: #1F4E5F;\n  background-color: #F9F8ED;\n  top: 33px;\n  left: -10px;\n  width: 60vw;\n  padding: 10px;\n  z-index: 2; }\n  #filter-menu form {\n    font-size: 2rem;\n    line-height: 3.3rem; }\n    #filter-menu form span {\n      font-size: 2.2rem;\n      padding-left: 15px;\n      font-weight: bold; }\n    #filter-menu form input {\n      margin-left: 20px; }\n    #filter-menu form [type=\"submit\"] {\n      font-size: 2rem;\n      margin-top: 20px;\n      float: right;\n      padding: 10px;\n      margin-right: 20px; }\n\n@media (min-width: 992px) {\n  .filter-click {\n    display: none; } }\n\n.black-blend {\n  position: absolute;\n  background-color: rgba(0, 0, 0, 0.3);\n  height: 100vh;\n  width: 100vw;\n  z-index: 1; }\n\n#filter-menu-desktop {\n  display: none;\n  color: #1F4E5F;\n  background-color: #F9F8ED; }\n  #filter-menu-desktop form {\n    font-size: 1.8rem;\n    line-height: 3.3rem; }\n    #filter-menu-desktop form span {\n      font-size: 2rem;\n      padding-left: 15px;\n      font-weight: bold; }\n    #filter-menu-desktop form input {\n      margin-left: 20px; }\n    #filter-menu-desktop form [type=\"submit\"] {\n      font-size: 2rem;\n      margin-top: 20px;\n      float: right;\n      padding: 10px;\n      margin-right: 20px;\n      margin-bottom: 20px; }\n  @media (min-width: 992px) {\n    #filter-menu-desktop {\n      display: block; } }\n\n#results {\n  padding-top: 10px;\n  display: flex;\n  flex-wrap: wrap; }\n  #results .tile {\n    padding: 10px;\n    height: 98%; }\n  #results .cat-card {\n    padding-bottom: 70px;\n    position: relative; }\n    @media (min-width: 768px) {\n      #results .cat-card .thumbnail {\n        height: 340px;\n        width: 340px;\n        overflow: hidden;\n        position: relative; } }\n    @media (min-width: 992px) {\n      #results .cat-card .thumbnail {\n        height: 236px;\n        width: 236px; } }\n    @media (min-width: 1200px) {\n      #results .cat-card .thumbnail {\n        height: 211px;\n        width: 211px; } }\n    #results .cat-card .cat-img {\n      width: 100%; }\n      @media (min-width: 768px) {\n        #results .cat-card .cat-img {\n          position: absolute;\n          left: 50%;\n          top: 50%;\n          height: 100%;\n          width: auto;\n          -webkit-transform: translate(-50%, -50%);\n          -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%); } }\n    #results .cat-card h1 {\n      margin: 10px 0; }\n    #results .cat-card #keywords {\n      font-weight: bold;\n      margin-bottom: 10px;\n      text-align: left; }\n    #results .cat-card p.cat-short-desc {\n      font-size: 1.4rem;\n      line-height: 1.9rem; }\n    #results .cat-card button.more {\n      padding: 5px 3px 5px 3px;\n      margin: 5px 10px 5px 10px;\n      position: absolute;\n      bottom: 10px;\n      right: 10px; }\n\n@media (min-width: 768px) {\n  .thumbnail {\n    height: 340px;\n    width: 340px;\n    overflow: hidden;\n    position: relative; } }\n\n@media (min-width: 992px) {\n  .thumbnail {\n    height: 236px;\n    width: 236px;\n    overflow: hidden;\n    position: relative; } }\n\n@media (min-width: 1200px) {\n  .thumbnail {\n    height: 211px;\n    width: 211px;\n    overflow: hidden;\n    position: relative; } }\n\n/* cat full profile */\n#cat-full-profile {\n  margin-top: 10px; }\n  #cat-full-profile .photo-thumbnails {\n    margin-bottom: 15px; }\n    #cat-full-profile .photo-thumbnails .gallery-thumbnail {\n      display: inline-block;\n      background-color: #F9F8ED;\n      padding: 5px;\n      margin: 3px; }\n      #cat-full-profile .photo-thumbnails .gallery-thumbnail .cont {\n        overflow: hidden;\n        height: 100px;\n        width: 100px;\n        position: relative; }\n        #cat-full-profile .photo-thumbnails .gallery-thumbnail .cont img {\n          height: 100%;\n          width: auto; }\n          @media (min-width: 768px) {\n            #cat-full-profile .photo-thumbnails .gallery-thumbnail .cont img {\n              position: absolute;\n              left: 50%;\n              top: 50%;\n              height: 100%;\n              width: auto;\n              -webkit-transform: translate(-50%, -50%);\n              -ms-transform: translate(-50%, -50%);\n              transform: translate(-50%, -50%); } }\n  #cat-full-profile #big-photo {\n    background-color: #F9F8ED;\n    padding: 10px; }\n    #cat-full-profile #big-photo img {\n      width: 100%; }\n  #cat-full-profile .cat-full-info {\n    padding: 10px; }\n    #cat-full-profile .cat-full-info div {\n      padding: 10px;\n      background-color: #F9F8ED;\n      padding-bottom: 30px;\n      margin-bottom: 20px; }\n      #cat-full-profile .cat-full-info div ol {\n        list-style-position: inside; }\n        #cat-full-profile .cat-full-info div ol li {\n          font-weight: bold;\n          padding-bottom: 20px; }\n          #cat-full-profile .cat-full-info div ol li form {\n            margin-top: 10px;\n            margin-left: 20px; }\n          #cat-full-profile .cat-full-info div ol li .button {\n            margin-left: 20px;\n            margin-top: 10px;\n            padding: 5px 10px; }\n", ""]);
 
 // exports
 
@@ -20889,7 +20909,7 @@ var appErrors = new _errors.ErrorFactory('app', 'Firebase', errors);
 Build: rev-1234895
 Terms: https://firebase.google.com/terms/ */
 
-var firebase = __webpack_require__(35);
+var firebase = __webpack_require__(36);
 (function(){(function(){var h,aa=aa||{},k=this,m=function(a){return void 0!==a},p=function(a){return"string"==typeof a},ba=function(a){return"boolean"==typeof a},ca=function(a){return"number"==typeof a},da=function(){},ea=function(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&
 !a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";else if("function"==b&&"undefined"==typeof a.call)return"object";return b},fa=function(a){return null===a},ga=function(a){return"array"==ea(a)},ha=function(a){var b=ea(a);return"array"==b||"object"==b&&"number"==typeof a.length},q=function(a){return"function"==ea(a)},r=function(a){var b=
 typeof a;return"object"==b&&null!=a||"function"==b},ia=function(a,b,c){return a.call.apply(a.bind,arguments)},ja=function(a,b,c){if(!a)throw Error();if(2<arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var c=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(c,d);return a.apply(b,c)}}return function(){return a.apply(b,arguments)}},t=function(a,b,c){t=Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?ia:ja;return t.apply(null,
@@ -21197,7 +21217,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. */
 
 (function() {
-            var firebase = __webpack_require__(35);
+            var firebase = __webpack_require__(36);
             var g,aa=this;function n(a){return void 0!==a}function ba(){}function ca(a){a.Vb=function(){return a.Ye?a.Ye:a.Ye=new a}}
 function da(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
 else if("function"==b&&"undefined"==typeof a.call)return"object";return b}function ea(a){return"array"==da(a)}function fa(a){var b=da(a);return"array"==b||"object"==b&&"number"==typeof a.length}function p(a){return"string"==typeof a}function ga(a){return"number"==typeof a}function ha(a){return"function"==da(a)}function ia(a){var b=typeof a;return"object"==b&&null!=a||"function"==b}function ja(a,b,c){return a.call.apply(a.bind,arguments)}
@@ -21475,7 +21495,7 @@ var _swController = __webpack_require__(185);
 
 var _swController2 = _interopRequireDefault(_swController);
 
-var _app = __webpack_require__(35);
+var _app = __webpack_require__(36);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -23044,7 +23064,7 @@ var _reference = __webpack_require__(104);
 
 var _service = __webpack_require__(204);
 
-var _app = __webpack_require__(35);
+var _app = __webpack_require__(36);
 
 var _app2 = _interopRequireDefault(_app);
 
@@ -26905,7 +26925,7 @@ module.exports = AutoFocusUtils;
 
 
 
-var EventPropagators = __webpack_require__(37);
+var EventPropagators = __webpack_require__(38);
 var ExecutionEnvironment = __webpack_require__(8);
 var FallbackCompositionState = __webpack_require__(225);
 var SyntheticCompositionEvent = __webpack_require__(268);
@@ -27515,8 +27535,8 @@ module.exports = CSSPropertyOperations;
 
 
 
-var EventPluginHub = __webpack_require__(36);
-var EventPropagators = __webpack_require__(37);
+var EventPluginHub = __webpack_require__(37);
+var EventPropagators = __webpack_require__(38);
 var ExecutionEnvironment = __webpack_require__(8);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactUpdates = __webpack_require__(14);
@@ -27915,7 +27935,7 @@ module.exports = DefaultEventPluginOrder;
 
 
 
-var EventPropagators = __webpack_require__(37);
+var EventPropagators = __webpack_require__(38);
 var ReactDOMComponentTree = __webpack_require__(6);
 var SyntheticMouseEvent = __webpack_require__(50);
 
@@ -28558,7 +28578,7 @@ var React = __webpack_require__(33);
 var ReactComponentEnvironment = __webpack_require__(75);
 var ReactCurrentOwner = __webpack_require__(15);
 var ReactErrorUtils = __webpack_require__(76);
-var ReactInstanceMap = __webpack_require__(38);
+var ReactInstanceMap = __webpack_require__(39);
 var ReactInstrumentation = __webpack_require__(12);
 var ReactNodeTypes = __webpack_require__(120);
 var ReactReconciler = __webpack_require__(30);
@@ -29585,7 +29605,7 @@ var DOMLazyTree = __webpack_require__(29);
 var DOMNamespaces = __webpack_require__(71);
 var DOMProperty = __webpack_require__(20);
 var DOMPropertyOperations = __webpack_require__(112);
-var EventPluginHub = __webpack_require__(36);
+var EventPluginHub = __webpack_require__(37);
 var EventPluginRegistry = __webpack_require__(48);
 var ReactBrowserEventEmitter = __webpack_require__(49);
 var ReactDOMComponentFlags = __webpack_require__(113);
@@ -32692,7 +32712,7 @@ module.exports = REACT_ELEMENT_TYPE;
 
 
 
-var EventPluginHub = __webpack_require__(36);
+var EventPluginHub = __webpack_require__(37);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -32929,7 +32949,7 @@ module.exports = ReactHostOperationHistoryHook;
 
 
 var DOMProperty = __webpack_require__(20);
-var EventPluginHub = __webpack_require__(36);
+var EventPluginHub = __webpack_require__(37);
 var EventPluginUtils = __webpack_require__(72);
 var ReactComponentEnvironment = __webpack_require__(75);
 var ReactEmptyComponent = __webpack_require__(115);
@@ -33068,7 +33088,7 @@ module.exports = ReactMarkupChecksum;
 var _prodInvariant = __webpack_require__(4);
 
 var ReactComponentEnvironment = __webpack_require__(75);
-var ReactInstanceMap = __webpack_require__(38);
+var ReactInstanceMap = __webpack_require__(39);
 var ReactInstrumentation = __webpack_require__(12);
 
 var ReactCurrentOwner = __webpack_require__(15);
@@ -34492,7 +34512,7 @@ module.exports = SVGDOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(37);
+var EventPropagators = __webpack_require__(38);
 var ExecutionEnvironment = __webpack_require__(8);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactInputSelection = __webpack_require__(118);
@@ -34689,7 +34709,7 @@ module.exports = SelectEventPlugin;
 var _prodInvariant = __webpack_require__(4);
 
 var EventListener = __webpack_require__(91);
-var EventPropagators = __webpack_require__(37);
+var EventPropagators = __webpack_require__(38);
 var ReactDOMComponentTree = __webpack_require__(6);
 var SyntheticAnimationEvent = __webpack_require__(266);
 var SyntheticClipboardEvent = __webpack_require__(267);
@@ -34700,7 +34720,7 @@ var SyntheticMouseEvent = __webpack_require__(50);
 var SyntheticDragEvent = __webpack_require__(269);
 var SyntheticTouchEvent = __webpack_require__(273);
 var SyntheticTransitionEvent = __webpack_require__(274);
-var SyntheticUIEvent = __webpack_require__(39);
+var SyntheticUIEvent = __webpack_require__(40);
 var SyntheticWheelEvent = __webpack_require__(275);
 
 var emptyFunction = __webpack_require__(13);
@@ -35086,7 +35106,7 @@ module.exports = SyntheticDragEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(39);
+var SyntheticUIEvent = __webpack_require__(40);
 
 /**
  * @interface FocusEvent
@@ -35169,7 +35189,7 @@ module.exports = SyntheticInputEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(39);
+var SyntheticUIEvent = __webpack_require__(40);
 
 var getEventCharCode = __webpack_require__(79);
 var getEventKey = __webpack_require__(281);
@@ -35258,7 +35278,7 @@ module.exports = SyntheticKeyboardEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(39);
+var SyntheticUIEvent = __webpack_require__(40);
 
 var getEventModifierState = __webpack_require__(80);
 
@@ -35639,7 +35659,7 @@ var _prodInvariant = __webpack_require__(4);
 
 var ReactCurrentOwner = __webpack_require__(15);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInstanceMap = __webpack_require__(38);
+var ReactInstanceMap = __webpack_require__(39);
 
 var getHostComponentFromComposite = __webpack_require__(125);
 var invariant = __webpack_require__(1);
@@ -36202,7 +36222,7 @@ var IndexLink = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Redirect__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(41);
 
 
 
@@ -36261,7 +36281,7 @@ var IndexRedirect = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__RouteUtils__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(41);
 
 
 
@@ -36318,7 +36338,7 @@ var IndexRoute = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__RouteUtils__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__InternalPropTypes__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__InternalPropTypes__ = __webpack_require__(41);
 
 
 
@@ -36375,7 +36395,7 @@ var Route = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createTransitionManager__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__InternalPropTypes__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__InternalPropTypes__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__RouterContext__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__RouteUtils__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__RouterUtils__ = __webpack_require__(135);
