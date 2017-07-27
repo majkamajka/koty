@@ -1,5 +1,6 @@
 import React from "react";
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
+import FilterMenu from "./filterMenu.jsx";
 
 class SortBar extends React.Component {
   constructor(props) {
