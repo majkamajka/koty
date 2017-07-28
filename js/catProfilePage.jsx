@@ -30,7 +30,6 @@ class CatProfilePage extends React.Component {
   render() {
     return (
       <div className="container">
-        <Header/>
         <section className="row" id="cat-full-profile">
           <Gallery pathId={this.props.params.id}/>
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 cat-full-info">
@@ -38,7 +37,6 @@ class CatProfilePage extends React.Component {
             <Donations/>
           </div>
         </section>
-        <Footer/>
       </div>
     )
   };

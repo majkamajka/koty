@@ -21,13 +21,11 @@ class MainPage extends React.Component {
   render () {
     return (
       <div className="container">
-        <Header />
         <Title />
         <About />
         <VirtualAdoption />
         <Help />
         <Contact />
-        <Footer />
       </div>
     )
   };

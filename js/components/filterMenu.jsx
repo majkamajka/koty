@@ -28,7 +28,7 @@ class FilterMenu extends React.Component {
 
 
 
-// czekboksy nie do końca działają dobrze - kliknięcie poza czekboks odpala event na pierwszym impucie z grupy - wtf?!
+// czekboksy nie do końca działają dobrze - kliknięcie poza czekboks odpala event na pierwszym inpucie z grupy - wtf?!
   render () {
     return (
       <div className="col-md-2 col-lg-2" id="filter-menu-desktop">

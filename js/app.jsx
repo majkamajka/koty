@@ -11,26 +11,26 @@ import {
   hashHistory
 } from 'react-router';
 
+import NotFound from "./components/notFound.jsx";
 import AdoptionsPage from "./adoptions.jsx";
 import MainPage from "./mainPage.jsx";
 import CatProfilePage from "./catProfilePage.jsx";
+import Template from "./components/template.jsx";
 
 import "../scss/style.scss";
 
-class NotFound extends React.Component {
-  render() {
-    return <h1>404, Nothing is here</h1>;
-  }
-}
 
 class App extends React.Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path='/' component={MainPage}/>
-        <Route path='/adoptions' component={AdoptionsPage}/>
-        <Route path='/cat-profile/:id' component={CatProfilePage}/>
-        <Route path='*' component={NotFound}/>
+
+        <Route path='/' component={Template}>
+          <IndexRoute component={MainPage} />
+          <Route path='/adoptions' component={AdoptionsPage}/>
+          <Route path='/cat-profile/:id' component={CatProfilePage}/>
+          <Route path='*' component={NotFound} />
+        </Route>
       </Router>
     )
   };

@@ -19,7 +19,6 @@ class AdoptionsPage extends React.Component {
     return (
       <div className="container">
 
-        <Header />
         <SortBar />
 
         <div className="black-blend hidden"></div>
@@ -31,7 +30,6 @@ class AdoptionsPage extends React.Component {
 
         </section>
 
-        <Footer />
 
       </div>
     )

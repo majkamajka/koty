@@ -10393,7 +10393,7 @@ var FilterMenu = function (_React$Component) {
     key: 'render',
 
 
-    // czekboksy nie do końca działają dobrze - kliknięcie poza czekboks odpala event na pierwszym impucie z grupy - wtf?!
+    // czekboksy nie do końca działają dobrze - kliknięcie poza czekboks odpala event na pierwszym inpucie z grupy - wtf?!
     value: function render() {
       return _react2.default.createElement(
         'div',
@@ -16361,6 +16361,10 @@ var firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
+var _notFound = __webpack_require__(322);
+
+var _notFound2 = _interopRequireDefault(_notFound);
+
 var _adoptions = __webpack_require__(148);
 
 var _adoptions2 = _interopRequireDefault(_adoptions);
@@ -16372,6 +16376,10 @@ var _mainPage2 = _interopRequireDefault(_mainPage);
 var _catProfilePage = __webpack_require__(149);
 
 var _catProfilePage2 = _interopRequireDefault(_catProfilePage);
+
+var _template = __webpack_require__(323);
+
+var _template2 = _interopRequireDefault(_template);
 
 __webpack_require__(55);
 
@@ -16385,31 +16393,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var NotFound = function (_React$Component) {
-  _inherits(NotFound, _React$Component);
-
-  function NotFound() {
-    _classCallCheck(this, NotFound);
-
-    return _possibleConstructorReturn(this, (NotFound.__proto__ || Object.getPrototypeOf(NotFound)).apply(this, arguments));
-  }
-
-  _createClass(NotFound, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "h1",
-        null,
-        "404, Nothing is here"
-      );
-    }
-  }]);
-
-  return NotFound;
-}(_react2.default.Component);
-
-var App = function (_React$Component2) {
-  _inherits(App, _React$Component2);
+var App = function (_React$Component) {
+  _inherits(App, _React$Component);
 
   function App() {
     _classCallCheck(this, App);
@@ -16423,10 +16408,14 @@ var App = function (_React$Component2) {
       return _react2.default.createElement(
         _reactRouter.Router,
         { history: _reactRouter.hashHistory },
-        _react2.default.createElement(_reactRouter.Route, { path: "/", component: _mainPage2.default }),
-        _react2.default.createElement(_reactRouter.Route, { path: "/adoptions", component: _adoptions2.default }),
-        _react2.default.createElement(_reactRouter.Route, { path: "/cat-profile/:id", component: _catProfilePage2.default }),
-        _react2.default.createElement(_reactRouter.Route, { path: "*", component: NotFound })
+        _react2.default.createElement(
+          _reactRouter.Route,
+          { path: "/", component: _template2.default },
+          _react2.default.createElement(_reactRouter.IndexRoute, { component: _mainPage2.default }),
+          _react2.default.createElement(_reactRouter.Route, { path: "/adoptions", component: _adoptions2.default }),
+          _react2.default.createElement(_reactRouter.Route, { path: "/cat-profile/:id", component: _catProfilePage2.default }),
+          _react2.default.createElement(_reactRouter.Route, { path: "*", component: _notFound2.default })
+        )
       );
     }
   }]);
@@ -16979,7 +16968,6 @@ var AdoptionsPage = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "container" },
-        _react2.default.createElement(_header2.default, null),
         _react2.default.createElement(_sortBar2.default, null),
         _react2.default.createElement("div", { className: "black-blend hidden" }),
         _react2.default.createElement(
@@ -16987,8 +16975,7 @@ var AdoptionsPage = function (_React$Component) {
           { className: "row", id: "results-container" },
           _react2.default.createElement(_filterMenu2.default, null),
           _react2.default.createElement(_searchResults2.default, null)
-        ),
-        _react2.default.createElement(_footer2.default, null)
+        )
       );
     }
   }]);
@@ -17081,7 +17068,6 @@ var CatProfilePage = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "container" },
-        _react2.default.createElement(_header2.default, null),
         _react2.default.createElement(
           "section",
           { className: "row", id: "cat-full-profile" },
@@ -17092,8 +17078,7 @@ var CatProfilePage = function (_React$Component) {
             _react2.default.createElement(_fullDesc2.default, { pathId: this.props.params.id }),
             _react2.default.createElement(_donations2.default, null)
           )
-        ),
-        _react2.default.createElement(_footer2.default, null)
+        )
       );
     }
   }]);
@@ -18724,13 +18709,11 @@ var MainPage = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "container" },
-        _react2.default.createElement(_header2.default, null),
         _react2.default.createElement(_title2.default, null),
         _react2.default.createElement(_about2.default, null),
         _react2.default.createElement(_virtualAdoption2.default, null),
         _react2.default.createElement(_help2.default, null),
-        _react2.default.createElement(_contact2.default, null),
-        _react2.default.createElement(_footer2.default, null)
+        _react2.default.createElement(_contact2.default, null)
       );
     }
   }]);
@@ -39298,6 +39281,250 @@ exports.clearImmediate = clearImmediate;
 __webpack_require__(147);
 module.exports = __webpack_require__(146);
 
+
+/***/ }),
+/* 322 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = __webpack_require__(7);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NotFound = function (_React$Component) {
+  _inherits(NotFound, _React$Component);
+
+  function NotFound() {
+    _classCallCheck(this, NotFound);
+
+    return _possibleConstructorReturn(this, (NotFound.__proto__ || Object.getPrototypeOf(NotFound)).apply(this, arguments));
+  }
+
+  _createClass(NotFound, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "h1",
+        null,
+        "404, Nothing is here"
+      );
+    }
+  }]);
+
+  return NotFound;
+}(_react2.default.Component);
+
+exports.default = NotFound;
+
+/***/ }),
+/* 323 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = __webpack_require__(7);
+
+var _footer = __webpack_require__(56);
+
+var _footer2 = _interopRequireDefault(_footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Template = function (_React$Component) {
+  _inherits(Template, _React$Component);
+
+  function Template() {
+    _classCallCheck(this, Template);
+
+    return _possibleConstructorReturn(this, (Template.__proto__ || Object.getPrototypeOf(Template)).apply(this, arguments));
+  }
+
+  _createClass(Template, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          "header",
+          { className: "row" },
+          _react2.default.createElement(
+            _reactRouter.IndexLink,
+            { to: "/" },
+            _react2.default.createElement(
+              "div",
+              { className: "col-xs-4 col-sm-4 col-md-4 col-lg-4 logo" },
+              _react2.default.createElement(
+                "h1",
+                null,
+                "Adopcje"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "nav",
+            { className: "col-xs-8 col-sm-8 col-md-8 col-lg-8 menu" },
+            _react2.default.createElement(
+              "ul",
+              { id: "menu-desktop" },
+              _react2.default.createElement(
+                _reactRouter.IndexLink,
+                { to: "/adoptions", activeClassName: "active-menu-link" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "KOTY DO",
+                  _react2.default.createElement("br", null),
+                  "ADOPCJI"
+                )
+              ),
+              _react2.default.createElement(
+                _reactRouter.IndexLink,
+                { to: "/", activeClassName: "active-menu-link" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "KOTERIA"
+                )
+              ),
+              _react2.default.createElement(
+                _reactRouter.IndexLink,
+                { to: "/", activeClassName: "active-menu-link" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "WIRTUALNA",
+                  _react2.default.createElement("br", null),
+                  "ADOPCJA"
+                )
+              ),
+              _react2.default.createElement(
+                _reactRouter.IndexLink,
+                { to: "/", activeClassName: "active-menu-link" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "POMOC"
+                )
+              ),
+              _react2.default.createElement(
+                _reactRouter.IndexLink,
+                { to: "/", activeClassName: "active-menu-link" },
+                _react2.default.createElement(
+                  "li",
+                  null,
+                  "KONTAKT"
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "hamburger" },
+              _react2.default.createElement(
+                "div",
+                { id: "menuToggle" },
+                _react2.default.createElement("input", { type: "checkbox" }),
+                _react2.default.createElement("span", null),
+                _react2.default.createElement("span", null),
+                _react2.default.createElement("span", null),
+                _react2.default.createElement(
+                  "ul",
+                  { id: "menu" },
+                  _react2.default.createElement(
+                    _reactRouter.IndexLink,
+                    { to: "/adoptions" },
+                    _react2.default.createElement(
+                      "li",
+                      null,
+                      "Koty do adopcji"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouter.IndexLink,
+                    { to: "/" },
+                    _react2.default.createElement(
+                      "li",
+                      null,
+                      "Koteria"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouter.IndexLink,
+                    { to: "/" },
+                    _react2.default.createElement(
+                      "li",
+                      null,
+                      "Wirtualna adopcja"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouter.IndexLink,
+                    { to: "/" },
+                    _react2.default.createElement(
+                      "li",
+                      null,
+                      "Pomoc"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    _reactRouter.IndexLink,
+                    { to: "/" },
+                    _react2.default.createElement(
+                      "li",
+                      null,
+                      "Kontakt"
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        this.props.children,
+        _react2.default.createElement(_footer2.default, null)
+      );
+    }
+  }]);
+
+  return Template;
+}(_react2.default.Component);
+
+exports.default = Template;
 
 /***/ })
 /******/ ]);
