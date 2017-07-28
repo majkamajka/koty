@@ -65,6 +65,7 @@ class CatCards extends React.Component {
   }
 
   render() {
+    console.log(this.props.activeFilters);
     return (
       <div className="row" id="results">
         {this.state.cards}

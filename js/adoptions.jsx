@@ -15,6 +15,34 @@ import "../scss/style.scss";
 
 
 class AdoptionsPage extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      filters: "",
+      activeFilters: ""
+    }
+  }
+
+
+  receiveFilters = (filters) => {
+    this.setState({
+      filters: filters
+    })
+    let x = this.state.filters;
+    let activeFilters = [];
+
+    for (let i = 0; i < Object.values(x).length; i++) {
+      if (Object.values(x)[i]) {
+        activeFilters.push(Object.keys(x)[i]);
+      }
+    }
+
+    this.setState({
+      activeFilters: activeFilters
+    })
+  }
+
   render () {
     return (
       <div className="container">
@@ -25,8 +53,8 @@ class AdoptionsPage extends React.Component {
 
         <section className="row" id="results-container">
 
-          <FilterMenu />
-          <SearchResults />
+          <FilterMenu logFilters={this.receiveFilters}/>
+          <SearchResults activeFilters={this.state.activeFilters}/>
 
         </section>
 

@@ -26,7 +26,11 @@ class FilterMenu extends React.Component {
     });
   }
 
-
+  passFiltersUp = (event) => {
+    event.preventDefault();
+    const allFiltersState = this.state;
+    this.props.logFilters(allFiltersState);
+  }
 
 // czekboksy nie do końca działają dobrze - kliknięcie poza czekboks odpala event na pierwszym inpucie z grupy - wtf?!
   render () {
@@ -59,7 +63,7 @@ class FilterMenu extends React.Component {
               <span> PILNE</span><hr/>
           </label>
 
-            <input className="button shadow-hover" type="submit" value="szukaj" onClick={this.submitFilters}></input>
+            <input className="button shadow-hover" type="submit" value="szukaj" onClick={this.passFiltersUp}></input>
         </form>
       </div>
     )

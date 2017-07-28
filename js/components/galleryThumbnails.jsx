@@ -51,7 +51,6 @@ class GalleryThumbnails extends React.Component {
   };
 
   getImage = (event) => {
-    event.preventDefault();
     const img = event.target.src; //to chyba nie tak powinno być, onClick powinien być na całym divie, a nie tylko na img, ale takim sposobem mogę wyciąganąć src. DZIAŁA! do poprawy później
     this.props.setBigPhoto(img);
   }

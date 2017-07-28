@@ -10376,6 +10376,12 @@ var FilterMenu = function (_React$Component) {
       _this.setState(_defineProperty({}, name, value));
     };
 
+    _this.passFiltersUp = function (event) {
+      event.preventDefault();
+      var allFiltersState = _this.state;
+      _this.props.logFilters(allFiltersState);
+    };
+
     _this.state = {
       sexMale: true,
       sexFemale: true,
@@ -10480,7 +10486,7 @@ var FilterMenu = function (_React$Component) {
             ),
             _react2.default.createElement('hr', null)
           ),
-          _react2.default.createElement('input', { className: 'button shadow-hover', type: 'submit', value: 'szukaj', onClick: this.submitFilters })
+          _react2.default.createElement('input', { className: 'button shadow-hover', type: 'submit', value: 'szukaj', onClick: this.passFiltersUp })
         )
       );
     }
@@ -16956,10 +16962,34 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var AdoptionsPage = function (_React$Component) {
   _inherits(AdoptionsPage, _React$Component);
 
-  function AdoptionsPage() {
+  function AdoptionsPage(props) {
     _classCallCheck(this, AdoptionsPage);
 
-    return _possibleConstructorReturn(this, (AdoptionsPage.__proto__ || Object.getPrototypeOf(AdoptionsPage)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (AdoptionsPage.__proto__ || Object.getPrototypeOf(AdoptionsPage)).call(this, props));
+
+    _this.receiveFilters = function (filters) {
+      _this.setState({
+        filters: filters
+      });
+      var x = _this.state.filters;
+      var activeFilters = [];
+
+      for (var i = 0; i < Object.values(x).length; i++) {
+        if (Object.values(x)[i]) {
+          activeFilters.push(Object.keys(x)[i]);
+        }
+      }
+
+      _this.setState({
+        activeFilters: activeFilters
+      });
+    };
+
+    _this.state = {
+      filters: "",
+      activeFilters: ""
+    };
+    return _this;
   }
 
   _createClass(AdoptionsPage, [{
@@ -16973,8 +17003,8 @@ var AdoptionsPage = function (_React$Component) {
         _react2.default.createElement(
           "section",
           { className: "row", id: "results-container" },
-          _react2.default.createElement(_filterMenu2.default, null),
-          _react2.default.createElement(_searchResults2.default, null)
+          _react2.default.createElement(_filterMenu2.default, { logFilters: this.receiveFilters }),
+          _react2.default.createElement(_searchResults2.default, { activeFilters: this.state.activeFilters })
         )
       );
     }
@@ -17364,6 +17394,7 @@ var CatCards = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      console.log(this.props.activeFilters);
       return _react2.default.createElement(
         "div",
         { className: "row", id: "results" },
@@ -17922,7 +17953,6 @@ var GalleryThumbnails = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (GalleryThumbnails.__proto__ || Object.getPrototypeOf(GalleryThumbnails)).call(this, props));
 
     _this.getImage = function (event) {
-      event.preventDefault();
       var img = event.target.src; //to chyba nie tak powinno być, onClick powinien być na całym divie, a nie tylko na img, ale takim sposobem mogę wyciąganąć src. DZIAŁA! do poprawy później
       _this.props.setBigPhoto(img);
     };
@@ -18194,7 +18224,7 @@ var SearchResults = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "col-xs-12 col-sm-12 col-md-10 col-lg-10" },
-        _react2.default.createElement(_catCards2.default, null)
+        _react2.default.createElement(_catCards2.default, { activeFilters: this.props.activeFilters })
       );
     }
   }]);
