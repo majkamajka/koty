@@ -19,7 +19,7 @@ class AdoptionsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: "",
+      filters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"],
       //activeFilters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"]
     }
   }

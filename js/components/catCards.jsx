@@ -22,9 +22,9 @@ class CatCards extends React.Component {
   }
 
   componentDidMount() {
-    console.log("props " + this.props.activeFilters);
-    console.log("state " + this.state.filters);
-
+    this.setState({
+      filters: this.props.activeFilters
+    });
     let db = fb.database().ref("/");
     let cards = [];
 
@@ -39,6 +39,14 @@ class CatCards extends React.Component {
         };
 
         let path = "/cat-profile/" + [i];
+
+
+        console.log(this.state.filters.indexOf("sexFemale"));
+
+        if (this.state.filters.indexOf("sexFemale") >= 0) {
+          console.log("dsfsdf");
+        }
+
 
         cards.push(
           <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3" key={i}>
@@ -67,6 +75,7 @@ class CatCards extends React.Component {
         cards: cards
       });
     });
+
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -78,8 +87,6 @@ class CatCards extends React.Component {
   }
 
   render() {
-    console.log(this.props.activeFilters);
-    console.log(this.state.filters);
     return (
       <div className="row" id="results">
         {this.state.cards}

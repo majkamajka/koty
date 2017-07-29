@@ -17000,7 +17000,7 @@ var AdoptionsPage = function (_React$Component) {
     };
 
     _this.state = {
-      filters: ""
+      filters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"]
       //activeFilters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"]
     };
     return _this;
@@ -17347,9 +17347,9 @@ var CatCards = function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      console.log("props " + this.props.activeFilters);
-      console.log("state " + this.state.filters);
-
+      this.setState({
+        filters: this.props.activeFilters
+      });
       var db = _db2.default.database().ref("/");
       var cards = [];
 
@@ -17364,6 +17364,12 @@ var CatCards = function (_React$Component) {
           };
 
           var path = "/cat-profile/" + [i];
+
+          console.log(_this2.state.filters.indexOf("sexFemale"));
+
+          if (_this2.state.filters.indexOf("sexFemale") >= 0) {
+            console.log("dsfsdf");
+          }
 
           cards.push(_react2.default.createElement(
             "div",
@@ -17423,8 +17429,6 @@ var CatCards = function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.props.activeFilters);
-      console.log(this.state.filters);
       return _react2.default.createElement(
         "div",
         { className: "row", id: "results" },
