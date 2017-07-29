@@ -28,8 +28,34 @@ class FilterMenu extends React.Component {
 
   passFiltersUp = (event) => {
     event.preventDefault();
-    const allFiltersState = this.state;
-    this.props.logFilters(allFiltersState);
+    let allFiltersState = [];
+
+    if (this.state.sexMale == true) {
+      allFiltersState.push("sexMale")
+    }
+    if (this.state.sexFemale == true) {
+      allFiltersState.push("sexFemale")
+    }
+    if (this.state.ageYoung == true) {
+      allFiltersState.push("ageYoung")
+    }
+    if (this.state.ageAdult == true) {
+      allFiltersState.push("ageAdult")
+    }
+    if (this.state.ageSenior == true) {
+      allFiltersState.push("ageSenior")
+    }
+    if (this.state.notAdopted == true) {
+      allFiltersState.push("notAdopted")
+    }
+    if (this.state.ill == true) {
+      allFiltersState.push("ill")
+    }
+    if (this.state.urgent == true) {
+      allFiltersState.push("urgent")
+    }
+
+    this.props.receiveFilters(allFiltersState);
   }
 
 // czekboksy nie do końca działają dobrze - kliknięcie poza czekboks odpala event na pierwszym inpucie z grupy - wtf?!

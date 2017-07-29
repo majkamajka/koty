@@ -10378,8 +10378,34 @@ var FilterMenu = function (_React$Component) {
 
     _this.passFiltersUp = function (event) {
       event.preventDefault();
-      var allFiltersState = _this.state;
-      _this.props.logFilters(allFiltersState);
+      var allFiltersState = [];
+
+      if (_this.state.sexMale == true) {
+        allFiltersState.push("sexMale");
+      }
+      if (_this.state.sexFemale == true) {
+        allFiltersState.push("sexFemale");
+      }
+      if (_this.state.ageYoung == true) {
+        allFiltersState.push("ageYoung");
+      }
+      if (_this.state.ageAdult == true) {
+        allFiltersState.push("ageAdult");
+      }
+      if (_this.state.ageSenior == true) {
+        allFiltersState.push("ageSenior");
+      }
+      if (_this.state.notAdopted == true) {
+        allFiltersState.push("notAdopted");
+      }
+      if (_this.state.ill == true) {
+        allFiltersState.push("ill");
+      }
+      if (_this.state.urgent == true) {
+        allFiltersState.push("urgent");
+      }
+
+      _this.props.receiveFilters(allFiltersState);
     };
 
     _this.state = {
@@ -16971,23 +16997,11 @@ var AdoptionsPage = function (_React$Component) {
       _this.setState({
         filters: filters
       });
-      var x = _this.state.filters;
-      var activeFilters = [];
-
-      for (var i = 0; i < Object.values(x).length; i++) {
-        if (Object.values(x)[i]) {
-          activeFilters.push(Object.keys(x)[i]);
-        }
-      }
-
-      _this.setState({
-        activeFilters: activeFilters
-      });
     };
 
     _this.state = {
-      filters: "",
-      activeFilters: ""
+      filters: ""
+      //activeFilters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"]
     };
     return _this;
   }
@@ -17003,8 +17017,8 @@ var AdoptionsPage = function (_React$Component) {
         _react2.default.createElement(
           "section",
           { className: "row", id: "results-container" },
-          _react2.default.createElement(_filterMenu2.default, { logFilters: this.receiveFilters }),
-          _react2.default.createElement(_searchResults2.default, { activeFilters: this.state.activeFilters })
+          _react2.default.createElement(_filterMenu2.default, { receiveFilters: this.receiveFilters }),
+          _react2.default.createElement(_searchResults2.default, { activeFilters: this.state.filters })
         )
       );
     }
@@ -17322,7 +17336,8 @@ var CatCards = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (CatCards.__proto__ || Object.getPrototypeOf(CatCards)).call(this, props));
 
     _this.state = {
-      cards: []
+      cards: [],
+      filters: _this.props.activeFilters
     };
     return _this;
   }
@@ -17331,6 +17346,9 @@ var CatCards = function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
+
+      console.log("props " + this.props.activeFilters);
+      console.log("state " + this.state.filters);
 
       var db = _db2.default.database().ref("/");
       var cards = [];
@@ -17388,13 +17406,25 @@ var CatCards = function (_React$Component) {
           ));
         }
 
-        _this2.setState({ cards: cards });
+        _this2.setState({
+          cards: cards
+        });
       });
+    }
+  }, {
+    key: "shouldComponentUpdate",
+    value: function shouldComponentUpdate(nextProps, nextState) {
+      this.setState({
+        filters: nextProps
+      });
+      console.log(this.state.filters);
+      return true;
     }
   }, {
     key: "render",
     value: function render() {
       console.log(this.props.activeFilters);
+      console.log(this.state.filters);
       return _react2.default.createElement(
         "div",
         { className: "row", id: "results" },

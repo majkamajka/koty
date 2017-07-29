@@ -16,11 +16,15 @@ class CatCards extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: []
+      cards: [],
+      filters: this.props.activeFilters
     }
   }
 
   componentDidMount() {
+    console.log("props " + this.props.activeFilters);
+    console.log("state " + this.state.filters);
+
     let db = fb.database().ref("/");
     let cards = [];
 
@@ -59,13 +63,23 @@ class CatCards extends React.Component {
         )
       }
 
-      this.setState({cards: cards});
-
+      this.setState({
+        cards: cards
+      });
     });
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    this.setState({
+      filters: nextProps
+    });
+    console.log(this.state.filters);
+    return true;
   }
 
   render() {
     console.log(this.props.activeFilters);
+    console.log(this.state.filters);
     return (
       <div className="row" id="results">
         {this.state.cards}

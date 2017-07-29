@@ -20,7 +20,7 @@ class AdoptionsPage extends React.Component {
     super(props);
     this.state = {
       filters: "",
-      activeFilters: ""
+      //activeFilters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"]
     }
   }
 
@@ -28,18 +28,6 @@ class AdoptionsPage extends React.Component {
   receiveFilters = (filters) => {
     this.setState({
       filters: filters
-    })
-    let x = this.state.filters;
-    let activeFilters = [];
-
-    for (let i = 0; i < Object.values(x).length; i++) {
-      if (Object.values(x)[i]) {
-        activeFilters.push(Object.keys(x)[i]);
-      }
-    }
-
-    this.setState({
-      activeFilters: activeFilters
     })
   }
 
@@ -53,8 +41,8 @@ class AdoptionsPage extends React.Component {
 
         <section className="row" id="results-container">
 
-          <FilterMenu logFilters={this.receiveFilters}/>
-          <SearchResults activeFilters={this.state.activeFilters}/>
+          <FilterMenu receiveFilters={this.receiveFilters}/>
+          <SearchResults activeFilters={this.state.filters}/>
 
         </section>
 
