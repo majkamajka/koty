@@ -4,11 +4,9 @@ import * as firebase from "firebase";
 
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 
-import Header from "./components/header.jsx";
 import SortBar from "./components/sortBar.jsx";
 import FilterMenu from "./components/filterMenu.jsx";
 import SearchResults from "./components/searchResults.jsx";
-import Footer from "./components/footer.jsx";
 
 import "../scss/style.scss";
 

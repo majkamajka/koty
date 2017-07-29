@@ -11,21 +11,15 @@ import {
   hashHistory
 } from 'react-router';
 
-import Header from "./components/header.jsx";
 import Gallery from "./components/gallery.jsx";
 import FullDesc from "./components/full-desc.jsx";
 import Donations from "./components/donations.jsx";
-import Footer from "./components/footer.jsx";
 
 import "../scss/style.scss";
 
 // IMPORTANT! removed all https from all links, as it wasn't working. needs to be fixed!
 
 class CatProfilePage extends React.Component {
-
-  componentDidMount() {
-    console.log(this.props.params.id);
-  }
 
   render() {
     return (
