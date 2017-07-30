@@ -26,23 +26,23 @@ html {
 [role="button"], .button {
   cursor: pointer;
 }
-.container {
+.container, header, footer, .row.copy {
   margin-right: auto;
   margin-left: auto;
 
 }
 @media (min-width: 768px) {
-  .container {
+  .container, header, footer, .row.copy {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container {
+  .container, header, footer, .row.copy {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .container, header, footer, .row.copy {
     width: 1170px;
   }
 }
@@ -383,13 +383,22 @@ ul.square-list {
   list-style-position: inside;
 }
 
-header {
-  padding: 10px;
+.container-full {
+  width: 100vw;
+  max-width:100%;
+}
+.bar {
   width: 100%;
   background-color: $firstColor;
   @extend .small-shadow;
+}
+header {
+  padding: 10px;
+  background-color: $firstColor;
+  box-shadow: 0 3px 0px rgba(0,0,0,0.16), 0 3px 0px rgba(0,0,0,0.23);
   color: $thirdColor;
   position: relative;
+  z-index: 2;
   nav {
     font-weight: bold;
     height: 100px;
@@ -764,6 +773,10 @@ footer {
   }
 }
 
+.bar-copy {
+  background-color: $thirdColor;
+}
+
 .copy {
   color: $firstColor;
   margin: 5px 0;
@@ -843,6 +856,7 @@ footer {
   background-color: rgba(black,0.3);
   height: 100vh;
   width: 100vw;
+  max-width:100%;
   z-index: 1;
 }
 

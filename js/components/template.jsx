@@ -10,7 +10,8 @@ class Template extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container-full">
+        <div className="bar">
         <header className="row">
           <IndexLink to="/">
             <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4 logo">
@@ -51,6 +52,7 @@ class Template extends React.Component {
 
           </nav>
         </header>
+        </div>
 
         {this.props.children}
 
