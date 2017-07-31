@@ -18521,15 +18521,15 @@ var CatCards = function (_React$Component) {
         });
       });
     }
-  }, {
-    key: "shouldComponentUpdate",
-    value: function shouldComponentUpdate(nextProps, nextState) {
-      this.setState({
-        filters: nextProps
-      });
-      console.log(this.state.filters);
-      return true;
-    }
+
+    // shouldComponentUpdate(nextProps, nextState) {
+    //   this.setState({
+    //     filters: nextProps
+    //   });
+    //   console.log(this.state.filters);
+    //   return true;
+    // }
+
   }, {
     key: "render",
     value: function render() {

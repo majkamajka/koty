@@ -78,13 +78,13 @@ class CatCards extends React.Component {
 
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    this.setState({
-      filters: nextProps
-    });
-    console.log(this.state.filters);
-    return true;
-  }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   this.setState({
+  //     filters: nextProps
+  //   });
+  //   console.log(this.state.filters);
+  //   return true;
+  // }
 
   render() {
 
