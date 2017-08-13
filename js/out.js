@@ -402,7 +402,7 @@ module.exports = warning;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -943,7 +943,7 @@ module.exports = invariant;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -1330,7 +1330,7 @@ module.exports = ReactComponentTreeHook;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 function makeEmptyFunction(arg) {
@@ -1464,7 +1464,7 @@ function isNativeBlobDefined() {
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -1788,7 +1788,7 @@ module.exports = ReactUpdates;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -2944,7 +2944,7 @@ function reject(error) {
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -4304,7 +4304,7 @@ module.exports = React;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -4358,7 +4358,7 @@ const fb = __WEBPACK_IMPORTED_MODULE_0_firebase__["initializeApp"](config);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (fb);
-
+ 
 
 
 /***/ }),
@@ -5388,7 +5388,7 @@ var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isE
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -6053,7 +6053,7 @@ module.exports = SyntheticMouseEvent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -6517,7 +6517,7 @@ module.exports = setInnerHTML;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -6581,7 +6581,7 @@ if(false) {
  * of patent rights can be found in the PATENTS file in the same directory.
  *
  * @typechecks
- *
+ * 
  */
 
 /*eslint-disable no-self-compare */
@@ -8375,7 +8375,7 @@ module.exports = EventPluginUtils;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -8583,7 +8583,7 @@ module.exports = LinkedValueUtils;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -8633,7 +8633,7 @@ module.exports = ReactComponentEnvironment;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -10131,34 +10131,7 @@ var FilterMenu = function (_React$Component) {
 
     _this.passFiltersUp = function (event) {
       event.preventDefault();
-      var allFiltersState = [];
-
-      if (_this.state.sexMale == true) {
-        allFiltersState.push("sexMale");
-      }
-      if (_this.state.sexFemale == true) {
-        allFiltersState.push("sexFemale");
-      }
-      if (_this.state.ageYoung == true) {
-        allFiltersState.push("ageYoung");
-      }
-      if (_this.state.ageAdult == true) {
-        allFiltersState.push("ageAdult");
-      }
-      if (_this.state.ageSenior == true) {
-        allFiltersState.push("ageSenior");
-      }
-      if (_this.state.notAdopted == true) {
-        allFiltersState.push("notAdopted");
-      }
-      if (_this.state.ill == true) {
-        allFiltersState.push("ill");
-      }
-      if (_this.state.urgent == true) {
-        allFiltersState.push("urgent");
-      }
-
-      _this.props.receiveFilters(allFiltersState);
+      _this.props.receiveFilters(_this.state);
     };
 
     _this.state = {
@@ -14073,7 +14046,7 @@ module.exports = CSSProperty;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -14703,7 +14676,7 @@ module.exports = ReactEmptyComponent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -15476,7 +15449,7 @@ module.exports = ReactMount;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -15522,7 +15495,7 @@ module.exports = ReactNodeTypes;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -15574,7 +15547,7 @@ module.exports = ViewportMetrics;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -15638,7 +15611,7 @@ module.exports = accumulateInto;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -16010,7 +15983,7 @@ module.exports = instantiateReactComponent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -17076,7 +17049,7 @@ module.exports = {
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -17463,7 +17436,7 @@ module.exports = ReactNoopUpdateQueue;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -18118,8 +18091,16 @@ var AdoptionsPage = function (_React$Component) {
     };
 
     _this.state = {
-      filters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"]
-      //activeFilters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"]
+      filters: {
+        sexMale: true,
+        sexFemale: true,
+        ageYoung: true,
+        ageAdult: true,
+        ageSenior: true,
+        notAdopted: true,
+        ill: true,
+        urgent: true
+      }
     };
     return _this;
   }
@@ -18136,7 +18117,7 @@ var AdoptionsPage = function (_React$Component) {
           "section",
           { className: "row", id: "results-container" },
           _react2.default.createElement(_filterMenu2.default, { receiveFilters: this.receiveFilters }),
-          _react2.default.createElement(_searchResults2.default, { activeFilters: this.state.filters })
+          _react2.default.createElement(_searchResults2.default, { filters: this.state.filters })
         )
       );
     }
@@ -18442,7 +18423,7 @@ var CatCards = function (_React$Component) {
 
     _this.state = {
       cards: [],
-      filters: _this.props.activeFilters
+      filters: _this.props.filters
     };
     return _this;
   }
@@ -18452,93 +18433,121 @@ var CatCards = function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      this.setState({
-        filters: this.props.activeFilters
-      });
       var db = _db2.default.database().ref("/");
       var cards = [];
 
       db.on("value", function (snap) {
 
         for (var i = 0; i < snap.val().length; i++) {
-          var sexIcon = "";
-          if (snap.val()[i].sex === "m") {
-            sexIcon = "fa fa-mars";
-          } else {
-            sexIcon = "fa fa-venus";
-          };
-
-          var path = "/cat-profile/" + [i];
-
-          console.log(_this2.state.filters.indexOf("sexFemale"));
-
-          if (_this2.state.filters.indexOf("sexFemale") >= 0) {
-            console.log("dsfsdf");
-          }
-
-          cards.push(_react2.default.createElement(
-            "div",
-            { className: "col-xs-12 col-sm-6 col-md-4 col-lg-3", key: i },
-            _react2.default.createElement(
-              "div",
-              { className: "tile cat-card" },
-              _react2.default.createElement(
-                "div",
-                { className: "thumbnail" },
-                _react2.default.createElement("img", { src: snap.val()[i].mainPhoto, alt: "", className: "cat-img" })
-              ),
-              _react2.default.createElement(
-                "h1",
-                null,
-                snap.val()[i].name,
-                "\xA0",
-                _react2.default.createElement("i", { className: sexIcon, "aria-hidden": "true" })
-              ),
-              _react2.default.createElement(
-                "p",
-                { id: "keywords" },
-                snap.val()[i].keywords
-              ),
-              _react2.default.createElement(
-                "p",
-                { className: "cat-short-desc" },
-                snap.val()[i].desc.substring(0, 200) + "..."
-              ),
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: path },
-                _react2.default.createElement(
-                  "button",
-                  { className: "button more" },
-                  "wi\u0119cej"
-                )
-              )
-            )
-          ));
+          cards.push(snap.val()[i]);
         }
 
         _this2.setState({
           cards: cards
         });
+
+        //dlaczego nigdzie nie jestem w stanie updejtować this state filters?!
       });
     }
+  }, {
+    key: "filterCards",
+    value: function filterCards(cards) {
 
-    // shouldComponentUpdate(nextProps, nextState) {
-    //   this.setState({
-    //     filters: nextProps
-    //   });
-    //   console.log(this.state.filters);
-    //   return true;
-    // }
+      var filters = this.props.filters;
+      var filteredDbCats = cards;
 
+      if (!filters.sexMale) {
+        filteredDbCats = filteredDbCats.filter(function (cat) {
+          return cat.sex !== "m";
+        });
+      };
+
+      if (!filters.sexFemale) {
+        filteredDbCats = filteredDbCats.filter(function (cat) {
+          return cat.sex !== "f";
+        });
+      };
+
+      if (!filters.ageYoung) {
+        filteredDbCats = filteredDbCats.filter(function (cat) {
+          return cat.ageMonths > 12;
+        });
+      };
+
+      if (!filters.ageAdult) {
+        filteredDbCats = filteredDbCats.filter(function (cat) {
+          return !(cat.ageMonths >= 12 && cat.ageMonths < 60);
+        });
+      };
+
+      if (!filters.ageSenior) {
+        filteredDbCats = filteredDbCats.filter(function (cat) {
+          return cat.ageMonths < 60;
+        });
+      };
+
+      var filteredCards = filteredDbCats.map(function (e, i) {
+
+        var path = "/cat-profile/" + i;
+        var sexIcon = "";
+        if (e.sex === "m") {
+          sexIcon = "fa fa-mars";
+        } else {
+          sexIcon = "fa fa-venus";
+        };
+
+        return _react2.default.createElement(
+          "div",
+          { className: "col-xs-12 col-sm-6 col-md-4 col-lg-3", key: "" + i + e.name },
+          _react2.default.createElement(
+            "div",
+            { className: "tile cat-card" },
+            _react2.default.createElement(
+              "div",
+              { className: "thumbnail" },
+              _react2.default.createElement("img", { src: e.mainPhoto, alt: "", className: "cat-img" })
+            ),
+            _react2.default.createElement(
+              "h1",
+              null,
+              e.name,
+              "\xA0",
+              _react2.default.createElement("i", { className: sexIcon, "aria-hidden": "true" }),
+              " ",
+              Math.round(e.ageMonths / 12)
+            ),
+            _react2.default.createElement(
+              "p",
+              { id: "keywords" },
+              e.keywords
+            ),
+            _react2.default.createElement(
+              "p",
+              { className: "cat-short-desc" },
+              e.desc.substring(0, 200) + "..."
+            ),
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: path },
+              _react2.default.createElement(
+                "button",
+                { className: "button more" },
+                "wi\u0119cej"
+              )
+            )
+          )
+        );
+      });
+
+      return filteredCards;
+    }
   }, {
     key: "render",
     value: function render() {
-
       return _react2.default.createElement(
         "div",
         { className: "row", id: "results" },
-        this.state.cards
+        this.filterCards(this.state.cards)
       );
     }
   }]);
@@ -18549,6 +18558,26 @@ var CatCards = function (_React$Component) {
 ;
 
 exports.default = CatCards;
+
+// cards.push(
+//   <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3" key={i}>
+//     <div className="tile cat-card">
+//
+//       <h1>
+//         {snap.val()[i].name}&nbsp;<i className={sexIcon} aria-hidden="true"></i>
+//       </h1>
+//       <p id="keywords">
+//         {snap.val()[i].keywords}
+//       </p>
+//       <p className="cat-short-desc">
+//         {snap.val()[i].desc.substring(0, 200) + "..."}
+//       </p>
+//       <Link to={path}>
+//         <button className="button more">więcej</button>
+//       </Link>
+//     </div>
+//   </div>
+// )
 
 // console.log(this.props.activeFilters);
 // let db = fb.database().ref("/");
@@ -19757,7 +19786,7 @@ var SearchResults = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "col-xs-12 col-sm-12 col-md-10 col-lg-10" },
-        _react2.default.createElement(_catCards2.default, { activeFilters: this.props.activeFilters })
+        _react2.default.createElement(_catCards2.default, { filters: this.props.filters })
       );
     }
   }]);
@@ -20677,7 +20706,7 @@ module.exports = camelizeStyleName;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 var isTextNode = __webpack_require__(180);
@@ -21230,7 +21259,7 @@ module.exports = isTextNode;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  * @typechecks static-only
  */
 
@@ -22379,7 +22408,7 @@ d;return d.Ya},{Reference:U,Query:X,Database:Pg,enableLogging:Sb,INTERNAL:Z,TEST
             module.exports = firebase.database;
           })();
           //# sourceMappingURL=database.js.map
-
+          
 
 
 /***/ }),
@@ -23735,7 +23764,7 @@ module.exports = exports['default'];
   var setTimeoutFunc = setTimeout;
 
   function noop() {}
-
+  
   // Polyfill for Function.prototype.bind
   function bind(fn, thisArg) {
     return function () {
@@ -23953,7 +23982,7 @@ module.exports = exports['default'];
   Promise._setUnhandledRejectionFn = function _setUnhandledRejectionFn(fn) {
     Promise._unhandledRejectionFn = fn;
   };
-
+  
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = Promise;
   } else if (!root.Promise) {
@@ -32624,7 +32653,7 @@ module.exports = ReactDOMUnknownPropertyHook;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -33155,7 +33184,7 @@ module.exports = {
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -33377,7 +33406,7 @@ module.exports = ReactEventListener;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -33455,7 +33484,7 @@ module.exports = ReactInjection;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -34005,7 +34034,7 @@ module.exports = ReactMultiChild;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -34104,7 +34133,7 @@ module.exports = ReactOwner;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -34319,7 +34348,7 @@ module.exports = ReactReconcileTransaction;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -34509,7 +34538,7 @@ module.exports = ReactServerRenderingTransaction;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -35173,7 +35202,7 @@ module.exports = SelectEventPlugin;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -35896,7 +35925,7 @@ module.exports = SyntheticWheelEvent;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -36189,7 +36218,7 @@ module.exports = findDOMNode;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -36388,7 +36417,7 @@ module.exports = getEventKey;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -37977,7 +38006,7 @@ function withRouter(WrappedComponent, options) {
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -38041,7 +38070,7 @@ module.exports = KeyEscapeUtils;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -38530,7 +38559,7 @@ module.exports = ReactDOMFactories;
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -38585,7 +38614,7 @@ module.exports = factory(isValidElement);
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 
@@ -38747,7 +38776,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  *
- *
+ * 
  */
 
 

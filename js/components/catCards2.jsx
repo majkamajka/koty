@@ -16,111 +16,76 @@ class CatCards extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: [],
-      filters: this.props.filters
+      cards2: [],
+      filters: this.props.activeFilters
     }
   }
 
   componentDidMount() {
-
+    this.setState({
+      filters: this.props.activeFilters
+    });
     let db = fb.database().ref("/");
     let cards = [];
 
     db.on("value", snap => {
 
       for (let i = 0; i < snap.val().length; i++) {
+        let sexIcon = "";
+        if (snap.val()[i].sex === "m") {
+          sexIcon = "fa fa-mars";
+        } else {
+          sexIcon = "fa fa-venus";
+        };
+
+        let path = "/cat-profile/" + [i];
+
+
+        //console.log(this.state.filters.indexOf("sexFemale"));
+
+        if (this.state.filters.indexOf("sexFemale") >= 0) {
+          console.log("dsfsdf");
+        }
+
         cards.push(snap.val()[i]);
+
       }
 
+
+
       this.setState({
-        cards: cards
+        cards2: cards
       });
-
-      //dlaczego nigdzie nie jestem w stanie updejtować this state filters?!
-
-    });
-  };
-
-  filterCards(cards) {
-
-    const filters = this.props.filters;
-    let filteredDbCats = cards;
-
-    if (!filters.sexMale) {
-      filteredDbCats = filteredDbCats.filter((cat) => cat.sex !== "m");
-    };
-
-    if (!filters.sexFemale) {
-      filteredDbCats = filteredDbCats.filter((cat) => cat.sex !== "f");
-    };
-
-    if (!filters.ageYoung) {
-      filteredDbCats = filteredDbCats.filter((cat) => cat.ageMonths > 12);
-    };
-
-    if (!filters.ageAdult) {
-      filteredDbCats = filteredDbCats.filter((cat) => !(cat.ageMonths >= 12 && cat.ageMonths < 60) );
-    };
-
-    if (!filters.ageSenior) {
-      filteredDbCats = filteredDbCats.filter((cat) => cat.ageMonths < 60);
-    };
-
-
-    let filteredCards = filteredDbCats.map((e, i) => {
-
-      const path = `/cat-profile/${i}`;
-      let sexIcon = "";
-      if (e.sex === "m") {
-        sexIcon = "fa fa-mars";
-      } else {
-        sexIcon = "fa fa-venus";
-      };
-
-      return (
-        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3" key={`${i}${e.name}`}>
-          <div className="tile cat-card">
-            <div className="thumbnail">
-              <img src={e.mainPhoto} alt="" className="cat-img"/>
-            </div>
-            <h1>
-              {e.name}&nbsp;<i className={sexIcon} aria-hidden="true"></i> {Math.round(e.ageMonths / 12)}
-            </h1>
-            <p id="keywords">
-              {e.keywords}
-            </p>
-            <p className="cat-short-desc">
-              {e.desc.substring(0, 200) + "..."}
-            </p>
-            <Link to={path}>
-              <button className="button more">więcej</button>
-            </Link>
-          </div>
-        </div>
-      )
     });
 
-    return filteredCards;
   }
 
+  filterCards() {
+    console.log("aaaa");
+    console.log(this.state.cards2);
+    console.log(this.state.filters);
+  }
 
   render() {
+
+
     return (
       <div className="row" id="results">
-        {this.filterCards(this.state.cards)}
+        {this.filterCards()}
       </div>
     )
   };
 };
 
 export default CatCards;
-
-
+//{this.state.cards}
 
 // cards.push(
 //   <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3" key={i}>
 //     <div className="tile cat-card">
-//
+//       <div className="thumbnail">
+//         <img src={snap.val()[i].mainPhoto} alt="" className="cat-img"/>
+//       </div>
 //       <h1>
 //         {snap.val()[i].name}&nbsp;<i className={sexIcon} aria-hidden="true"></i>
 //       </h1>
@@ -136,6 +101,7 @@ export default CatCards;
 //     </div>
 //   </div>
 // )
+
 
 // console.log(this.props.activeFilters);
 // let db = fb.database().ref("/");

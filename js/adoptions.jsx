@@ -17,8 +17,16 @@ class AdoptionsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"],
-      //activeFilters: ["sexMale", "sexFemale", "ageYoung", "ageAdult", "ageSenior", "notAdopted", "ill", "urgent"]
+      filters: {
+        sexMale: true,
+        sexFemale: true,
+        ageYoung: true,
+        ageAdult: true,
+        ageSenior: true,
+        notAdopted: true,
+        ill: true,
+        urgent: true,
+      }
     }
   }
 
@@ -40,7 +48,7 @@ class AdoptionsPage extends React.Component {
         <section className="row" id="results-container">
 
           <FilterMenu receiveFilters={this.receiveFilters}/>
-          <SearchResults activeFilters={this.state.filters}/>
+          <SearchResults filters={this.state.filters}/>
 
         </section>
 
