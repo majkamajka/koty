@@ -23,6 +23,11 @@ class SortBar extends React.Component {
         arrowClass: "fa fa-arrow-circle-down"
       })
     }
+  };
+
+  handleSortChange = (event) => {
+    event.preventDefault();
+    this.props.receiveSortBy(event.target.value);
   }
 
   render () {
@@ -56,12 +61,11 @@ class SortBar extends React.Component {
         <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8 sort-container">
           <form id="sort">
             <label>sortuj: </label>
-            <select>
-              <option value="lonely">samotne</option>
-              <option value="oldest">najstarsze</option>
-              <option value="youngest">najmłodsze</option>
-              <option value="popular">popularne</option>
-              <option value="dt">w DT</option>
+            <select onChange={this.handleSortChange}>
+              <option value="adoptions">samotne</option>
+              <option value="-ageMonths">najstarsze</option>
+              <option value="ageMonths">najmłodsze</option>
+
             </select>
           </form>
         </div>
@@ -71,3 +75,7 @@ class SortBar extends React.Component {
 };
 
 export default SortBar;
+
+
+// <option value="popular">popularne</option>
+// <option value="dt">w DT</option>

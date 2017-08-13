@@ -26,7 +26,8 @@ class AdoptionsPage extends React.Component {
         notAdopted: true,
         ill: true,
         urgent: true,
-      }
+      },
+      sortBy: "adoptions"
     }
   }
 
@@ -35,20 +36,26 @@ class AdoptionsPage extends React.Component {
     this.setState({
       filters: filters
     })
-  }
+  };
+
+  receiveSortBy = (sort) => {
+    this.setState({
+      sortBy: sort
+    });
+  };
 
   render () {
     return (
       <div className="container">
 
-        <SortBar />
+        <SortBar receiveSortBy={this.receiveSortBy}/>
 
         <div className="black-blend hidden"></div>
 
         <section className="row" id="results-container">
 
           <FilterMenu receiveFilters={this.receiveFilters}/>
-          <SearchResults filters={this.state.filters}/>
+          <SearchResults filters={this.state.filters} sortBy={this.state.sortBy}/>
 
         </section>
 

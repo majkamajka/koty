@@ -18090,6 +18090,12 @@ var AdoptionsPage = function (_React$Component) {
       });
     };
 
+    _this.receiveSortBy = function (sort) {
+      _this.setState({
+        sortBy: sort
+      });
+    };
+
     _this.state = {
       filters: {
         sexMale: true,
@@ -18100,7 +18106,8 @@ var AdoptionsPage = function (_React$Component) {
         notAdopted: true,
         ill: true,
         urgent: true
-      }
+      },
+      sortBy: "adoptions"
     };
     return _this;
   }
@@ -18111,13 +18118,13 @@ var AdoptionsPage = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "container" },
-        _react2.default.createElement(_sortBar2.default, null),
+        _react2.default.createElement(_sortBar2.default, { receiveSortBy: this.receiveSortBy }),
         _react2.default.createElement("div", { className: "black-blend hidden" }),
         _react2.default.createElement(
           "section",
           { className: "row", id: "results-container" },
           _react2.default.createElement(_filterMenu2.default, { receiveFilters: this.receiveFilters }),
-          _react2.default.createElement(_searchResults2.default, { filters: this.state.filters })
+          _react2.default.createElement(_searchResults2.default, { filters: this.state.filters, sortBy: this.state.sortBy })
         )
       );
     }
@@ -18423,7 +18430,8 @@ var CatCards = function (_React$Component) {
 
     _this.state = {
       cards: [],
-      filters: _this.props.filters
+      filters: _this.props.filters,
+      sortBy: _this.props.sortBy
     };
     return _this;
   }
@@ -18455,40 +18463,50 @@ var CatCards = function (_React$Component) {
 
       var filters = this.props.filters;
       var filteredDbCats = cards;
+      var sortBy = this.props.sortBy;
 
       if (!filters.sexMale) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
           return cat.sex !== "m";
         });
       };
-
       if (!filters.sexFemale) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
           return cat.sex !== "f";
         });
       };
-
       if (!filters.ageYoung) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
           return cat.ageMonths > 12;
         });
       };
-
       if (!filters.ageAdult) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
           return !(cat.ageMonths >= 12 && cat.ageMonths < 60);
         });
       };
-
       if (!filters.ageSenior) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
           return cat.ageMonths < 60;
         });
       };
 
+      //https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value-in-javascript
+      function dynamicSort(property) {
+        var sortOrder = 1;
+        if (property[0] === "-") {
+          sortOrder = -1;
+          property = property.substr(1);
+        };
+        return function (a, b) {
+          var result = a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
+          return result * sortOrder;
+        };
+      };
+      filteredDbCats.sort(dynamicSort(sortBy));
+
       var filteredCards = filteredDbCats.map(function (e, i) {
 
-        var path = "/cat-profile/" + i;
         var sexIcon = "";
         if (e.sex === "m") {
           sexIcon = "fa fa-mars";
@@ -18528,7 +18546,7 @@ var CatCards = function (_React$Component) {
             ),
             _react2.default.createElement(
               _reactRouter.Link,
-              { to: path },
+              { to: "/cat-profile/" + i },
               _react2.default.createElement(
                 "button",
                 { className: "button more" },
@@ -19786,7 +19804,7 @@ var SearchResults = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "col-xs-12 col-sm-12 col-md-10 col-lg-10" },
-        _react2.default.createElement(_catCards2.default, { filters: this.props.filters })
+        _react2.default.createElement(_catCards2.default, { filters: this.props.filters, sortBy: this.props.sortBy })
       );
     }
   }]);
@@ -19849,6 +19867,11 @@ var SortBar = function (_React$Component) {
           arrowClass: "fa fa-arrow-circle-down"
         });
       }
+    };
+
+    _this.handleSortChange = function (event) {
+      event.preventDefault();
+      _this.props.receiveSortBy(event.target.value);
     };
 
     _this.state = {
@@ -19947,31 +19970,21 @@ var SortBar = function (_React$Component) {
             ),
             _react2.default.createElement(
               "select",
-              null,
+              { onChange: this.handleSortChange },
               _react2.default.createElement(
                 "option",
-                { value: "lonely" },
+                { value: "adoptions" },
                 "samotne"
               ),
               _react2.default.createElement(
                 "option",
-                { value: "oldest" },
+                { value: "-ageMonths" },
                 "najstarsze"
               ),
               _react2.default.createElement(
                 "option",
-                { value: "youngest" },
+                { value: "ageMonths" },
                 "najm\u0142odsze"
-              ),
-              _react2.default.createElement(
-                "option",
-                { value: "popular" },
-                "popularne"
-              ),
-              _react2.default.createElement(
-                "option",
-                { value: "dt" },
-                "w DT"
               )
             )
           )
@@ -19986,6 +19999,9 @@ var SortBar = function (_React$Component) {
 ;
 
 exports.default = SortBar;
+
+// <option value="popular">popularne</option>
+// <option value="dt">w DT</option>
 
 /***/ }),
 /* 164 */
