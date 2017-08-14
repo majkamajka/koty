@@ -30,7 +30,9 @@ class CatCards extends React.Component {
     db.on("value", snap => {
 
       for (let i = 0; i < snap.val().length; i++) {
+
         cards.push(snap.val()[i]);
+        cards[i].id = parseInt([i]);
       }
 
       this.setState({
@@ -43,7 +45,6 @@ class CatCards extends React.Component {
   };
 
   filterCards(cards) {
-
     const filters = this.props.filters;
     let filteredDbCats = cards;
     let sortBy = this.props.sortBy;
@@ -102,7 +103,7 @@ class CatCards extends React.Component {
             <p className="cat-short-desc">
               {e.desc.substring(0, 200) + "..."}
             </p>
-            <Link to={`/cat-profile/${i}`}>
+            <Link to={`/cat-profile/${e.id}`}>
               <button className="button more">więcej</button>
             </Link>
           </div>

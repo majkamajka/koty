@@ -18447,7 +18447,9 @@ var CatCards = function (_React$Component) {
       db.on("value", function (snap) {
 
         for (var i = 0; i < snap.val().length; i++) {
+
           cards.push(snap.val()[i]);
+          cards[i].id = parseInt([i]);
         }
 
         _this2.setState({
@@ -18460,7 +18462,6 @@ var CatCards = function (_React$Component) {
   }, {
     key: "filterCards",
     value: function filterCards(cards) {
-
       var filters = this.props.filters;
       var filteredDbCats = cards;
       var sortBy = this.props.sortBy;
@@ -18546,7 +18547,7 @@ var CatCards = function (_React$Component) {
             ),
             _react2.default.createElement(
               _reactRouter.Link,
-              { to: "/cat-profile/" + i },
+              { to: "/cat-profile/" + e.id },
               _react2.default.createElement(
                 "button",
                 { className: "button more" },
