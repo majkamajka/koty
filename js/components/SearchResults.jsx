@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import * as Firebase from "firebase";
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
-import CatCards from "./catCards.jsx";
-import fb from "./db.js";
+import CatCards from "./CatCards.jsx";
+import fb from "./Db.js";
 
 
 

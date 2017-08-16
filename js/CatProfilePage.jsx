@@ -11,9 +11,9 @@ import {
   hashHistory
 } from 'react-router';
 
-import Gallery from "./components/gallery.jsx";
-import FullDesc from "./components/full-desc.jsx";
-import Donations from "./components/donations.jsx";
+import Gallery from "./components/Gallery.jsx";
+import FullDesc from "./components/Full-desc.jsx";
+import Donations from "./components/Donations.jsx";
 
 import "../scss/style.scss";
 

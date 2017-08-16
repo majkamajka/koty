@@ -17492,25 +17492,25 @@ var firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
-var _notFound = __webpack_require__(161);
+var _NotFound = __webpack_require__(162);
 
-var _notFound2 = _interopRequireDefault(_notFound);
+var _NotFound2 = _interopRequireDefault(_NotFound);
 
-var _adoptions = __webpack_require__(150);
+var _Adoptions = __webpack_require__(150);
 
-var _adoptions2 = _interopRequireDefault(_adoptions);
+var _Adoptions2 = _interopRequireDefault(_Adoptions);
 
-var _mainPage = __webpack_require__(167);
+var _MainPage = __webpack_require__(152);
 
-var _mainPage2 = _interopRequireDefault(_mainPage);
+var _MainPage2 = _interopRequireDefault(_MainPage);
 
-var _catProfilePage = __webpack_require__(151);
+var _CatProfilePage = __webpack_require__(151);
 
-var _catProfilePage2 = _interopRequireDefault(_catProfilePage);
+var _CatProfilePage2 = _interopRequireDefault(_CatProfilePage);
 
-var _template = __webpack_require__(164);
+var _Template = __webpack_require__(165);
 
-var _template2 = _interopRequireDefault(_template);
+var _Template2 = _interopRequireDefault(_Template);
 
 __webpack_require__(57);
 
@@ -17541,11 +17541,11 @@ var App = function (_React$Component) {
         { history: _reactRouter.hashHistory },
         _react2.default.createElement(
           _reactRouter.Route,
-          { path: "/", component: _template2.default },
-          _react2.default.createElement(_reactRouter.IndexRoute, { component: _mainPage2.default }),
-          _react2.default.createElement(_reactRouter.Route, { path: "/adoptions", component: _adoptions2.default }),
-          _react2.default.createElement(_reactRouter.Route, { path: "/cat-profile/:id", component: _catProfilePage2.default }),
-          _react2.default.createElement(_reactRouter.Route, { path: "*", component: _notFound2.default })
+          { path: "/", component: _Template2.default },
+          _react2.default.createElement(_reactRouter.IndexRoute, { component: _MainPage2.default }),
+          _react2.default.createElement(_reactRouter.Route, { path: "/adoptions", component: _Adoptions2.default }),
+          _react2.default.createElement(_reactRouter.Route, { path: "/cat-profile/:id", component: _CatProfilePage2.default }),
+          _react2.default.createElement(_reactRouter.Route, { path: "*", component: _NotFound2.default })
         )
       );
     }
@@ -18052,17 +18052,17 @@ var firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
-var _sortBar = __webpack_require__(163);
+var _SortBar = __webpack_require__(164);
 
-var _sortBar2 = _interopRequireDefault(_sortBar);
+var _SortBar2 = _interopRequireDefault(_SortBar);
 
-var _filterMenu = __webpack_require__(92);
+var _FilterMenu = __webpack_require__(92);
 
-var _filterMenu2 = _interopRequireDefault(_filterMenu);
+var _FilterMenu2 = _interopRequireDefault(_FilterMenu);
 
-var _searchResults = __webpack_require__(162);
+var _SearchResults = __webpack_require__(163);
 
-var _searchResults2 = _interopRequireDefault(_searchResults);
+var _SearchResults2 = _interopRequireDefault(_SearchResults);
 
 __webpack_require__(57);
 
@@ -18118,13 +18118,13 @@ var AdoptionsPage = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "container" },
-        _react2.default.createElement(_sortBar2.default, { receiveSortBy: this.receiveSortBy }),
+        _react2.default.createElement(_SortBar2.default, { receiveSortBy: this.receiveSortBy }),
         _react2.default.createElement("div", { className: "black-blend hidden" }),
         _react2.default.createElement(
           "section",
           { className: "row", id: "results-container" },
-          _react2.default.createElement(_filterMenu2.default, { receiveFilters: this.receiveFilters }),
-          _react2.default.createElement(_searchResults2.default, { filters: this.state.filters, sortBy: this.state.sortBy })
+          _react2.default.createElement(_FilterMenu2.default, { receiveFilters: this.receiveFilters }),
+          _react2.default.createElement(_SearchResults2.default, { filters: this.state.filters, sortBy: this.state.sortBy })
         )
       );
     }
@@ -18164,17 +18164,17 @@ var firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
-var _gallery = __webpack_require__(158);
+var _Gallery = __webpack_require__(159);
 
-var _gallery2 = _interopRequireDefault(_gallery);
+var _Gallery2 = _interopRequireDefault(_Gallery);
 
-var _fullDesc = __webpack_require__(157);
+var _FullDesc = __webpack_require__(158);
 
-var _fullDesc2 = _interopRequireDefault(_fullDesc);
+var _FullDesc2 = _interopRequireDefault(_FullDesc);
 
-var _donations = __webpack_require__(155);
+var _Donations = __webpack_require__(156);
 
-var _donations2 = _interopRequireDefault(_donations);
+var _Donations2 = _interopRequireDefault(_Donations);
 
 __webpack_require__(57);
 
@@ -18208,12 +18208,12 @@ var CatProfilePage = function (_React$Component) {
         _react2.default.createElement(
           "section",
           { className: "row", id: "cat-full-profile" },
-          _react2.default.createElement(_gallery2.default, { pathId: this.props.params.id }),
+          _react2.default.createElement(_Gallery2.default, { pathId: this.props.params.id }),
           _react2.default.createElement(
             "div",
             { className: "col-xs-12 col-sm-12 col-md-6 col-lg-4 cat-full-info" },
-            _react2.default.createElement(_fullDesc2.default, { pathId: this.props.params.id }),
-            _react2.default.createElement(_donations2.default, null)
+            _react2.default.createElement(_FullDesc2.default, { pathId: this.props.params.id }),
+            _react2.default.createElement(_Donations2.default, null)
           )
         )
       );
@@ -18229,6 +18229,96 @@ exports.default = CatProfilePage;
 
 /***/ }),
 /* 152 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(30);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _firebase = __webpack_require__(20);
+
+var firebase = _interopRequireWildcard(_firebase);
+
+var _reactRouter = __webpack_require__(7);
+
+var _Title = __webpack_require__(166);
+
+var _Title2 = _interopRequireDefault(_Title);
+
+var _About = __webpack_require__(153);
+
+var _About2 = _interopRequireDefault(_About);
+
+var _VirtualAdoption = __webpack_require__(167);
+
+var _VirtualAdoption2 = _interopRequireDefault(_VirtualAdoption);
+
+var _Help = __webpack_require__(161);
+
+var _Help2 = _interopRequireDefault(_Help);
+
+var _Contact = __webpack_require__(155);
+
+var _Contact2 = _interopRequireDefault(_Contact);
+
+__webpack_require__(57);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MainPage = function (_React$Component) {
+  _inherits(MainPage, _React$Component);
+
+  function MainPage() {
+    _classCallCheck(this, MainPage);
+
+    return _possibleConstructorReturn(this, (MainPage.__proto__ || Object.getPrototypeOf(MainPage)).apply(this, arguments));
+  }
+
+  _createClass(MainPage, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "container" },
+        _react2.default.createElement(_Title2.default, null),
+        _react2.default.createElement(_About2.default, null),
+        _react2.default.createElement(_VirtualAdoption2.default, null),
+        _react2.default.createElement(_Help2.default, null),
+        _react2.default.createElement(_Contact2.default, null)
+      );
+    }
+  }]);
+
+  return MainPage;
+}(_react2.default.Component);
+
+;
+
+exports.default = MainPage;
+
+/***/ }),
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18380,7 +18470,7 @@ var About = function (_React$Component) {
 exports.default = About;
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18406,9 +18496,9 @@ var Firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
-var _db = __webpack_require__(37);
+var _Db = __webpack_require__(37);
 
-var _db2 = _interopRequireDefault(_db);
+var _Db2 = _interopRequireDefault(_Db);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -18441,7 +18531,7 @@ var CatCards = function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var db = _db2.default.database().ref("/");
+      var db = _Db2.default.database().ref("/");
       var cards = [];
 
       db.on("value", function (snap) {
@@ -18786,7 +18876,7 @@ exports.default = CatCards;
 // });
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18911,7 +19001,7 @@ var Contact = function (_React$Component) {
 exports.default = Contact;
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19026,7 +19116,7 @@ var Donations = function (_React$Component) {
 exports.default = Donations;
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19180,7 +19270,7 @@ var Footer = function (_React$Component) {
 exports.default = Footer;
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19202,9 +19292,9 @@ var Firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
-var _db = __webpack_require__(37);
+var _Db = __webpack_require__(37);
 
-var _db2 = _interopRequireDefault(_db);
+var _Db2 = _interopRequireDefault(_Db);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -19240,7 +19330,7 @@ var FullDesc = function (_React$Component) {
       var _this2 = this;
 
       var id = this.props.pathId;
-      var db = _db2.default.database().ref("/");
+      var db = _Db2.default.database().ref("/");
       var ageUnit = "";
       var age = 0;
       var sex = "";
@@ -19326,7 +19416,7 @@ var FullDesc = function (_React$Component) {
 exports.default = FullDesc;
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19344,13 +19434,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(7);
 
-var _db = __webpack_require__(37);
+var _Db = __webpack_require__(37);
 
-var _db2 = _interopRequireDefault(_db);
+var _Db2 = _interopRequireDefault(_Db);
 
-var _galleryThumbnails = __webpack_require__(159);
+var _GalleryThumbnails = __webpack_require__(160);
 
-var _galleryThumbnails2 = _interopRequireDefault(_galleryThumbnails);
+var _GalleryThumbnails2 = _interopRequireDefault(_GalleryThumbnails);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19387,7 +19477,7 @@ var Gallery = function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var db = _db2.default.database().ref("/");
+      var db = _Db2.default.database().ref("/");
       var id = this.props.pathId;
 
       db.on("value", function (snap) {
@@ -19414,7 +19504,7 @@ var Gallery = function (_React$Component) {
         return _react2.default.createElement(
           "div",
           { className: "col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery" },
-          _react2.default.createElement(_galleryThumbnails2.default, { setBigPhoto: this.setBigPhoto, pathId: this.state.id }),
+          _react2.default.createElement(_GalleryThumbnails2.default, { setBigPhoto: this.setBigPhoto, pathId: this.state.id }),
           _react2.default.createElement(
             "div",
             { id: "big-photo", className: "big-photo" },
@@ -19443,7 +19533,7 @@ var Gallery = function (_React$Component) {
 exports.default = Gallery;
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19461,9 +19551,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(7);
 
-var _db = __webpack_require__(37);
+var _Db = __webpack_require__(37);
 
-var _db2 = _interopRequireDefault(_db);
+var _Db2 = _interopRequireDefault(_Db);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19497,7 +19587,7 @@ var GalleryThumbnails = function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var db = _db2.default.database().ref("/");
+      var db = _Db2.default.database().ref("/");
       var cards = [];
       var id = this.props.pathId;
       var thumbnailsLinks = [];
@@ -19551,7 +19641,7 @@ exports.default = GalleryThumbnails;
 // </div>
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19694,7 +19784,7 @@ var Help = function (_React$Component) {
 exports.default = Help;
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19746,7 +19836,7 @@ var NotFound = function (_React$Component) {
 exports.default = NotFound;
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19772,13 +19862,13 @@ var Firebase = _interopRequireWildcard(_firebase);
 
 var _reactRouter = __webpack_require__(7);
 
-var _catCards = __webpack_require__(153);
+var _CatCards = __webpack_require__(154);
 
-var _catCards2 = _interopRequireDefault(_catCards);
+var _CatCards2 = _interopRequireDefault(_CatCards);
 
-var _db = __webpack_require__(37);
+var _Db = __webpack_require__(37);
 
-var _db2 = _interopRequireDefault(_db);
+var _Db2 = _interopRequireDefault(_Db);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -19805,7 +19895,7 @@ var SearchResults = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: "col-xs-12 col-sm-12 col-md-10 col-lg-10" },
-        _react2.default.createElement(_catCards2.default, { filters: this.props.filters, sortBy: this.props.sortBy })
+        _react2.default.createElement(_CatCards2.default, { filters: this.props.filters, sortBy: this.props.sortBy })
       );
     }
   }]);
@@ -19818,7 +19908,7 @@ var SearchResults = function (_React$Component) {
 exports.default = SearchResults;
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19836,9 +19926,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(7);
 
-var _filterMenu = __webpack_require__(92);
+var _FilterMenu = __webpack_require__(92);
 
-var _filterMenu2 = _interopRequireDefault(_filterMenu);
+var _FilterMenu2 = _interopRequireDefault(_FilterMenu);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20005,7 +20095,7 @@ exports.default = SortBar;
 // <option value="dt">w DT</option>
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20023,9 +20113,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(7);
 
-var _footer = __webpack_require__(156);
+var _Footer = __webpack_require__(157);
 
-var _footer2 = _interopRequireDefault(_footer);
+var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20198,7 +20288,7 @@ var Template = function (_React$Component) {
           )
         ),
         this.props.children,
-        _react2.default.createElement(_footer2.default, null)
+        _react2.default.createElement(_Footer2.default, null)
       );
     }
   }]);
@@ -20209,7 +20299,7 @@ var Template = function (_React$Component) {
 exports.default = Template;
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20298,7 +20388,7 @@ var Title = function (_React$Component) {
 exports.default = Title;
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20439,96 +20529,6 @@ var VirtualAdoption = function (_React$Component) {
 ;
 
 exports.default = VirtualAdoption;
-
-/***/ }),
-/* 167 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(30);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _firebase = __webpack_require__(20);
-
-var firebase = _interopRequireWildcard(_firebase);
-
-var _reactRouter = __webpack_require__(7);
-
-var _title = __webpack_require__(165);
-
-var _title2 = _interopRequireDefault(_title);
-
-var _about = __webpack_require__(152);
-
-var _about2 = _interopRequireDefault(_about);
-
-var _virtualAdoption = __webpack_require__(166);
-
-var _virtualAdoption2 = _interopRequireDefault(_virtualAdoption);
-
-var _help = __webpack_require__(160);
-
-var _help2 = _interopRequireDefault(_help);
-
-var _contact = __webpack_require__(154);
-
-var _contact2 = _interopRequireDefault(_contact);
-
-__webpack_require__(57);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var MainPage = function (_React$Component) {
-  _inherits(MainPage, _React$Component);
-
-  function MainPage() {
-    _classCallCheck(this, MainPage);
-
-    return _possibleConstructorReturn(this, (MainPage.__proto__ || Object.getPrototypeOf(MainPage)).apply(this, arguments));
-  }
-
-  _createClass(MainPage, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "container" },
-        _react2.default.createElement(_title2.default, null),
-        _react2.default.createElement(_about2.default, null),
-        _react2.default.createElement(_virtualAdoption2.default, null),
-        _react2.default.createElement(_help2.default, null),
-        _react2.default.createElement(_contact2.default, null)
-      );
-    }
-  }]);
-
-  return MainPage;
-}(_react2.default.Component);
-
-;
-
-exports.default = MainPage;
 
 /***/ }),
 /* 168 */

@@ -1,6 +1,6 @@
 import React from "react";
 import {IndexLink} from "react-router";
-import Footer from "./footer.jsx";
+import Footer from "./Footer.jsx";
 
 class Template extends React.Component {
 

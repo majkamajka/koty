@@ -7,8 +7,8 @@ import {
   IndexRoute,
   hashHistory
 } from 'react-router';
-import fb from "./db.js";
-import GalleryThumbnails from "./galleryThumbnails.jsx";
+import fb from "./Db.js";
+import GalleryThumbnails from "./GalleryThumbnails.jsx";
 
 class Gallery extends React.Component {
 

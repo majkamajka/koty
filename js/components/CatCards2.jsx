@@ -9,7 +9,7 @@ import {
   IndexRoute,
   hashHistory
 } from 'react-router';
-import fb from "./db.js";
+import fb from "./Db.js";
 
 class CatCards extends React.Component {
 

@@ -11,11 +11,11 @@ import {
   hashHistory
 } from 'react-router';
 
-import NotFound from "./components/notFound.jsx";
-import AdoptionsPage from "./adoptions.jsx";
-import MainPage from "./mainPage.jsx";
-import CatProfilePage from "./catProfilePage.jsx";
-import Template from "./components/template.jsx";
+import NotFound from "./components/NotFound.jsx";
+import AdoptionsPage from "./Adoptions.jsx";
+import MainPage from "./MainPage.jsx";
+import CatProfilePage from "./CatProfilePage.jsx";
+import Template from "./components/Template.jsx";
 
 import "../scss/style.scss";
 

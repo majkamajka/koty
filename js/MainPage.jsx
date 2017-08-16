@@ -5,11 +5,11 @@ import * as firebase from "firebase";
 
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 
-import Title from "./components/title.jsx";
-import About from "./components/about.jsx";
-import VirtualAdoption from "./components/virtualAdoption.jsx";
-import Help from "./components/help.jsx";
-import Contact from "./components/contact.jsx";
+import Title from "./components/Title.jsx";
+import About from "./components/About.jsx";
+import VirtualAdoption from "./components/VirtualAdoption.jsx";
+import Help from "./components/Help.jsx";
+import Contact from "./components/Contact.jsx";
 
 import "../scss/style.scss";
 
