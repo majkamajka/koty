@@ -4346,19 +4346,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 const config = {
-  apiKey: "AIzaSyBD5bKLZyfDUTHWSQrMdOU6Z6tsreYaak4",
-  authDomain: "koty-c79fd.firebaseapp.com",
-  databaseURL: "https://koty-c79fd.firebaseio.com",
-  projectId: "koty-c79fd",
-  storageBucket: "koty-c79fd.appspot.com",
-  messagingSenderId: "511321533732"
+  apiKey: 'AIzaSyBD5bKLZyfDUTHWSQrMdOU6Z6tsreYaak4',
+  authDomain: 'koty-c79fd.firebaseapp.com',
+  databaseURL: 'https://koty-c79fd.firebaseio.com',
+  projectId: 'koty-c79fd',
+  storageBucket: 'koty-c79fd.appspot.com',
+  messagingSenderId: '511321533732',
 };
 
 const fb = __WEBPACK_IMPORTED_MODULE_0_firebase__["initializeApp"](config);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (fb);
- 
 
 
 /***/ }),
@@ -10246,8 +10245,6 @@ var FilterMenu = function (_React$Component) {
 
   return FilterMenu;
 }(_react2.default.Component);
-
-;
 
 exports.default = FilterMenu;
 
@@ -18034,10 +18031,6 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(30);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
 var _firebase = __webpack_require__(24);
 
 var firebase = _interopRequireWildcard(_firebase);
@@ -18099,22 +18092,22 @@ var AdoptionsPage = function (_React$Component) {
         ill: true,
         urgent: true
       },
-      sortBy: "adoptions"
+      sortBy: 'adoptions'
     };
     return _this;
   }
 
   _createClass(AdoptionsPage, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "container" },
+        'div',
+        { className: 'container' },
         _react2.default.createElement(_SortBar2.default, { receiveSortBy: this.receiveSortBy }),
-        _react2.default.createElement("div", { className: "black-blend hidden" }),
+        _react2.default.createElement('div', { className: 'black-blend hidden' }),
         _react2.default.createElement(
-          "section",
-          { className: "row", id: "results-container" },
+          'section',
+          { className: 'row', id: 'results-container' },
           _react2.default.createElement(_FilterMenu2.default, { receiveFilters: this.receiveFilters }),
           _react2.default.createElement(_SearchResults2.default, { filters: this.state.filters, sortBy: this.state.sortBy })
         )
@@ -18124,8 +18117,6 @@ var AdoptionsPage = function (_React$Component) {
 
   return AdoptionsPage;
 }(_react2.default.Component);
-
-;
 
 exports.default = AdoptionsPage;
 
@@ -18145,10 +18136,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(30);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _firebase = __webpack_require__(24);
 
@@ -18192,18 +18179,18 @@ var CatProfilePage = function (_React$Component) {
   }
 
   _createClass(CatProfilePage, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "container" },
+        'div',
+        { className: 'container' },
         _react2.default.createElement(
-          "section",
-          { className: "row", id: "cat-full-profile" },
+          'section',
+          { className: 'row', id: 'cat-full-profile' },
           _react2.default.createElement(_Gallery2.default, { pathId: this.props.params.id }),
           _react2.default.createElement(
-            "div",
-            { className: "col-xs-12 col-sm-12 col-md-6 col-lg-4 cat-full-info" },
+            'div',
+            { className: 'col-xs-12 col-sm-12 col-md-6 col-lg-4 cat-full-info' },
             _react2.default.createElement(_FullDesc2.default, { pathId: this.props.params.id }),
             _react2.default.createElement(_Donations2.default, null)
           )
@@ -18214,8 +18201,6 @@ var CatProfilePage = function (_React$Component) {
 
   return CatProfilePage;
 }(_react2.default.Component);
-
-;
 
 exports.default = CatProfilePage;
 
@@ -18288,11 +18273,11 @@ var MainPage = function (_React$Component) {
   }
 
   _createClass(MainPage, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "container" },
+        'div',
+        { className: 'container' },
         _react2.default.createElement(_Title2.default, null),
         _react2.default.createElement(_About2.default, null),
         _react2.default.createElement(_VirtualAdoption2.default, null),
@@ -18304,8 +18289,6 @@ var MainPage = function (_React$Component) {
 
   return MainPage;
 }(_react2.default.Component);
-
-;
 
 exports.default = MainPage;
 
@@ -18346,103 +18329,103 @@ var About = function (_React$Component) {
   }
 
   _createClass(About, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "section",
-        { className: "row about", id: "about" },
+        'section',
+        { className: 'row about', id: 'about' },
         _react2.default.createElement(
-          "div",
-          { className: "col-xs-12" },
+          'div',
+          { className: 'col-xs-12' },
           _react2.default.createElement(
-            "div",
-            { className: "row flex" },
+            'div',
+            { className: 'row flex' },
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-6 col-md-4 col-lg-4 flex" },
+              'div',
+              { className: 'col-xs-12 col-sm-6 col-md-4 col-lg-4 flex' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
+                'div',
+                { className: 'tile' },
                 _react2.default.createElement(
-                  "h2",
-                  { className: "heading" },
-                  "Misja Koterii"
+                  'h2',
+                  { className: 'heading' },
+                  'Misja Koterii'
                 ),
                 _react2.default.createElement(
-                  "ul",
-                  { className: "square-list" },
+                  'ul',
+                  { className: 'square-list' },
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "kastracja kot\xF3w miejskich"
+                    'kastracja kot\xF3w miejskich'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "identyfikacja wykastrowanych kot\xF3w przez naci\u0119cie czubka ucha"
+                    'identyfikacja wykastrowanych kot\xF3w przez naci\u0119cie czubka ucha'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "oddawanie do adopcji kot\xF3w oswojonych oraz m\u0142odych, podatnych na oswojenie"
+                    'oddawanie do adopcji kot\xF3w oswojonych oraz m\u0142odych, podatnych na oswojenie'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "profilaktyka weterynaryjna dla kot\xF3w miejskich"
+                    'profilaktyka weterynaryjna dla kot\xF3w miejskich'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "pomoc opiekunom kot\xF3w wolno \u017Cyj\u0105cych"
+                    'pomoc opiekunom kot\xF3w wolno \u017Cyj\u0105cych'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "pomoc w wy\u0142apywaniu wolno \u017Cyj\u0105cych kot\xF3w"
+                    'pomoc w wy\u0142apywaniu wolno \u017Cyj\u0105cych kot\xF3w'
                   )
                 )
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-6 col-md-5 col-lg-5 flex" },
+              'div',
+              { className: 'col-xs-12 col-sm-6 col-md-5 col-lg-5 flex' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
+                'div',
+                { className: 'tile' },
                 _react2.default.createElement(
-                  "h2",
-                  { className: "heading" },
-                  "Do adopcji"
+                  'h2',
+                  { className: 'heading' },
+                  'Do adopcji'
                 ),
                 _react2.default.createElement(
-                  "p",
+                  'p',
                   null,
-                  "Podstawowym zadaniem Koterii jest sterylizacja kot\xF3w wolno\u017Cyj\u0105cych, kt\xF3re powinny po zabiegu wr\xF3ci\u0107 tam, gdzie zosta\u0142y z\u0142apane. Czasami jednak spotykamy koty, ktore na ulicy znalaz\u0142y si\u0119 przypadkiem - komu\u015B zgine\u0142y lub zosta\u0142y porzucone. Takie koty nie radz\u0105 sobie dobrze na podw\xF3rkach, przyzwyczajone do opieki nie potrafi\u0105 znale\u017A\u0107 po\u017Cywienia czy schronienia, nie znaj\u0105 swoich naturalnych wrog\xF3w, nie rozumiej\u0105 niebezpiecze\u0144stw. Drug\u0105 grup\u0105 kot\xF3w dla kt\xF3rych szukamy dom\xF3w s\u0105 koci\u0119ta. Je\u015Bli nie maj\u0105 jeszcze trzech miesi\u0119cy jest du\u017Ca szansa na ich oswojenie."
+                  'Podstawowym zadaniem Koterii jest sterylizacja kot\xF3w wolno\u017Cyj\u0105cych, kt\xF3re powinny po zabiegu wr\xF3ci\u0107 tam, gdzie zosta\u0142y z\u0142apane. Czasami jednak spotykamy koty, ktore na ulicy znalaz\u0142y si\u0119 przypadkiem - komu\u015B zgine\u0142y lub zosta\u0142y porzucone. Takie koty nie radz\u0105 sobie dobrze na podw\xF3rkach, przyzwyczajone do opieki nie potrafi\u0105 znale\u017A\u0107 po\u017Cywienia czy schronienia, nie znaj\u0105 swoich naturalnych wrog\xF3w, nie rozumiej\u0105 niebezpiecze\u0144stw. Drug\u0105 grup\u0105 kot\xF3w dla kt\xF3rych szukamy dom\xF3w s\u0105 koci\u0119ta. Je\u015Bli nie maj\u0105 jeszcze trzech miesi\u0119cy jest du\u017Ca szansa na ich oswojenie.'
                 )
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-12 col-md-3 col-lg-3 flex" },
+              'div',
+              { className: 'col-xs-12 col-sm-12 col-md-3 col-lg-3 flex' },
               _react2.default.createElement(
-                "div",
-                { className: "tile img" },
+                'div',
+                { className: 'tile img' },
                 _react2.default.createElement(
-                  "div",
-                  { className: "blend" },
+                  'div',
+                  { className: 'blend' },
                   _react2.default.createElement(
-                    "p",
+                    'p',
                     null,
-                    "Wi\u0119cej informacji o\xA0adopcji:"
+                    'Wi\u0119cej informacji o\xA0adopcji:'
                   ),
                   _react2.default.createElement(
-                    "a",
-                    { href: "http://www.koteria.org.pl/adopcje/adopcje.htm" },
+                    'a',
+                    { href: 'http://www.koteria.org.pl/adopcje/adopcje.htm' },
                     _react2.default.createElement(
-                      "button",
-                      { className: "button" },
-                      "Zobacz"
+                      'button',
+                      { className: 'button' },
+                      'Zobacz'
                     )
                   )
                 )
@@ -18456,8 +18439,6 @@ var About = function (_React$Component) {
 
   return About;
 }(_react2.default.Component);
-
-;
 
 exports.default = About;
 
@@ -18477,10 +18458,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(30);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _firebase = __webpack_require__(24);
 
@@ -18519,14 +18496,14 @@ var CatCards = function (_React$Component) {
   }
 
   _createClass(CatCards, [{
-    key: "componentDidMount",
+    key: 'componentDidMount',
     value: function componentDidMount() {
       var _this2 = this;
 
-      var db = _Db2.default.database().ref("/");
+      var db = _Db2.default.database().ref('/');
       var cards = [];
 
-      db.on("value", function (snap) {
+      db.on('value', function (snap) {
 
         for (var i = 0; i < snap.val().length; i++) {
 
@@ -18538,11 +18515,11 @@ var CatCards = function (_React$Component) {
           cards: cards
         });
 
-        //dlaczego nigdzie nie jestem w stanie updejtować this state filters?!
+        // dlaczego nigdzie nie jestem w stanie updejtować this state filters?!
       });
     }
   }, {
-    key: "filterCards",
+    key: 'filterCards',
     value: function filterCards(cards) {
       var filters = this.props.filters;
       var filteredDbCats = cards;
@@ -18550,90 +18527,90 @@ var CatCards = function (_React$Component) {
 
       if (!filters.sexMale) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
-          return cat.sex !== "m";
+          return cat.sex !== 'm';
         });
-      };
+      }
       if (!filters.sexFemale) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
-          return cat.sex !== "f";
+          return cat.sex !== 'f';
         });
-      };
+      }
       if (!filters.ageYoung) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
           return cat.ageMonths > 12;
         });
-      };
+      }
       if (!filters.ageAdult) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
           return !(cat.ageMonths >= 12 && cat.ageMonths < 60);
         });
-      };
+      }
       if (!filters.ageSenior) {
         filteredDbCats = filteredDbCats.filter(function (cat) {
           return cat.ageMonths < 60;
         });
-      };
+      }
 
-      //https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value-in-javascript
+      // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value-in-javascript
       function dynamicSort(property) {
         var sortOrder = 1;
-        if (property[0] === "-") {
+        if (property[0] === '-') {
           sortOrder = -1;
           property = property.substr(1);
-        };
+        }
+
         return function (a, b) {
           var result = a[property] < b[property] ? -1 : a[property] > b[property] ? 1 : 0;
           return result * sortOrder;
         };
-      };
+      }
       filteredDbCats.sort(dynamicSort(sortBy));
 
       var filteredCards = filteredDbCats.map(function (e, i) {
-
-        var sexIcon = "";
-        if (e.sex === "m") {
-          sexIcon = "fa fa-mars";
+        var sexIcon = '';
+        if (e.sex === 'm') {
+          sexIcon = 'fa fa-mars';
         } else {
-          sexIcon = "fa fa-venus";
-        };
+          sexIcon = 'fa fa-venus';
+        }
 
         return _react2.default.createElement(
-          "div",
-          { className: "col-xs-12 col-sm-6 col-md-4 col-lg-3", key: "" + i + e.name },
+          'div',
+          { className: 'col-xs-12 col-sm-6 col-md-4 col-lg-3', key: '' + i + e.name },
           _react2.default.createElement(
-            "div",
-            { className: "tile cat-card" },
+            'div',
+            { className: 'tile cat-card' },
             _react2.default.createElement(
-              "div",
-              { className: "thumbnail" },
-              _react2.default.createElement("img", { src: e.mainPhoto, alt: "", className: "cat-img" })
+              'div',
+              { className: 'thumbnail' },
+              _react2.default.createElement('img', { src: e.mainPhoto, alt: '', className: 'cat-img' })
             ),
             _react2.default.createElement(
-              "h1",
+              'h1',
               null,
               e.name,
-              "\xA0",
-              _react2.default.createElement("i", { className: sexIcon, "aria-hidden": "true" }),
-              " ",
+              '\xA0',
+              _react2.default.createElement('i', { className: sexIcon, 'aria-hidden': 'true' }),
+              ' ',
               Math.round(e.ageMonths / 12)
             ),
             _react2.default.createElement(
-              "p",
-              { id: "keywords" },
+              'p',
+              { id: 'keywords' },
               e.keywords
             ),
             _react2.default.createElement(
-              "p",
-              { className: "cat-short-desc" },
-              e.desc.substring(0, 200) + "..."
+              'p',
+              { className: 'cat-short-desc' },
+              e.desc.substring(0, 200) + '...'
             ),
             _react2.default.createElement(
               _reactRouter.Link,
-              { to: "/cat-profile/" + e.id },
+              { to: '/cat-profile/' + e.id },
               _react2.default.createElement(
-                "button",
-                { className: "button more" },
-                "wi\u0119cej"
+                'button',
+                { className: 'button more' },
+                'wi\u0119cej'
               )
             )
           )
@@ -18643,11 +18620,11 @@ var CatCards = function (_React$Component) {
       return filteredCards;
     }
   }, {
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "row", id: "results" },
+        'div',
+        { className: 'row', id: 'results' },
         this.filterCards(this.state.cards)
       );
     }
@@ -18655,8 +18632,6 @@ var CatCards = function (_React$Component) {
 
   return CatCards;
 }(_react2.default.Component);
-
-;
 
 exports.default = CatCards;
 
@@ -18904,78 +18879,78 @@ var Contact = function (_React$Component) {
   }
 
   _createClass(Contact, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "section",
-        { className: "row", id: "contact" },
+        'section',
+        { className: 'row', id: 'contact' },
         _react2.default.createElement(
-          "div",
-          { className: "col-xs-12" },
+          'div',
+          { className: 'col-xs-12' },
           _react2.default.createElement(
-            "div",
-            { className: "row flex" },
+            'div',
+            { className: 'row flex' },
             _react2.default.createElement(
-              "div",
-              { className: "col-md-4 col-lg-4 flex entrance-img" },
+              'div',
+              { className: 'col-md-4 col-lg-4 flex entrance-img' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
-                _react2.default.createElement("img", { src: "images/koteria-budynek.png", alt: "" }),
+                'div',
+                { className: 'tile' },
+                _react2.default.createElement('img', { src: 'images/koteria-budynek.png', alt: '' }),
                 _react2.default.createElement(
-                  "p",
+                  'p',
                   null,
-                  "wej\u015Bcie do budynku"
+                  'wej\u015Bcie do budynku'
                 )
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-6 col-md-5 col-lg-5 flex" },
+              'div',
+              { className: 'col-xs-12 col-sm-6 col-md-5 col-lg-5 flex' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
-                _react2.default.createElement("div", { id: "map" })
+                'div',
+                { className: 'tile' },
+                _react2.default.createElement('div', { id: 'map' })
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-6 col-md-3 col-lg-3 flex" },
+              'div',
+              { className: 'col-xs-12 col-sm-6 col-md-3 col-lg-3 flex' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
+                'div',
+                { className: 'tile' },
                 _react2.default.createElement(
-                  "h1",
-                  { className: "heading" },
-                  "Kontakt"
+                  'h1',
+                  { className: 'heading' },
+                  'Kontakt'
                 ),
                 _react2.default.createElement(
-                  "p",
+                  'p',
                   null,
                   _react2.default.createElement(
-                    "strong",
+                    'strong',
                     null,
-                    "O\u015Brodek KOTERIA"
+                    'O\u015Brodek KOTERIA'
                   ),
-                  _react2.default.createElement("br", null),
-                  "ul. Chrzanowskiego 13",
-                  _react2.default.createElement("br", null),
-                  "04-392 Warszawa",
-                  _react2.default.createElement("br", null),
-                  "koteria@argos.org.pl",
-                  _react2.default.createElement("br", null),
-                  "tel. 535 870 225",
-                  _react2.default.createElement("br", null),
-                  _react2.default.createElement("br", null),
+                  _react2.default.createElement('br', null),
+                  'ul. Chrzanowskiego 13',
+                  _react2.default.createElement('br', null),
+                  '04-392 Warszawa',
+                  _react2.default.createElement('br', null),
+                  'koteria@argos.org.pl',
+                  _react2.default.createElement('br', null),
+                  'tel. 535 870 225',
+                  _react2.default.createElement('br', null),
+                  _react2.default.createElement('br', null),
                   _react2.default.createElement(
-                    "strong",
+                    'strong',
                     null,
-                    "Zapraszamy:"
+                    'Zapraszamy:'
                   ),
-                  _react2.default.createElement("br", null),
-                  "pon-pt: 9.00 - 19.00;",
-                  _react2.default.createElement("br", null),
-                  "sob: 9.00 - 13.00"
+                  _react2.default.createElement('br', null),
+                  'pon-pt: 9.00 - 19.00;',
+                  _react2.default.createElement('br', null),
+                  'sob: 9.00 - 13.00'
                 )
               )
             )
@@ -18987,8 +18962,6 @@ var Contact = function (_React$Component) {
 
   return Contact;
 }(_react2.default.Component);
-
-;
 
 exports.default = Contact;
 
@@ -19029,69 +19002,69 @@ var Donations = function (_React$Component) {
   }
 
   _createClass(Donations, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "help" },
+        'div',
+        { className: 'help' },
         _react2.default.createElement(
-          "h2",
-          { className: "heading" },
-          "Jak mo\u017Cesz pom\xF3c?"
+          'h2',
+          { className: 'heading' },
+          'Jak mo\u017Cesz pom\xF3c?'
         ),
         _react2.default.createElement(
-          "ol",
+          'ol',
           null,
           _react2.default.createElement(
-            "li",
+            'li',
             null,
-            "wirtualna adopcja:",
-            _react2.default.createElement("br", null),
-            "[paypal subscription button]"
+            'wirtualna adopcja:',
+            _react2.default.createElement('br', null),
+            '[paypal subscription button]'
           ),
           _react2.default.createElement(
-            "li",
+            'li',
             null,
-            "jednorazowa wp\u0142ata:",
-            _react2.default.createElement("br", null),
-            "[paypal donation button]"
+            'jednorazowa wp\u0142ata:',
+            _react2.default.createElement('br', null),
+            '[paypal donation button]'
           ),
           _react2.default.createElement(
-            "li",
+            'li',
             null,
-            "prawdziwa adopcja:",
-            _react2.default.createElement("br", null),
+            'prawdziwa adopcja:',
+            _react2.default.createElement('br', null),
             _react2.default.createElement(
-              "a",
-              { href: "www.koteria.org.pl/adopcje/adopcje.htm" },
+              'a',
+              { href: 'www.koteria.org.pl/adopcje/adopcje.htm' },
               _react2.default.createElement(
-                "button",
-                { className: "button" },
-                "wi\u0119cej info"
+                'button',
+                { className: 'button' },
+                'wi\u0119cej info'
               )
             ),
             _react2.default.createElement(
-              "a",
-              { href: "www.koteria.org.pl/dok/umowa_adop.pdf" },
+              'a',
+              { href: 'www.koteria.org.pl/dok/umowa_adop.pdf' },
               _react2.default.createElement(
-                "button",
-                { className: "button" },
-                "umowa adopcyjna"
+                'button',
+                { className: 'button' },
+                'umowa adopcyjna'
               )
             )
           ),
           _react2.default.createElement(
-            "li",
+            'li',
             null,
-            "dom tymczasowy:",
-            _react2.default.createElement("br", null),
+            'dom tymczasowy:',
+            _react2.default.createElement('br', null),
             _react2.default.createElement(
-              "a",
-              { href: "www.koteria.org.pl/adopcje/dom-tymczasowy.htm" },
+              'a',
+              { href: 'www.koteria.org.pl/adopcje/dom-tymczasowy.htm' },
               _react2.default.createElement(
-                "button",
-                { className: "button" },
-                "wi\u0119cej info"
+                'button',
+                { className: 'button' },
+                'wi\u0119cej info'
               )
             )
           )
@@ -19102,8 +19075,6 @@ var Donations = function (_React$Component) {
 
   return Donations;
 }(_react2.default.Component);
-
-;
 
 exports.default = Donations;
 
@@ -19144,108 +19115,108 @@ var Footer = function (_React$Component) {
   }
 
   _createClass(Footer, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "bar" },
+        'div',
+        { className: 'bar' },
         _react2.default.createElement(
-          "footer",
-          { className: "row", id: "footer" },
+          'footer',
+          { className: 'row', id: 'footer' },
           _react2.default.createElement(
-            "div",
-            { className: "col-xs-7 col-sm-7 col-md-6 col-lg-6" },
+            'div',
+            { className: 'col-xs-7 col-sm-7 col-md-6 col-lg-6' },
             _react2.default.createElement(
-              "ul",
+              'ul',
               null,
               _react2.default.createElement(
-                "li",
+                'li',
                 null,
-                "O\u015Brodek KOTERIA"
+                'O\u015Brodek KOTERIA'
               ),
               _react2.default.createElement(
-                "li",
+                'li',
                 null,
-                "ul. Chrzanowskiego 13"
+                'ul. Chrzanowskiego 13'
               ),
               _react2.default.createElement(
-                "li",
+                'li',
                 null,
-                "Warszawa"
+                'Warszawa'
               ),
               _react2.default.createElement(
-                "li",
+                'li',
                 null,
-                "535 870 225"
+                '535 870 225'
               ),
               _react2.default.createElement(
-                "li",
+                'li',
                 null,
-                "fundacja ARGOS:",
-                _react2.default.createElement("br", null),
-                "Bank PEKAO SA 47 1240 6133 1111 0000 4808 5915"
+                'fundacja ARGOS:',
+                _react2.default.createElement('br', null),
+                'Bank PEKAO SA 47 1240 6133 1111 0000 4808 5915'
               )
             )
           ),
           _react2.default.createElement(
-            "div",
-            { className: "col-xs-5 col-sm-5 col-md-6 col-lg-6 social-media" },
+            'div',
+            { className: 'col-xs-5 col-sm-5 col-md-6 col-lg-6 social-media' },
             _react2.default.createElement(
-              "ul",
+              'ul',
               null,
               _react2.default.createElement(
-                "li",
+                'li',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "https://www.facebook.com/KoteriaOrgPl/?ref=br_rs" },
-                  _react2.default.createElement("i", { className: "fa fa-facebook-official", "aria-hidden": "true" })
+                  'a',
+                  { href: 'https://www.facebook.com/KoteriaOrgPl/?ref=br_rs' },
+                  _react2.default.createElement('i', { className: 'fa fa-facebook-official', 'aria-hidden': 'true' })
                 )
               ),
               _react2.default.createElement(
-                "li",
+                'li',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "#" },
-                  _react2.default.createElement("i", { className: "fa fa-instagram", "aria-hidden": "true" })
+                  'a',
+                  { href: '#' },
+                  _react2.default.createElement('i', { className: 'fa fa-instagram', 'aria-hidden': 'true' })
                 )
               ),
               _react2.default.createElement(
-                "li",
+                'li',
                 null,
                 _react2.default.createElement(
-                  "a",
-                  { href: "http://www.koteria.org.pl/index.htm" },
-                  _react2.default.createElement("i", { className: "fa fa-desktop", "aria-hidden": "true" })
+                  'a',
+                  { href: 'http://www.koteria.org.pl/index.htm' },
+                  _react2.default.createElement('i', { className: 'fa fa-desktop', 'aria-hidden': 'true' })
                 )
               )
             )
           )
         ),
         _react2.default.createElement(
-          "div",
-          { className: "bar-copy" },
+          'div',
+          { className: 'bar-copy' },
           _react2.default.createElement(
-            "div",
-            { className: "row copy" },
+            'div',
+            { className: 'row copy' },
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-6 col-sm-6 col-md-6 col-lg-6" },
-              "\xA9 2017 majkamajka"
+              'div',
+              { className: 'col-xs-6 col-sm-6 col-md-6 col-lg-6' },
+              '\xA9 2017 majkamajka'
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-6 col-sm-6 col-md-6 col-lg-6 git" },
+              'div',
+              { className: 'col-xs-6 col-sm-6 col-md-6 col-lg-6 git' },
               _react2.default.createElement(
-                "a",
-                { href: "https://github.com/majkamajka" },
+                'a',
+                { href: 'https://github.com/majkamajka' },
                 _react2.default.createElement(
-                  "span",
+                  'span',
                   null,
-                  "\xA0/majkamajka"
+                  '\xA0/majkamajka'
                 ),
-                _react2.default.createElement("i", { className: "fa fa-github" })
+                _react2.default.createElement('i', { className: 'fa fa-github' })
               )
             )
           )
@@ -19256,8 +19227,6 @@ var Footer = function (_React$Component) {
 
   return Footer;
 }(_react2.default.Component);
-
-;
 
 exports.default = Footer;
 
@@ -19307,55 +19276,53 @@ var FullDesc = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (FullDesc.__proto__ || Object.getPrototypeOf(FullDesc)).call(this, props));
 
     _this.state = {
-      name: "",
-      keywords: "",
-      sex: "",
-      age: "",
-      fullDesc: ""
+      name: '',
+      keywords: '',
+      sex: '',
+      age: '',
+      fullDesc: ''
     };
     return _this;
   }
 
   _createClass(FullDesc, [{
-    key: "componentDidMount",
+    key: 'componentDidMount',
     value: function componentDidMount() {
       var _this2 = this;
 
       var id = this.props.pathId;
-      var db = _Db2.default.database().ref("/");
-      var ageUnit = "";
+      var db = _Db2.default.database().ref('/');
+      var ageUnit = '';
       var age = 0;
-      var sex = "";
+      var sex = '';
 
-      db.on("value", function (snap) {
-
-        if (snap.val()[id].sex === "f") {
-          sex = "kotka";
+      db.on('value', function (snap) {
+        if (snap.val()[id].sex === 'f') {
+          sex = 'kotka';
         } else {
-          sex = "kocur";
-        };
+          sex = 'kocur';
+        }
 
         if (snap.val()[id].ageMonths >= 12) {
           age = Math.round(snap.val()[id].ageMonths / 12);
 
           if (age === 1) {
-            ageUnit = " rok";
+            ageUnit = ' rok';
           } else if (age >= 2 && age <= 4) {
-            ageUnit = " lata";
+            ageUnit = ' lata';
           } else {
-            ageUnit = " lat";
-          };
+            ageUnit = ' lat';
+          }
         } else {
           age = snap.val()[id].ageMonths;
-
           if (snap.val()[id].ageMonths === 1) {
-            ageUnit = " miesiąc";
+            ageUnit = ' miesiąc';
           } else if (snap.val()[id].ageMonths >= 2 && snap.val()[id].ageMonths <= 4) {
-            ageUnit = " miesiące";
+            ageUnit = ' miesiące';
           } else {
-            ageUnit = " miesięcy";
-          };
-        };
+            ageUnit = ' miesięcy';
+          }
+        }
 
         _this2.setState({
           name: snap.val()[id].name,
@@ -19367,32 +19334,31 @@ var FullDesc = function (_React$Component) {
       });
     }
   }, {
-    key: "render",
+    key: 'render',
     value: function render() {
-
       return _react2.default.createElement(
-        "div",
-        { className: "cat-full-desc" },
+        'div',
+        { className: 'cat-full-desc' },
         _react2.default.createElement(
-          "h1",
-          { className: "heading" },
+          'h1',
+          { className: 'heading' },
           this.state.name
         ),
         _react2.default.createElement(
-          "p",
+          'p',
           null,
-          "keywords: ",
+          'keywords: ',
           this.state.keywords
         ),
         _react2.default.createElement(
-          "p",
+          'p',
           null,
           this.state.sex,
-          ", ",
+          ', ',
           this.state.age
         ),
         _react2.default.createElement(
-          "p",
+          'p',
           null,
           this.state.fullDesc
         )
@@ -19402,8 +19368,6 @@ var FullDesc = function (_React$Component) {
 
   return FullDesc;
 }(_react2.default.Component);
-
-;
 
 exports.default = FullDesc;
 
@@ -19457,7 +19421,7 @@ var Gallery = function (_React$Component) {
     };
 
     _this.state = {
-      bigImgPath: "",
+      bigImgPath: '',
       id: _this.props.pathId,
       galleryExists: false
     };
@@ -19465,15 +19429,14 @@ var Gallery = function (_React$Component) {
   }
 
   _createClass(Gallery, [{
-    key: "componentDidMount",
+    key: 'componentDidMount',
     value: function componentDidMount() {
       var _this2 = this;
 
-      var db = _Db2.default.database().ref("/");
+      var db = _Db2.default.database().ref('/');
       var id = this.props.pathId;
 
-      db.on("value", function (snap) {
-
+      db.on('value', function (snap) {
         if (snap.val()[id].gallery) {
           _this2.setState({
             galleryExists: true
@@ -19482,7 +19445,7 @@ var Gallery = function (_React$Component) {
           _this2.setState({
             galleryExists: false
           });
-        };
+        }
 
         _this2.setState({
           bigImgPath: snap.val()[id].mainPhoto
@@ -19490,27 +19453,27 @@ var Gallery = function (_React$Component) {
       });
     }
   }, {
-    key: "render",
+    key: 'render',
     value: function render() {
       if (this.state.galleryExists) {
         return _react2.default.createElement(
-          "div",
-          { className: "col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery" },
+          'div',
+          { className: 'col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery' },
           _react2.default.createElement(_GalleryThumbnails2.default, { setBigPhoto: this.setBigPhoto, pathId: this.state.id }),
           _react2.default.createElement(
-            "div",
-            { id: "big-photo", className: "big-photo" },
-            _react2.default.createElement("img", { src: this.state.bigImgPath, alt: "" })
+            'div',
+            { id: 'big-photo', className: 'big-photo' },
+            _react2.default.createElement('img', { src: this.state.bigImgPath, alt: '' })
           )
         );
       } else {
         return _react2.default.createElement(
-          "div",
-          { className: "col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery" },
+          'div',
+          { className: 'col-xs-12 col-sm-12 col-md-6 col-lg-8 gallery' },
           _react2.default.createElement(
-            "div",
-            { id: "big-photo", className: "big-photo" },
-            _react2.default.createElement("img", { src: this.state.bigImgPath, alt: "" })
+            'div',
+            { id: 'big-photo', className: 'big-photo' },
+            _react2.default.createElement('img', { src: this.state.bigImgPath, alt: '' })
           )
         );
       }
@@ -19519,8 +19482,6 @@ var Gallery = function (_React$Component) {
 
   return Gallery;
 }(_react2.default.Component);
-
-;
 
 exports.default = Gallery;
 
@@ -19575,35 +19536,33 @@ var GalleryThumbnails = function (_React$Component) {
   }
 
   _createClass(GalleryThumbnails, [{
-    key: "componentDidMount",
+    key: 'componentDidMount',
     value: function componentDidMount() {
       var _this2 = this;
 
-      var db = _Db2.default.database().ref("/");
-      var cards = [];
+      var db = _Db2.default.database().ref('/');
       var id = this.props.pathId;
       var thumbnailsLinks = [];
       var thumbnails = [];
 
-      db.on("value", function (snap) {
-
+      db.on('value', function (snap) {
         thumbnailsLinks.push(snap.val()[id].mainPhoto);
 
         for (var i = 0; i < snap.val()[id].gallery.length; i++) {
           thumbnailsLinks.push(snap.val()[id].gallery[i]);
-        };
+        }
 
         for (var _i = 0; _i < thumbnailsLinks.length; _i++) {
           thumbnails.push(_react2.default.createElement(
-            "div",
-            { className: "gallery-thumbnail current", key: _i },
+            'div',
+            { className: 'gallery-thumbnail current', key: _i },
             _react2.default.createElement(
-              "div",
-              { className: "cont" },
-              _react2.default.createElement("img", { src: thumbnailsLinks[_i], alt: "", onClick: _this2.getImage })
+              'div',
+              { className: 'cont' },
+              _react2.default.createElement('img', { src: thumbnailsLinks[_i], alt: '', onClick: _this2.getImage })
             )
           ));
-        };
+        }
 
         _this2.setState({
           thumbnails: thumbnails
@@ -19611,11 +19570,11 @@ var GalleryThumbnails = function (_React$Component) {
       });
     }
   }, {
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "photo-thumbnails" },
+        'div',
+        { className: 'photo-thumbnails' },
         this.state.thumbnails
       );
     }
@@ -19669,95 +19628,95 @@ var Help = function (_React$Component) {
   }
 
   _createClass(Help, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "section",
-        { className: "row another", id: "other-help" },
+        'section',
+        { className: 'row another', id: 'other-help' },
         _react2.default.createElement(
-          "div",
-          { className: "col-xs-12" },
+          'div',
+          { className: 'col-xs-12' },
           _react2.default.createElement(
-            "div",
-            { className: "row flex" },
+            'div',
+            { className: 'row flex' },
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-12 col-md-4 col-lg-4 flex" },
+              'div',
+              { className: 'col-xs-12 col-sm-12 col-md-4 col-lg-4 flex' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
+                'div',
+                { className: 'tile' },
                 _react2.default.createElement(
-                  "h1",
-                  { className: "heading" },
-                  "sdfsdfsd"
+                  'h1',
+                  { className: 'heading' },
+                  'sdfsdfsd'
                 ),
                 _react2.default.createElement(
-                  "p",
+                  'p',
                   null,
-                  "rabi\u0105 sporu. I Wojski ubierze kt\xF3ry teraz je\u015Bli zechcesz, i on mo\u017Ce te\u017C same obicia z kim by\u0142, lecz ka\u017Cdemu inna. Bo nie by\u0142 \u017Conaty a on zmieni\u0142 si\u0119 echem i wida\u0107 z postawy lecz latem nic to m\xF3wi\u0105c, \u017Ce zamczysko wzi\u0119li\u015Bmy w porz\u0105dku pilnowa\u0142. Bo nie m\xF3g\u0142. Jak mnie rad\u0105 do poca\u0142owani i krwi ton\u0119\u0142a, gdy"
+                  'rabi\u0105 sporu. I Wojski ubierze kt\xF3ry teraz je\u015Bli zechcesz, i on mo\u017Ce te\u017C same obicia z kim by\u0142, lecz ka\u017Cdemu inna. Bo nie by\u0142 \u017Conaty a on zmieni\u0142 si\u0119 echem i wida\u0107 z postawy lecz latem nic to m\xF3wi\u0105c, \u017Ce zamczysko wzi\u0119li\u015Bmy w porz\u0105dku pilnowa\u0142. Bo nie m\xF3g\u0142. Jak mnie rad\u0105 do poca\u0142owani i krwi ton\u0119\u0142a, gdy'
                 )
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-12 col-md-5 col-lg-5 flex" },
+              'div',
+              { className: 'col-xs-12 col-sm-12 col-md-5 col-lg-5 flex' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
+                'div',
+                { className: 'tile' },
                 _react2.default.createElement(
-                  "h1",
-                  { className: "heading" },
-                  "Jak mo\u017Cesz pom\xF3c?"
+                  'h1',
+                  { className: 'heading' },
+                  'Jak mo\u017Cesz pom\xF3c?'
                 ),
                 _react2.default.createElement(
-                  "ul",
-                  { className: "square-list" },
+                  'ul',
+                  { className: 'square-list' },
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "bezpo\u015Brednia wp\u0142ata na rzecz o\u015Brodka [paypal]"
+                    'bezpo\u015Brednia wp\u0142ata na rzecz o\u015Brodka [paypal]'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "zakupy na zooplus poprzez reflink [klik]"
+                    'zakupy na zooplus poprzez reflink [klik]'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "dostarczenie nam karmy, \u015Brodk\xF3w czysto\u015Bci etc."
+                    'dostarczenie nam karmy, \u015Brodk\xF3w czysto\u015Bci etc.'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "bycie domem tymczasowym [wi\u0119cej info]"
+                    'bycie domem tymczasowym [wi\u0119cej info]'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "przekaza\u0107 1% podatku"
+                    'przekaza\u0107 1% podatku'
                   )
                 )
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-12 col-md-3 col-lg-3 flex" },
+              'div',
+              { className: 'col-xs-12 col-sm-12 col-md-3 col-lg-3 flex' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
+                'div',
+                { className: 'tile' },
                 _react2.default.createElement(
-                  "ul",
-                  { className: "square-list" },
+                  'ul',
+                  { className: 'square-list' },
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "[paypal link]"
+                    '[paypal link]'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "[zooplus link]"
+                    '[zooplus link]'
                   )
                 )
               )
@@ -19770,8 +19729,6 @@ var Help = function (_React$Component) {
 
   return Help;
 }(_react2.default.Component);
-
-;
 
 exports.default = Help;
 
@@ -19812,12 +19769,12 @@ var NotFound = function (_React$Component) {
   }
 
   _createClass(NotFound, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "h1",
+        'h1',
         null,
-        "404, Nothing is here"
+        '404, Nothing is here'
       );
     }
   }]);
@@ -19844,10 +19801,6 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(30);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
 var _firebase = __webpack_require__(24);
 
 var Firebase = _interopRequireWildcard(_firebase);
@@ -19857,10 +19810,6 @@ var _reactRouter = __webpack_require__(7);
 var _CatCards = __webpack_require__(154);
 
 var _CatCards2 = _interopRequireDefault(_CatCards);
-
-var _Db = __webpack_require__(37);
-
-var _Db2 = _interopRequireDefault(_Db);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -19882,11 +19831,11 @@ var SearchResults = function (_React$Component) {
   }
 
   _createClass(SearchResults, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "col-xs-12 col-sm-12 col-md-10 col-lg-10" },
+        'div',
+        { className: 'col-xs-12 col-sm-12 col-md-10 col-lg-10' },
         _react2.default.createElement(_CatCards2.default, { filters: this.props.filters, sortBy: this.props.sortBy })
       );
     }
@@ -19894,8 +19843,6 @@ var SearchResults = function (_React$Component) {
 
   return SearchResults;
 }(_react2.default.Component);
-
-;
 
 exports.default = SearchResults;
 
@@ -19938,16 +19885,16 @@ var SortBar = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (SortBar.__proto__ || Object.getPrototypeOf(SortBar)).call(this, props));
 
-    _this.filterMenuToggle = function (event) {
-      if (_this.state.filterMenuDisplay === "none") {
+    _this.filterMenuToggle = function () {
+      if (_this.state.filterMenuDisplay === 'none') {
         _this.setState({
-          filterMenuDisplay: "block",
-          arrowClass: "fa fa-arrow-circle-up"
+          filterMenuDisplay: 'block',
+          arrowClass: 'fa fa-arrow-circle-up'
         });
       } else {
         _this.setState({
-          filterMenuDisplay: "none",
-          arrowClass: "fa fa-arrow-circle-down"
+          filterMenuDisplay: 'none',
+          arrowClass: 'fa fa-arrow-circle-down'
         });
       }
     };
@@ -19958,116 +19905,116 @@ var SortBar = function (_React$Component) {
     };
 
     _this.state = {
-      filterMenuDisplay: "none",
-      arrowClass: "fa fa-arrow-circle-down"
+      filterMenuDisplay: 'none',
+      arrowClass: 'fa fa-arrow-circle-down'
     };
     return _this;
   }
 
   _createClass(SortBar, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       var filterMenuDisplay = { display: this.state.filterMenuDisplay };
 
       return _react2.default.createElement(
-        "section",
-        { className: "row", id: "selection-bar" },
+        'section',
+        { className: 'row', id: 'selection-bar' },
         _react2.default.createElement(
-          "div",
-          { className: "col-xs-4 col-sm-4 col-md-4 col-lg-4", id: "filter-click" },
+          'div',
+          { className: 'col-xs-4 col-sm-4 col-md-4 col-lg-4', id: 'filter-click' },
           _react2.default.createElement(
-            "div",
-            { className: "filter-click", onClick: this.filterMenuToggle },
+            'div',
+            { className: 'filter-click', onClick: this.filterMenuToggle },
             _react2.default.createElement(
-              "span",
+              'span',
               null,
-              "Filtruj"
+              'Filtruj'
             ),
-            " ",
-            _react2.default.createElement("i", { className: this.state.arrowClass, "aria-hidden": "true" })
+            ' ',
+            _react2.default.createElement('i', { className: this.state.arrowClass, 'aria-hidden': 'true' })
           ),
           _react2.default.createElement(
-            "div",
-            { id: "filter-menu", style: filterMenuDisplay },
+            'div',
+            { id: 'filter-menu', style: filterMenuDisplay },
             _react2.default.createElement(
-              "form",
-              { name: "search" },
+              'form',
+              { name: 'search' },
               _react2.default.createElement(
-                "span",
+                'span',
                 null,
-                "p\u0142e\u0107:"
+                'p\u0142e\u0107:'
               ),
-              _react2.default.createElement("br", null),
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("input", { type: "checkbox", name: "sex", value: "male", defaultChecked: true }),
-              " panowie",
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("input", { type: "checkbox", name: "sex", value: "female", defaultChecked: true }),
-              " panie",
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("br", null),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('input', { type: 'checkbox', name: 'sex', value: 'male', defaultChecked: true }),
+              ' panowie',
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('input', { type: 'checkbox', name: 'sex', value: 'female', defaultChecked: true }),
+              ' panie',
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('br', null),
               _react2.default.createElement(
-                "span",
+                'span',
                 null,
-                "wiek:"
+                'wiek:'
               ),
-              _react2.default.createElement("br", null),
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("input", { type: "checkbox", name: "age", value: "young", defaultChecked: true }),
-              " < 1 rok",
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("input", { type: "checkbox", name: "age", value: "adult", defaultChecked: true }),
-              " 1-5 lat",
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("input", { type: "checkbox", name: "age", value: "senior", defaultChecked: true }),
-              " > 5 lat",
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("br", null),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('input', { type: 'checkbox', name: 'age', value: 'young', defaultChecked: true }),
+              ' < 1 rok',
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('input', { type: 'checkbox', name: 'age', value: 'adult', defaultChecked: true }),
+              ' 1-5 lat',
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('input', { type: 'checkbox', name: 'age', value: 'senior', defaultChecked: true }),
+              ' > 5 lat',
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('br', null),
               _react2.default.createElement(
-                "span",
+                'span',
                 null,
-                "adopcje:"
+                'adopcje:'
               ),
-              _react2.default.createElement("br", null),
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("input", { type: "checkbox", name: "adopt", value: "false", defaultChecked: true }),
-              " brak opiekuna",
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("input", { type: "checkbox", name: "adopt", value: "true", defaultChecked: true }),
-              " zaadoptowane",
-              _react2.default.createElement("hr", null),
-              _react2.default.createElement("input", { className: "button shadow-hover", type: "submit", value: "szukaj" })
+              _react2.default.createElement('br', null),
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('input', { type: 'checkbox', name: 'adopt', value: 'false', defaultChecked: true }),
+              ' brak opiekuna',
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('input', { type: 'checkbox', name: 'adopt', value: 'true', defaultChecked: true }),
+              ' zaadoptowane',
+              _react2.default.createElement('hr', null),
+              _react2.default.createElement('input', { className: 'button shadow-hover', type: 'submit', value: 'szukaj' })
             )
           )
         ),
         _react2.default.createElement(
-          "div",
-          { className: "col-xs-8 col-sm-8 col-md-8 col-lg-8 sort-container" },
+          'div',
+          { className: 'col-xs-8 col-sm-8 col-md-8 col-lg-8 sort-container' },
           _react2.default.createElement(
-            "form",
-            { id: "sort" },
+            'form',
+            { id: 'sort' },
             _react2.default.createElement(
-              "label",
+              'label',
               null,
-              "sortuj: "
+              'sortuj: '
             ),
             _react2.default.createElement(
-              "select",
+              'select',
               { onChange: this.handleSortChange },
               _react2.default.createElement(
-                "option",
-                { value: "adoptions" },
-                "samotne"
+                'option',
+                { value: 'adoptions' },
+                'samotne'
               ),
               _react2.default.createElement(
-                "option",
-                { value: "-ageMonths" },
-                "najstarsze"
+                'option',
+                { value: '-ageMonths' },
+                'najstarsze'
               ),
               _react2.default.createElement(
-                "option",
-                { value: "ageMonths" },
-                "najm\u0142odsze"
+                'option',
+                { value: 'ageMonths' },
+                'najm\u0142odsze'
               )
             )
           )
@@ -20078,8 +20025,6 @@ var SortBar = function (_React$Component) {
 
   return SortBar;
 }(_react2.default.Component);
-
-;
 
 exports.default = SortBar;
 
@@ -20137,140 +20082,140 @@ var Template = function (_React$Component) {
   }
 
   _createClass(Template, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "container-full" },
+        'div',
+        { className: 'container-full' },
         _react2.default.createElement(
-          "div",
-          { className: "bar" },
+          'div',
+          { className: 'bar' },
           _react2.default.createElement(
-            "header",
-            { className: "row" },
+            'header',
+            { className: 'row' },
             _react2.default.createElement(
               _reactRouter.IndexLink,
-              { to: "/" },
+              { to: '/' },
               _react2.default.createElement(
-                "div",
-                { className: "col-xs-4 col-sm-4 col-md-4 col-lg-4 logo" },
+                'div',
+                { className: 'col-xs-4 col-sm-4 col-md-4 col-lg-4 logo' },
                 _react2.default.createElement(
-                  "h1",
+                  'h1',
                   null,
-                  "Adopcje"
+                  'Adopcje'
                 )
               )
             ),
             _react2.default.createElement(
-              "nav",
-              { className: "col-xs-8 col-sm-8 col-md-8 col-lg-8 menu" },
+              'nav',
+              { className: 'col-xs-8 col-sm-8 col-md-8 col-lg-8 menu' },
               _react2.default.createElement(
-                "ul",
-                { id: "menu-desktop" },
+                'ul',
+                { id: 'menu-desktop' },
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
-                  { to: "/adoptions", activeClassName: "active-menu-link" },
+                  { to: '/adoptions', activeClassName: 'active-menu-link' },
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "KOTY DO",
-                    _react2.default.createElement("br", null),
-                    "ADOPCJI"
+                    'KOTY DO',
+                    _react2.default.createElement('br', null),
+                    'ADOPCJI'
                   )
                 ),
                 _react2.default.createElement(
-                  "li",
+                  'li',
                   { onClick: this.xxx },
-                  "KOTERIA"
+                  'KOTERIA'
                 ),
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
-                  { to: "/", activeClassName: "active-menu-link" },
+                  { to: '/', activeClassName: 'active-menu-link' },
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "WIRTUALNA",
-                    _react2.default.createElement("br", null),
-                    "ADOPCJA"
+                    'WIRTUALNA',
+                    _react2.default.createElement('br', null),
+                    'ADOPCJA'
                   )
                 ),
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
-                  { to: "/", activeClassName: "active-menu-link" },
+                  { to: '/', activeClassName: 'active-menu-link' },
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "JAK",
-                    _react2.default.createElement("br", null),
-                    "POM\xD3C"
+                    'JAK',
+                    _react2.default.createElement('br', null),
+                    'POM\xD3C'
                   )
                 ),
                 _react2.default.createElement(
                   _reactRouter.IndexLink,
-                  { to: "/", activeClassName: "active-menu-link" },
+                  { to: '/', activeClassName: 'active-menu-link' },
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "KONTAKT"
+                    'KONTAKT'
                   )
                 )
               ),
               _react2.default.createElement(
-                "div",
-                { className: "hamburger" },
+                'div',
+                { className: 'hamburger' },
                 _react2.default.createElement(
-                  "div",
-                  { id: "menuToggle" },
-                  _react2.default.createElement("input", { type: "checkbox" }),
-                  _react2.default.createElement("span", null),
-                  _react2.default.createElement("span", null),
-                  _react2.default.createElement("span", null),
+                  'div',
+                  { id: 'menuToggle' },
+                  _react2.default.createElement('input', { type: 'checkbox' }),
+                  _react2.default.createElement('span', null),
+                  _react2.default.createElement('span', null),
+                  _react2.default.createElement('span', null),
                   _react2.default.createElement(
-                    "ul",
-                    { id: "menu" },
+                    'ul',
+                    { id: 'menu' },
                     _react2.default.createElement(
                       _reactRouter.IndexLink,
-                      { to: "/adoptions" },
+                      { to: '/adoptions' },
                       _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "Koty do adopcji"
+                        'Koty do adopcji'
                       )
                     ),
                     _react2.default.createElement(
                       _reactRouter.IndexLink,
-                      { to: "/" },
+                      { to: '/' },
                       _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "Koteria"
+                        'Koteria'
                       )
                     ),
                     _react2.default.createElement(
                       _reactRouter.IndexLink,
-                      { to: "/" },
+                      { to: '/' },
                       _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "Wirtualna adopcja"
+                        'Wirtualna adopcja'
                       )
                     ),
                     _react2.default.createElement(
                       _reactRouter.IndexLink,
-                      { to: "/" },
+                      { to: '/' },
                       _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "Pomoc"
+                        'Pomoc'
                       )
                     ),
                     _react2.default.createElement(
                       _reactRouter.IndexLink,
-                      { to: "/" },
+                      { to: '/' },
                       _react2.default.createElement(
-                        "li",
+                        'li',
                         null,
-                        "Kontakt"
+                        'Kontakt'
                       )
                     )
                   )
@@ -20327,43 +20272,43 @@ var Title = function (_React$Component) {
   }
 
   _createClass(Title, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        { className: "row main" },
+        'div',
+        { className: 'row main' },
         _react2.default.createElement(
-          "section",
-          { className: "col-xs-12 col-sm-6 col-md-4 col-lg-4" },
+          'section',
+          { className: 'col-xs-12 col-sm-6 col-md-4 col-lg-4' },
           _react2.default.createElement(
-            "p",
+            'p',
             null,
-            "Nie masz czasu?",
-            _react2.default.createElement("br", null),
-            "Nie masz warunk\xF3w?",
-            _react2.default.createElement("br", null),
-            "Masz serce?"
+            'Nie masz czasu?',
+            _react2.default.createElement('br', null),
+            'Nie masz warunk\xF3w?',
+            _react2.default.createElement('br', null),
+            'Masz serce?'
           ),
           _react2.default.createElement(
-            "h1",
+            'h1',
             null,
-            "Adoptuj wirtualnie!"
+            'Adoptuj wirtualnie!'
           ),
           _react2.default.createElement(
-            "h3",
+            'h3',
             null,
-            "Koty czekaj\u0105 na Twoj\u0105 pomoc"
+            'Koty czekaj\u0105 na Twoj\u0105 pomoc'
           ),
           _react2.default.createElement(
-            "div",
+            'div',
             null,
             _react2.default.createElement(
               _reactRouter.Link,
-              { to: "/adoptions" },
+              { to: '/adoptions' },
               _react2.default.createElement(
-                "button",
-                { className: "button" },
-                "Sprawd\u017A"
+                'button',
+                { className: 'button' },
+                'Sprawd\u017A'
               )
             )
           )
@@ -20374,8 +20319,6 @@ var Title = function (_React$Component) {
 
   return Title;
 }(_react2.default.Component);
-
-;
 
 exports.default = Title;
 
@@ -20416,95 +20359,95 @@ var VirtualAdoption = function (_React$Component) {
   }
 
   _createClass(VirtualAdoption, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "section",
-        { className: "row adopt", id: "virtual-adoption" },
+        'section',
+        { className: 'row adopt', id: 'virtual-adoption' },
         _react2.default.createElement(
-          "div",
-          { className: "col-xs-12" },
+          'div',
+          { className: 'col-xs-12' },
           _react2.default.createElement(
-            "div",
-            { className: "row flex" },
+            'div',
+            { className: 'row flex' },
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-6 col-md-4 col-lg-4 flex" },
+              'div',
+              { className: 'col-xs-12 col-sm-6 col-md-4 col-lg-4 flex' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
+                'div',
+                { className: 'tile' },
                 _react2.default.createElement(
-                  "h1",
-                  { className: "heading" },
-                  "Wirtualna adopcja"
+                  'h1',
+                  { className: 'heading' },
+                  'Wirtualna adopcja'
                 ),
                 _react2.default.createElement(
-                  "p",
+                  'p',
                   null,
-                  "Je\u017Celi marzysz o adopcji kota i uczynieniu jego (i swojego) \u017Cycia lepszym, a zdajesz sobie spraw\u0119, \u017Ce nie masz warunk\xF3w albo mo\u017Cliwo\u015Bci, \u017Ceby fizycznie zaadoptowa\u0107 kociaka, to wirtualna adopcja jest idealnym rozwi\u0105zaniem dla Ciebie! Mo\u017Cesz poprawi\u0107 warunki \u017Cycia wybranego przez Ciebie kotka poprzez regularne wp\u0142aty na poczet opieki nad nim."
+                  'Je\u017Celi marzysz o adopcji kota i uczynieniu jego (i swojego) \u017Cycia lepszym, a zdajesz sobie spraw\u0119, \u017Ce nie masz warunk\xF3w albo mo\u017Cliwo\u015Bci, \u017Ceby fizycznie zaadoptowa\u0107 kociaka, to wirtualna adopcja jest idealnym rozwi\u0105zaniem dla Ciebie! Mo\u017Cesz poprawi\u0107 warunki \u017Cycia wybranego przez Ciebie kotka poprzez regularne wp\u0142aty na poczet opieki nad nim.'
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "btn-wrapper" },
+                  'div',
+                  { className: 'btn-wrapper' },
                   _react2.default.createElement(
                     _reactRouter.Link,
-                    { to: "/adoptions" },
+                    { to: '/adoptions' },
                     _react2.default.createElement(
-                      "button",
-                      { className: "button" },
-                      "Zobacz aktualne"
+                      'button',
+                      { className: 'button' },
+                      'Zobacz aktualne'
                     )
                   )
                 )
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-12 col-md-5 col-lg-5 flex slider" },
+              'div',
+              { className: 'col-xs-12 col-sm-12 col-md-5 col-lg-5 flex slider' },
               _react2.default.createElement(
-                "div",
-                { id: "slider", className: "small-shadow shadow-hover" },
-                "slider ze zdjeciami kotow"
+                'div',
+                { id: 'slider', className: 'small-shadow shadow-hover' },
+                'slider ze zdjeciami kotow'
               )
             ),
             _react2.default.createElement(
-              "div",
-              { className: "col-xs-12 col-sm-6 col-md-3 col-lg-3 flex virtual-adopt" },
+              'div',
+              { className: 'col-xs-12 col-sm-6 col-md-3 col-lg-3 flex virtual-adopt' },
               _react2.default.createElement(
-                "div",
-                { className: "tile" },
+                'div',
+                { className: 'tile' },
                 _react2.default.createElement(
-                  "h2",
-                  { className: "heading" },
-                  "Co zyskujesz?"
+                  'h2',
+                  { className: 'heading' },
+                  'Co zyskujesz?'
                 ),
                 _react2.default.createElement(
-                  "ul",
-                  { className: "square-list" },
+                  'ul',
+                  { className: 'square-list' },
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "mo\u017Cliwo\u015B\u0107 odwiedzania swojego podopiecznego w DT"
+                    'mo\u017Cliwo\u015B\u0107 odwiedzania swojego podopiecznego w DT'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "uszcz\u0119\u015Bliwiasz bezbronne zwierz\u0105tko"
+                    'uszcz\u0119\u015Bliwiasz bezbronne zwierz\u0105tko'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "odci\u0105\u017Casz finansowo o\u015Brodek"
+                    'odci\u0105\u017Casz finansowo o\u015Brodek'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "je\u017Cli zechcesz, b\u0119dziesz wpisany na stronie internetowej jako opiekun swojego kotka"
+                    'je\u017Cli zechcesz, b\u0119dziesz wpisany na stronie internetowej jako opiekun swojego kotka'
                   ),
                   _react2.default.createElement(
-                    "li",
+                    'li',
                     null,
-                    "+100 do bycia dobrym cz\u0142owiekiem :)"
+                    '+100 do bycia dobrym cz\u0142owiekiem :)'
                   )
                 )
               )
@@ -20517,8 +20460,6 @@ var VirtualAdoption = function (_React$Component) {
 
   return VirtualAdoption;
 }(_react2.default.Component);
-
-;
 
 exports.default = VirtualAdoption;
 

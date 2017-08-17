@@ -1,54 +1,50 @@
-import React from "react";
+import React from 'react';
 import {
   Router,
   Route,
   Link,
   IndexLink,
   IndexRoute,
-  hashHistory
+  hashHistory,
 } from 'react-router';
-import fb from "./Db.js";
+import fb from './Db.js';
 
 class GalleryThumbnails extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      thumbnails: []
-    }
+      thumbnails: [],
+    };
   }
 
   componentDidMount() {
-    let db = fb.database().ref("/");
-    let cards = [];
-    let id = this.props.pathId;
-    let thumbnailsLinks = [];
-    let thumbnails = [];
+    const db = fb.database().ref('/');
+    const id = this.props.pathId;
+    const thumbnailsLinks = [];
+    const thumbnails = [];
 
-    db.on("value", snap => {
-
+    db.on('value', (snap) => {
       thumbnailsLinks.push(snap.val()[id].mainPhoto);
 
       for (let i = 0; i < snap.val()[id].gallery.length; i++) {
         thumbnailsLinks.push(snap.val()[id].gallery[i]);
-      };
+      }
 
       for (let i = 0; i < thumbnailsLinks.length; i++) {
         thumbnails.push(
           <div className="gallery-thumbnail current" key={i}>
             <div className="cont">
-              <img src={thumbnailsLinks[i]} alt="" onClick={this.getImage}/>
+              <img src={thumbnailsLinks[i]} alt="" onClick={this.getImage} />
             </div>
-          </div>
+          </div>,
         );
-      };
+      }
 
       this.setState({
         thumbnails: thumbnails,
       });
-
     });
-  };
+  }
 
   getImage = (event) => {
     const img = event.target.src; //to chyba nie tak powinno być, onClick powinien być na całym divie, a nie tylko na img, ale takim sposobem mogę wyciąganąć src. DZIAŁA! do poprawy później
@@ -60,7 +56,7 @@ class GalleryThumbnails extends React.Component {
       <div className="photo-thumbnails">
         {this.state.thumbnails}
       </div>
-    )
+    );
   }
 }
 

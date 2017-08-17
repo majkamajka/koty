@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 
 class NotFound extends React.Component {

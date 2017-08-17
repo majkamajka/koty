@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 
 class VirtualAdoption extends React.Component {
-  render () {
+  render() {
     return (
       <section className="row adopt" id="virtual-adoption">
         <div className="col-xs-12">
@@ -43,8 +43,8 @@ class VirtualAdoption extends React.Component {
           </div>
         </div>
       </section>
-    )
-  };
-};
+    );
+  }
+}
 
 export default VirtualAdoption;

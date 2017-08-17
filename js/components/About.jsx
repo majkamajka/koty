@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 
 class About extends React.Component {
-  render () {
+  render() {
     return (
       <section className="row about" id="about">
         <div className="col-xs-12">
@@ -42,8 +42,8 @@ class About extends React.Component {
           </div>
         </div>
       </section>
-    )
-  };
-};
+    );
+  }
+}
 
 export default About;

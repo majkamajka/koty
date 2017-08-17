@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-router';
 
 class Help extends React.Component {
-  render () {
+  render() {
     return (
       <section className="row another" id="other-help">
         <div className="col-xs-12">
@@ -40,8 +40,8 @@ class Help extends React.Component {
           </div>
         </div>
       </section>
-    )
-  };
-};
+    );
+  }
+}
 
 export default Help;

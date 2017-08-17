@@ -1,15 +1,14 @@
-import React from "react";
-import ReactDOM from 'react-dom';
-import * as Firebase from "firebase";
+import React from 'react';
+import * as Firebase from 'firebase';
 import {
   Router,
   Route,
   Link,
   IndexLink,
   IndexRoute,
-  hashHistory
+  hashHistory,
 } from 'react-router';
-import fb from "./Db.js";
+import fb from './Db.js';
 
 class CatCards extends React.Component {
 
@@ -18,16 +17,16 @@ class CatCards extends React.Component {
     this.state = {
       cards: [],
       filters: this.props.filters,
-      sortBy: this.props.sortBy
-    }
+      sortBy: this.props.sortBy,
+    };
   }
 
   componentDidMount() {
 
-    let db = fb.database().ref("/");
-    let cards = [];
+    const db = fb.database().ref('/');
+    const cards = [];
 
-    db.on("value", snap => {
+    db.on('value', (snap) => {
 
       for (let i = 0; i < snap.val().length; i++) {
 
@@ -36,79 +35,79 @@ class CatCards extends React.Component {
       }
 
       this.setState({
-        cards: cards
+        cards: cards,
       });
 
-      //dlaczego nigdzie nie jestem w stanie updejtować this state filters?!
+      // dlaczego nigdzie nie jestem w stanie updejtować this state filters?!
 
     });
-  };
+  }
 
   filterCards(cards) {
     const filters = this.props.filters;
     let filteredDbCats = cards;
-    let sortBy = this.props.sortBy;
+    const sortBy = this.props.sortBy;
 
     if (!filters.sexMale) {
-      filteredDbCats = filteredDbCats.filter((cat) => cat.sex !== "m");
-    };
+      filteredDbCats = filteredDbCats.filter(cat => cat.sex !== 'm');
+    }
     if (!filters.sexFemale) {
-      filteredDbCats = filteredDbCats.filter((cat) => cat.sex !== "f");
-    };
+      filteredDbCats = filteredDbCats.filter(cat => cat.sex !== 'f');
+    }
     if (!filters.ageYoung) {
-      filteredDbCats = filteredDbCats.filter((cat) => cat.ageMonths > 12);
-    };
+      filteredDbCats = filteredDbCats.filter(cat => cat.ageMonths > 12);
+    }
     if (!filters.ageAdult) {
-      filteredDbCats = filteredDbCats.filter((cat) => !(cat.ageMonths >= 12 && cat.ageMonths < 60) );
-    };
+      filteredDbCats = filteredDbCats.filter(cat => !(cat.ageMonths >= 12 && cat.ageMonths < 60));
+    }
     if (!filters.ageSenior) {
-      filteredDbCats = filteredDbCats.filter((cat) => cat.ageMonths < 60);
-    };
+      filteredDbCats = filteredDbCats.filter(cat => cat.ageMonths < 60);
+    }
 
-//https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value-in-javascript
+    // https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value-in-javascript
     function dynamicSort(property) {
       let sortOrder = 1;
-      if (property[0] === "-") {
+      if (property[0] === '-') {
         sortOrder = -1;
         property = property.substr(1);
-      };
-      return function (a,b) {
-        let result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+      }
+
+      return function (a, b) {
+        const result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
         return result * sortOrder;
       };
-    };
+    }
     filteredDbCats.sort(dynamicSort(sortBy));
 
-    let filteredCards = filteredDbCats.map((e, i) => {
-
-      let sexIcon = "";
-      if (e.sex === "m") {
-        sexIcon = "fa fa-mars";
+    const filteredCards = filteredDbCats.map((e, i) => {
+      let sexIcon = '';
+      if (e.sex === 'm') {
+        sexIcon = 'fa fa-mars';
       } else {
-        sexIcon = "fa fa-venus";
-      };
+        sexIcon = 'fa fa-venus';
+      }
 
       return (
         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3" key={`${i}${e.name}`}>
           <div className="tile cat-card">
             <div className="thumbnail">
-              <img src={e.mainPhoto} alt="" className="cat-img"/>
+              <img src={e.mainPhoto} alt="" className="cat-img" />
             </div>
             <h1>
-              {e.name}&nbsp;<i className={sexIcon} aria-hidden="true"></i> {Math.round(e.ageMonths / 12)}
+              {e.name}&nbsp;<i className={sexIcon} aria-hidden="true" /> {Math.round(e.ageMonths / 12)}
             </h1>
             <p id="keywords">
               {e.keywords}
             </p>
             <p className="cat-short-desc">
-              {e.desc.substring(0, 200) + "..."}
+              {e.desc.substring(0, 200) + '...'}
             </p>
             <Link to={`/cat-profile/${e.id}`}>
               <button className="button more">więcej</button>
             </Link>
           </div>
         </div>
-      )
+      );
     });
 
     return filteredCards;
@@ -120,12 +119,11 @@ class CatCards extends React.Component {
       <div className="row" id="results">
         {this.filterCards(this.state.cards)}
       </div>
-    )
-  };
-};
+    );
+  }
+}
 
 export default CatCards;
-
 
 
 // cards.push(
