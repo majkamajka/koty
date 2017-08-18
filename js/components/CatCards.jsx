@@ -81,11 +81,35 @@ class CatCards extends React.Component {
 
     const filteredCards = filteredDbCats.map((e, i) => {
       let sexIcon = '';
+      let age = 0;
+      let ageUnit = '';
+
       if (e.sex === 'm') {
         sexIcon = 'fa fa-mars';
       } else {
         sexIcon = 'fa fa-venus';
       }
+
+      if (e.ageMonths >= 12) {
+        age = Math.round(e.ageMonths / 12);
+        if (age === 1) {
+          ageUnit = ' rok';
+        } else if (age >= 2 && age <= 4) {
+          ageUnit = ' lata';
+        } else {
+          ageUnit = ' lat';
+        }
+      } else {
+        age = e.ageMonths;
+        if (e.ageMonths === 1) {
+          ageUnit = ' miesiąc';
+        } else if (e.ageMonths >= 2 && e.ageMonths <= 4) {
+          ageUnit = ' miesiące';
+        } else {
+          ageUnit = ' miesięcy';
+        }
+      }
+
 
       return (
         <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3" key={`${i}${e.name}`}>
@@ -94,8 +118,9 @@ class CatCards extends React.Component {
               <img src={e.mainPhoto} alt="" className="cat-img" />
             </div>
             <h1>
-              {e.name}&nbsp;<i className={sexIcon} aria-hidden="true" /> {Math.round(e.ageMonths / 12)}
+              {e.name}&nbsp;<i className={sexIcon} aria-hidden="true" />
             </h1>
+            <span>wiek: {age}{ageUnit}</span>
             <p id="keywords">
               {e.keywords}
             </p>
