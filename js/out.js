@@ -19649,21 +19649,22 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Header = function (_React$Component) {
   _inherits(Header, _React$Component);
 
-  function Header() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
+  function Header(props) {
     _classCallCheck(this, Header);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Header.__proto__ || Object.getPrototypeOf(Header)).call.apply(_ref, [this].concat(args))), _this), _this.scrollToElement = function (elemId) {
+    _this.scrollToElement = function (elemId) {
       event.preventDefault();
-      document.getElementById(elemId).scrollIntoView();
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+      if (_this.state.location.href === _this.state.location.origin + '/#/') {
+        document.getElementById(elemId).scrollIntoView();
+      }
+    };
+
+    _this.state = {
+      location: location
+    };
+    return _this;
   }
 
   _createClass(Header, [{

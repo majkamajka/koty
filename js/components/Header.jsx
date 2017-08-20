@@ -3,10 +3,22 @@ import { Router, Route, Link, IndexLink, IndexRoute, hashHistory } from 'react-r
 
 class Header extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      location: location
+    };
+  }
+
   scrollToElement = (elemId) => {
     event.preventDefault();
-    document.getElementById(elemId).scrollIntoView();
+    if (this.state.location.href === `${this.state.location.origin}/#/`) {
+      document.getElementById(elemId).scrollIntoView();
+    }
+
   }
+
+
 
   render() {
     return (
