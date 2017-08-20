@@ -62,7 +62,7 @@ class FullDesc extends React.Component {
         keywords: snap.val()[id].keywords,
         sex: sex,
         age: age + ageUnit,
-        fullDesc: snap.val()[id].desc
+        fullDesc: snap.val()[id].desc,
       });
     });
   }
