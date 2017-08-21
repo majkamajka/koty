@@ -19656,9 +19656,25 @@ var Header = function (_React$Component) {
 
     _this.scrollToElement = function (elemId) {
       event.preventDefault();
-      if (_this.state.location.href === _this.state.location.origin + '/#/') {
-        document.getElementById(elemId).scrollIntoView();
-      }
+
+      //console.log(location);
+
+
+      var myPromise = new Promise(function (resolve, reject) {
+
+        resolve(_reactRouter.hashHistory.push('/'));
+      });
+
+      myPromise.then(console.log(elemId)).then(console.log(document)).then(console.log(document.getElementById('about'))); /// dlaczegoo null?! ;(
+
+
+      //scrollIntoView());
+
+
+      // if (this.state.location.href === `${this.state.location.origin}/#/`) {
+      //   console.log("xxxx");
+      //   document.getElementById(elemId).scrollIntoView();
+      // }
     };
 
     _this.state = {
@@ -19709,15 +19725,11 @@ var Header = function (_React$Component) {
                 )
               ),
               _react2.default.createElement(
-                _reactRouter.IndexLink,
-                { to: '/' },
-                _react2.default.createElement(
-                  'li',
-                  { onClick: function onClick() {
-                      return _this2.scrollToElement('about');
-                    } },
-                  'O KOTERII'
-                )
+                'li',
+                { onClick: function onClick() {
+                    return _this2.scrollToElement('about');
+                  } },
+                'O KOTERII'
               ),
               _react2.default.createElement(
                 _reactRouter.IndexLink,

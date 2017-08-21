@@ -12,12 +12,32 @@ class Header extends React.Component {
 
   scrollToElement = (elemId) => {
     event.preventDefault();
-    if (this.state.location.href === `${this.state.location.origin}/#/`) {
-      document.getElementById(elemId).scrollIntoView();
-    }
+
+    //console.log(location);
+
+
+    const myPromise = new Promise((resolve, reject) => {
+
+        resolve (
+          hashHistory.push('/')
+      );
+
+    });
+
+    myPromise.then(console.log(elemId))
+    .then(console.log(document))
+    .then(console.log(document.getElementById('about'))) /// dlaczegoo null?! ;(
+
+
+    //scrollIntoView());
+
+
+    // if (this.state.location.href === `${this.state.location.origin}/#/`) {
+    //   console.log("xxxx");
+    //   document.getElementById(elemId).scrollIntoView();
+    // }
 
   }
-
 
 
   render() {
@@ -35,9 +55,9 @@ class Header extends React.Component {
               <IndexLink to="/adoptions">
                 <li>KOTY DO<br />ADOPCJI</li>
               </IndexLink>
-              <IndexLink to="/">
+
                 <li onClick={() => this.scrollToElement('about')}>O KOTERII</li>
-              </IndexLink>
+
               <IndexLink to="/">
                 <li onClick={() => this.scrollToElement('virtual-adoption')}>WIRTUALNA<br />ADOPCJA</li>
               </IndexLink>
