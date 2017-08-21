@@ -11,34 +11,32 @@ class Header extends React.Component {
   }
 
   scrollToElement = (elemId) => {
-    event.preventDefault();
-
-    //console.log(location);
-
+    //event.preventDefault();
 
     const myPromise = new Promise((resolve, reject) => {
-
-        resolve (
-          hashHistory.push('/')
-      );
-
+        resolve(hashHistory.push('/'));
     });
 
     myPromise.then(console.log(elemId))
-    .then(console.log(document))
-    .then(console.log(document.getElementById('about'))) /// dlaczegoo null?! ;(
+    .then(console.log(document.body))
+    .then(console.log(document.getElementById(elemId))) /// dlaczegoo null?! ;(
+    .then(document.getElementById(elemId).scrollIntoView())
 
-
-    //scrollIntoView());
-
-
-    // if (this.state.location.href === `${this.state.location.origin}/#/`) {
-    //   console.log("xxxx");
-    //   document.getElementById(elemId).scrollIntoView();
-    // }
 
   }
 
+
+
+
+      //console.log(location);
+
+      //scrollIntoView());
+
+
+      // if (this.state.location.href === `${this.state.location.origin}/#/`) {
+      //   console.log("xxxx");
+      //   document.getElementById(elemId).scrollIntoView();
+      // }
 
   render() {
     return (

@@ -19655,26 +19655,14 @@ var Header = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
 
     _this.scrollToElement = function (elemId) {
-      event.preventDefault();
-
-      //console.log(location);
-
+      //event.preventDefault();
 
       var myPromise = new Promise(function (resolve, reject) {
-
         resolve(_reactRouter.hashHistory.push('/'));
       });
 
-      myPromise.then(console.log(elemId)).then(console.log(document)).then(console.log(document.getElementById('about'))); /// dlaczegoo null?! ;(
-
-
-      //scrollIntoView());
-
-
-      // if (this.state.location.href === `${this.state.location.origin}/#/`) {
-      //   console.log("xxxx");
-      //   document.getElementById(elemId).scrollIntoView();
-      // }
+      myPromise.then(console.log(elemId)).then(console.log(document.body)).then(console.log(document.getElementById(elemId))) /// dlaczegoo null?! ;(
+      .then(document.getElementById(elemId).scrollIntoView());
     };
 
     _this.state = {
@@ -19685,6 +19673,18 @@ var Header = function (_React$Component) {
 
   _createClass(Header, [{
     key: 'render',
+
+
+    //console.log(location);
+
+    //scrollIntoView());
+
+
+    // if (this.state.location.href === `${this.state.location.origin}/#/`) {
+    //   console.log("xxxx");
+    //   document.getElementById(elemId).scrollIntoView();
+    // }
+
     value: function render() {
       var _this2 = this;
 
