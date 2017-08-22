@@ -37,10 +37,19 @@ class Header extends React.Component {
     const hamburgerMenu = document.getElementById("hamburger-menu");
     hamburgerMenu.classList.toggle("inside");
     hamburgerMenu.classList.toggle("outside");
+  };
+
+  hamburgerAnimate = () => {
+    const spans = document.querySelectorAll("#hamburger span");
+    spans[0].classList.toggle("rotate-upper");
+    spans[1].classList.toggle("hidden-span");
+    spans[2].classList.toggle("rotate-bottom");
   }
 
-
-
+  onClick = () => {
+    this.menuDisplay();
+    this.hamburgerAnimate();
+  }
 
   render() {
     return (
@@ -72,8 +81,14 @@ class Header extends React.Component {
             </ul>
 
           </nav>
-          <div id="hamburger" onClick={this.menuDisplay}>x</div>
-            <ul id="hamburger-menu" className="inside">
+          <div id="hamburger" onClick={this.onClick}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+            <ul id="hamburger-menu" className="outside">
+              <h1 className="heading">Menu</h1>
               <IndexLink to="/adoptions"><li>Koty do adopcji</li></IndexLink>
               <IndexLink to="/"><li onClick={() => this.scrollToElement('about')}>O Koterii</li></IndexLink>
               <IndexLink to="/"><li onClick={() => this.scrollToElement('virtual-adoption')}>Wirtualna adopcja</li></IndexLink>
