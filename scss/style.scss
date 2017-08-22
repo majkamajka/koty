@@ -279,7 +279,7 @@ $fourthColor: #F9F8ED;
   font-family: 'Montserrat', sans-serif;
   text-align: justify;
   font-size: 1.6rem;
-  border: 1px solid magenta;
+  //border: 1px solid magenta;
  }
 
 html {
@@ -474,6 +474,9 @@ header {
   li {
     padding: 10px 0;
     font-size: 22px;
+  }
+  @media (min-width: 992px) {
+    display: none;
   }
 }
 
