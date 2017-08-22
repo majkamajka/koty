@@ -35,11 +35,8 @@ class Header extends React.Component {
 
   menuDisplay = () => {
     const hamburgerMenu = document.getElementById("hamburger-menu");
-    const hamburgerMenuContainer = document.getElementById("wtf");
     hamburgerMenu.classList.toggle("inside");
     hamburgerMenu.classList.toggle("outside");
-    wtf.classList.toggle("hidden");
-    wtf.classList.toggle("visible");
   }
 
 
