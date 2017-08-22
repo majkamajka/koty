@@ -22,21 +22,28 @@ class Header extends React.Component {
     .then(console.log(document.getElementById(elemId))) /// dlaczegoo null?! ;(
     .then(document.getElementById(elemId).scrollIntoView())
 
+    //console.log(location);
 
+    //scrollIntoView());
+
+
+    // if (this.state.location.href === `${this.state.location.origin}/#/`) {
+    //   console.log("xxxx");
+    //   document.getElementById(elemId).scrollIntoView();
+    // }
+  }
+
+  menuDisplay = () => {
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+    const hamburgerMenuContainer = document.getElementById("wtf");
+    hamburgerMenu.classList.toggle("inside");
+    hamburgerMenu.classList.toggle("outside");
+    wtf.classList.toggle("hidden");
+    wtf.classList.toggle("visible");
   }
 
 
 
-
-      //console.log(location);
-
-      //scrollIntoView());
-
-
-      // if (this.state.location.href === `${this.state.location.origin}/#/`) {
-      //   console.log("xxxx");
-      //   document.getElementById(elemId).scrollIntoView();
-      // }
 
   render() {
     return (
@@ -67,26 +74,34 @@ class Header extends React.Component {
               </IndexLink>
             </ul>
 
-            <div className="hamburger">
-              <div id="menuToggle">
-                <input type="checkbox" />
-                <span />
-                <span />
-                <span />
-                <ul id="menu">
-                  <IndexLink to="/adoptions"><li>Koty do adopcji</li></IndexLink>
-                  <IndexLink to="/"><li onClick={() => this.scrollToElement('about')}>O Koterii</li></IndexLink>
-                  <IndexLink to="/"><li onClick={() => this.scrollToElement('virtual-adoption')}>Wirtualna adopcja</li></IndexLink>
-                  <IndexLink to="/"><li onClick={() => this.scrollToElement('other-help')}>Jak pomóc</li></IndexLink>
-                  <IndexLink to="/"><li onClick={() => this.scrollToElement('contact')}>Kontakt</li></IndexLink>
-                </ul>
-              </div>
-            </div>
           </nav>
+          <div id="hamburger" onClick={this.menuDisplay}>x</div>
+            <ul id="hamburger-menu" className="inside">
+              <IndexLink to="/adoptions"><li>Koty do adopcji</li></IndexLink>
+              <IndexLink to="/"><li onClick={() => this.scrollToElement('about')}>O Koterii</li></IndexLink>
+              <IndexLink to="/"><li onClick={() => this.scrollToElement('virtual-adoption')}>Wirtualna adopcja</li></IndexLink>
+              <IndexLink to="/"><li onClick={() => this.scrollToElement('other-help')}>Jak pomóc</li></IndexLink>
+              <IndexLink to="/"><li onClick={() => this.scrollToElement('contact')}>Kontakt</li></IndexLink>
+            </ul>
+
+
+
         </header>
+
       </div>
     );
   }
 }
 
 export default Header;
+
+
+// <div className="hamburger">
+//   <div id="menuToggle">
+//     <input type="checkbox" />
+//     <span />
+//     <span />
+//     <span />
+//
+//   </div>
+// </div>
