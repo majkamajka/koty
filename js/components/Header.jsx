@@ -30,7 +30,7 @@ class Header extends React.Component {
   scrollToElement = (elemId) => {
     //event.preventDefault();
 
-    const myPromise = new Promise((resolve, reject) => {
+    const goHome = new Promise((resolve, reject) => {
       if (this.state.location.href !== `${this.state.location.origin}/#/`) {
         resolve(hashHistory.push('/'));
       } else {
@@ -39,10 +39,10 @@ class Header extends React.Component {
 
     });
 
-    myPromise.then(console.log(elemId))
-              .then(console.log(document.body))
-              .then(console.log(document.getElementById(elemId))) // dlaczegoo null?! ;(
-              .then(document.getElementById(elemId).scrollIntoView());
+    goHome.then(console.log(elemId))
+          .then(console.log(document.body))
+          .then(console.log(document.getElementById(elemId))) // dlaczegoo null?! ;(
+          .then(document.getElementById(elemId).scrollIntoView());
 
     // console.log(location);
 
@@ -63,26 +63,24 @@ class Header extends React.Component {
               <h1>Adopcje</h1>
             </div>
           </IndexLink>
-
           <nav className="col-md-8 col-lg-8 menu">
-            <ul id="menu-desktop">
-              <IndexLink to="/adoptions">
-                <li>KOTY DO<br />ADOPCJI</li>
-              </IndexLink>
+              <ul id="menu-desktop">
+                <IndexLink to="/adoptions">
+                  <li id="adopt-link">KOTY DO<br />ADOPCJI</li>
+                </IndexLink>
 
-                <li onClick={() => this.scrollToElement('about')}>O KOTERII</li>
+                  <li onClick={() => this.scrollToElement('about')}>O KOTERII</li>
 
-              <IndexLink to="/">
-                <li onClick={() => this.scrollToElement('virtual-adoption')}>WIRTUALNA<br />ADOPCJA</li>
-              </IndexLink>
-              <IndexLink to="/">
-                <li onClick={() => this.scrollToElement('other-help')}>JAK<br />POMÓC</li>
-              </IndexLink>
-              <IndexLink to="/">
-                <li onClick={() => this.scrollToElement('contact')}>KONTAKT</li>
-              </IndexLink>
-            </ul>
-
+                <IndexLink to="/">
+                  <li onClick={() => this.scrollToElement('virtual-adoption')}>WIRTUALNA<br />ADOPCJA</li>
+                </IndexLink>
+                <IndexLink to="/">
+                  <li onClick={() => this.scrollToElement('other-help')}>JAK<br />POMÓC</li>
+                </IndexLink>
+                <IndexLink to="/">
+                  <li onClick={() => this.scrollToElement('contact')}>KONTAKT</li>
+                </IndexLink>
+              </ul>
           </nav>
           <div id="hamburger" onClick={this.onClick}>
             <span />
