@@ -31,7 +31,12 @@ class Header extends React.Component {
     //event.preventDefault();
 
     const myPromise = new Promise((resolve, reject) => {
-      resolve(hashHistory.push('/'));
+      if (this.state.location.href !== `${this.state.location.origin}/#/`) {
+        resolve(hashHistory.push('/'));
+      } else {
+        resolve();
+      }
+
     });
 
     myPromise.then(console.log(elemId))

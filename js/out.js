@@ -19676,7 +19676,11 @@ var Header = function (_React$Component) {
       //event.preventDefault();
 
       var myPromise = new Promise(function (resolve, reject) {
-        resolve(_reactRouter.hashHistory.push('/'));
+        if (_this.state.location.href !== _this.state.location.origin + '/#/') {
+          resolve(_reactRouter.hashHistory.push('/'));
+        } else {
+          resolve();
+        }
       });
 
       myPromise.then(console.log(elemId)).then(console.log(document.body)).then(console.log(document.getElementById(elemId))) // dlaczegoo null?! ;(
